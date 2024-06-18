@@ -1,0 +1,100 @@
+.phones
+    position: relative
+
+    &__toggle
+        display: flex
+        align-items: center
+        gap: 6px
+        font-size: 20px
+        color: var(--white)
+        transition: color .5s ease
+
+        @media ($max-xxl)
+            font-size: 18px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--ruby)
+
+        &[aria-expanded="true"]
+            color: var(--ruby)
+
+            @media ($max-md)
+                color: var(--white)
+
+            .phones__toggle-arrow
+                transform: rotateX(180deg)
+
+        &-icon
+
+            @media ($max-md)
+                width: 22px
+                height: 22px
+
+            @media ($max-xs)
+                width: 18px
+                height: 18px
+
+        &-text
+
+            @media ($max-xl)
+                display: none
+                
+        &-arrow
+            transition: transform .5s ease
+
+            @media ($max-md)
+                display: none
+
+    &__list
+        position: absolute
+        top: calc(100% + 22px)
+        left: 0
+        min-width: 100%
+        margin: 0
+        padding: 0
+        list-style: none
+        background: var(--white)
+        box-shadow: 2px 23px 36px 0 rgba(0, 0, 0, .1)
+        opacity: 0
+        visibility: hidden
+        transform: translateY(20px)
+        transition: opacity .25s ease, transform .25s ease, visibility .25s ease
+        z-index: $z-index-2
+
+        @media ($max-md)
+            left: auto
+            right: 0
+
+        &[aria-hidden="false"]
+            opacity: 1
+            visibility: visible
+            transform: translateY(0)
+            transition: opacity .5s ease, transform .5s ease, visibility .5s ease
+
+    &__item
+
+        &:not(:last-child)
+            border-bottom: 1px solid #f1f1f1
+
+    &__link
+        display: flex
+        align-items: center
+        gap: 8px
+        white-space: nowrap
+        padding: 8px 10px 8px 30px
+        font-size: 20px
+        color: var(--black)
+        transition: color .5s ease
+
+        @media ($max-xl)
+            padding: 8px 10px
+
+        @media ($max-xxl)
+            font-size: 18px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--ruby)

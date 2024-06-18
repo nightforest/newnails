@@ -1,0 +1,107 @@
+.swiper
+    --swiper-pagination-bullet-horizontal-gap: 8px
+    --swiper-pagination-bottom: 0
+    --swiper-scrollbar-sides-offset: 0px
+    --swiper-scrollbar-bottom: 0
+    --swiper-scrollbar-size: 3px
+    --swiper-scrollbar-border-radius: 0px
+    --swiper-scrollbar-bg-color: #DCE5E5
+    --swiper-scrollbar-drag-bg-color: var(--ruby)
+    --swiper-scrollbar-sides-offset: 15px
+
+    @media ($max-xl)
+        --swiper-scrollbar-sides-offset: 12px
+
+    &-wrapper
+        box-sizing: border-box !important
+
+    &-slide
+        height: auto
+
+    &-scrollbar
+        cursor: pointer
+
+    &-pagination-fraction
+        left: 50%
+        bottom: 20px
+        margin-left: -57px
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        gap: 10px
+        width: 114px
+        height: 52px
+        border-radius: 10px
+        background: var(--white)
+        color: var(--grey)
+        font-size: 24px
+        font-weight: 500
+
+        @media ($max-md)
+            width: 80px
+            height: 30px
+            margin-left: -40px
+            font-size: 18px
+
+        .swiper-pagination-current
+            color: var(--black)
+
+    &-nav-prev,
+    &-nav-next
+        position: absolute
+        top: 50%
+        translate: 0 -50% 0
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 50px
+        height: 50px
+        border: 1px solid var(--black)
+        background: var(--white)
+        color: var(--black)
+        transition: color .5s ease, opacity .5s ease, visibility .5s ease, background .5s ease, border-color .5s ease
+        z-index: $z-index-1
+
+        @media ($max-md)
+            width: 28px
+            height: 28px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--white)
+            background: var(--ruby)
+            border-color: var(--ruby)
+        
+        &.swiper-button-disabled,
+        &.swiper-button-lock
+            opacity: 0
+            visibility: hidden
+
+        &__icon
+
+            @media ($max-md)
+                width: 9px
+                height: 9px
+
+    &-nav-prev
+        left: -15px
+
+    &-nav-next
+        right: -15px
+        
+    &-pagination
+        line-height: 1
+        font-size: 0
+
+        &-bullet
+            width: 28px
+            height: 5px
+            border-radius: 0
+            background: var(--white)
+            transition: background .5s ease
+            opacity: 1
+
+            &-active
+                background: var(--ruby)

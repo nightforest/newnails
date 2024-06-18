@@ -1,0 +1,108 @@
+.order-details
+    padding: 40px 30px
+    background: var(--grey)
+
+    @media ($max-md)
+        padding: 20px 15px
+
+    &__inner
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        justify-content: space-between
+        gap: 30px
+
+        @media ($max-md)
+            display: flex
+            flex-direction: column
+            gap: 20px
+
+        &:not(:last-child)
+            margin-bottom: 20px
+
+        &--right
+            display: flex
+            justify-content: flex-end
+    
+    &__header
+        padding-bottom: 20px
+        margin-bottom: 20px
+        border-bottom: 1px solid #D9D9D9
+
+        @media ($max-md)
+            padding: 0
+            border: none
+            text-align: center
+            margin-bottom: 15px
+        
+    &__title
+        font-size: 24px
+        font-weight: 900
+        margin-bottom: 15px
+
+        @media ($max-md)
+            font-size: 20px
+
+    &__subtitle
+        font-size: 20px
+        font-weight: 700
+        line-height: 1.2
+
+    &__item
+        grid-column: 6 span
+        width: 100%
+        max-width: 435px
+
+        @media ($max-md)
+            max-width: 100%
+    
+    &__row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 12px
+
+        &:not(:last-child)
+            margin-bottom: 20px
+
+        &--bold
+            
+            .order-details__col
+                font-weight: 900
+            
+        
+        &--normal
+
+            .order-details__col
+                font-weight: 400
+    
+    &__col
+
+        @media ($max-xxl)
+            font-size: 14px
+
+        @media ($max-md)
+            font-size: 13px
+
+        &:last-child
+            text-align: right
+
+        &--bold
+            font-weight: 700
+
+        &--heavy
+            font-weight: 900
+            font-size: 16px
+
+    &__button
+
+        @media ($max-sm)
+            width: 100%
+
+    &__order-item
+        gap: 15px
+
+        .order-item__title
+            font-size: 16px
+
+            @media ($max-xl)
+                font-size: 14px

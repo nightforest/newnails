@@ -1,0 +1,134 @@
+section.cabinet-section
+    .container.cabinet-section__container
+        aside.cabinet-section__sidebar
+            include ./includes/_cabinet-menu.pug
+
+        article.cabinet-section__article
+            header.cabinet-section__header
+                h1.cabinet-section__title Мої замовлення
+            
+            .order-details.cabinet-section__order-details
+                .order-details__inner
+                    .order-details__item
+                        .order-details__row
+                            .order-details__col.order-details__col--bold № замовлення:
+                            .order-details__col №49
+                        
+                        .order-details__row
+                            .order-details__col.order-details__col--bold Дата замовлення:
+                            .order-details__col 28.05.2024
+                        
+                        .order-details__row
+                            .order-details__col.order-details__col--bold Всього:
+                            .order-details__col 3099 грн
+                        
+                        .order-details__row
+                            .order-details__col.order-details__col--bold Кількість товарів:
+                            .order-details__col 3
+
+                    .order-details__item
+                        .order-details__row
+                            .order-details__col.order-details__col--bold Статус замовлення
+                            .order-details__col Передано на склад
+                        
+                        .order-details__row
+                            .order-details__col.order-details__col--bold Оплата:
+                            .order-details__col Готівкою при отриманні
+                        
+                        .order-details__row
+                            .order-details__col.order-details__col--bold Доставка:
+                            .order-details__col Нова Пошта, відділення № 15 м .Дніпро
+                
+                button.button.button--outline.order-details__button(type="button") Деталі замовлення
+
+            .order-details.cabinet-section__order-details
+                .order-details__inner
+                    .order-details__item
+                        .order-details__row
+                            .order-details__col.order-details__col--bold № замовлення:
+                            .order-details__col №49
+                        
+                        .order-details__row
+                            .order-details__col.order-details__col--bold Дата замовлення:
+                            .order-details__col 28.05.2024
+                        
+                        .order-details__row
+                            .order-details__col.order-details__col--bold Всього:
+                            .order-details__col 3099 грн
+                        
+                        .order-details__row
+                            .order-details__col.order-details__col--bold Кількість товарів:
+                            .order-details__col 3
+
+                    .order-details__item
+                        .order-details__row
+                            .order-details__col.order-details__col--bold Статус замовлення
+                            .order-details__col Передано на склад
+                        
+                        .order-details__row
+                            .order-details__col.order-details__col--bold Оплата:
+                            .order-details__col Готівкою при отриманні
+                        
+                        .order-details__row
+                            .order-details__col.order-details__col--bold Доставка:
+                            .order-details__col Нова Пошта, відділення № 15 м .Дніпро
+                
+                button.button.button--outline.order-details__button(type="button") Деталі замовлення
+
+            .order-details.cabinet-section__order-details
+                .order-details__inner
+                    .order-details__item
+                        .order-details__row
+                            .order-details__col № замовлення:
+                            .order-details__col №49
+                        
+                        .order-details__row
+                            .order-details__col Дата замовлення:
+                            .order-details__col 28.05.2024
+                        
+                        .order-details__row
+                            .order-details__col Всього:
+                            .order-details__col 3099 грн
+                        
+                        .order-details__row
+                            .order-details__col Кількість товарів:
+                            .order-details__col 3
+
+                    .order-details__item
+                        .order-details__row
+                            .order-details__col Статус замовлення
+                            .order-details__col Передано на склад
+                        
+                        .order-details__row
+                            .order-details__col Оплата:
+                            .order-details__col Готівкою при отриманні
+                        
+                        .order-details__row
+                            .order-details__col Доставка:
+                            .order-details__col Нова Пошта, відділення № 15 м .Дніпро
+                
+                button.button.button--outline.order-details__button(type="button") Деталі замовлення
+
+            nav.pagination.cabinet-section__pagination(aria-label="Page navigation")
+                ul.pagination__list
+                    li.pagination__item
+                        button.pagination__button(type="button" aria-label="Previous page")
+                            svg.pagination__icon(width="7" height="12")
+                                use(xlink:href="img/sprite.svg#arrow-left")
+
+                    li.pagination__item.is-active(aria-current="page")
+                        button.pagination__button(type="button") 1
+                    
+                    li.pagination__item
+                        button.pagination__button(type="button") 2
+                    
+                    li.pagination__item
+                        span ...
+                    
+                    li.pagination__item
+                        button.pagination__button(type="button") 10
+
+                    li.pagination__item
+                        button.pagination__button(type="button" aria-label="Next page")
+                            svg.pagination__icon(width="7" height="12")
+                                use(xlink:href="img/sprite.svg#arrow-right")

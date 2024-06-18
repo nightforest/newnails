@@ -1,0 +1,62 @@
+.mobile-nav
+    .mobile-nav__sidebar
+        .mobile-nav__header
+            button.mobile-nav__close(type="button" data-nav-toggle aria-label="Close mobile menu")
+                svg.mobile-nav__close-icon(width="19" height="19")
+                    use(xlink:href="img/sprite.svg#close")
+            
+            a.mobile-nav__bonus(href="#")
+                svg.mobile-nav__bonus-icon(width="20" height="20")
+                    use(xlink:href="img/sprite.svg#nn")
+
+                .mobile-nav__bonus-text Бонусів 
+                    span 128₴
+
+            nav.actions.mobile-nav__actions
+                ul.actions__list
+                    li.actions__item
+                        a.actions__button(href="#")
+                            svg.actions__icon(width="24" height="22")
+                                use(xlink:href="img/sprite.svg#heart")
+                            
+                            span.actions__count 1
+
+            .dropdown.mobile-nav__currency
+                button.dropdown__toggle(type="button" data-toggle="currency-dropdown-mobile" aria-expanded="false") Гривня
+                    svg.dropdown__toggle-arrow(width="9" height="6")
+                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+                
+                ul#currency-dropdown-mobile.dropdown__list(aria-hidden="true")
+                    li.dropdown__item
+                        a.dropdown__link(href="#") Доллар
+                    
+                    li.dropdown__item
+                        a.dropdown__link(href="#") Євро
+
+        .mobile-nav__inner
+            nav.mobile-nav-menu
+                ul.mobile-nav-menu__list
+                    li.mobile-nav-menu__item
+                        a.mobile-nav-menu__link.is-active(href="#") Акції
+
+                    li.mobile-nav-menu__item
+                        a.mobile-nav-menu__link(href="#") Бренди
+                    
+                    li.mobile-nav-menu__item
+                        a.mobile-nav-menu__link(href="#") Про нас
+                    
+                    li.mobile-nav-menu__item
+                        a.mobile-nav-menu__link(href="#") Доставка та оплата
+                    
+                    li.mobile-nav-menu__item
+                        a.mobile-nav-menu__link(href="#") Оптові позиції
+                    
+                    li.mobile-nav-menu__item
+                        a.mobile-nav-menu__link(href="#") Накопичувальна знижка
+                    
+                    li.mobile-nav-menu__item
+                        a.mobile-nav-menu__link(href="#") Відгуки
+                    
+                    li.mobile-nav-menu__item
+                        a.mobile-nav-menu__link(href="#") Контакти
+    

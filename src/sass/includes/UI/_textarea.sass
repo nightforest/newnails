@@ -1,0 +1,40 @@
+.textarea
+    display: block
+    width: 100%
+    height: auto
+    border-radius: 0
+    background: var(--white)
+    border: 1px solid var(--black)
+    padding: 16px 20px
+    box-shadow: none
+    font-size: 16px
+    line-height: 1.2
+    color: var(--black)
+    font-weight: 400
+    outline: none
+    appearance: none
+    transition: all .5s ease
+    resize: vertical
+
+    &:hover,
+    &:focus
+        border-color: var(--ruby)
+
+    &::placeholder
+        color: #8A8A8A
+        font-weight: 300
+
+    &:read-only
+        color: var(--grey)
+
+        &:hover,
+        &:focus
+            border-color: var(--grey)
+
+    &::-webkit-contacts-auto-fill-button,
+    &::-webkit-credentials-auto-fill-button
+        visibility: hidden
+        display: none !important
+        pointer-events: none
+        position: absolute
+        right: 0

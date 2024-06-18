@@ -1,0 +1,117 @@
+section.cabinet-section
+    .container.cabinet-section__container
+        aside.cabinet-section__sidebar
+            include ./includes/_cabinet-menu.pug
+
+        article.cabinet-section__article
+            header.cabinet-section__header
+                h1.cabinet-section__title Деталі замовлення (№49)
+            
+            .order-details.cabinet-section__order-details
+                .order-details__inner
+                    .order-details__item
+                        .order-details__row
+                            .order-details__col.order-details__col--bold  Дата замовлення:
+                            .order-details__col 28.05.2024
+                        
+                        .order-details__row
+                            .order-details__col.order-details__col--bold  Всього:
+                            .order-details__col 3099 грн
+                        
+                        .order-details__row
+                            .order-details__col.order-details__col--bold  Кількість товарів:
+                            .order-details__col 3
+
+                        .order-details__row
+                            .order-details__col.order-details__col--bold  Статус замовлення
+                            .order-details__col Передано на склад
+
+            .order-details.cabinet-section__order-details
+                .order-details__header
+                    h3.order-details__subtitle Товари
+
+                .order-item.order-details__order-item
+                    .order-item__col
+                        picture.order-item__picture
+                            img.order-item__picture-img(src="img/gallery-img-thumb.webp" srcset="img/gallery-img-thumb@2x.webp 2x" loading="lazy" width="64" height="64" alt="alt")
+
+                    .order-item__col
+                        h4.order-item__title
+                            a.order-item__link(href="#") Стартовий набір для манікюру Saga
+                        
+                        .order-item__code Код товару 
+                            strong 4352635
+                            
+                    .order-item__col
+                        .order-item__price 800 ₴
+
+                    .order-item__col
+                        .order-item__count 2 шт
+
+                    .order-item__col
+                        .order-item__total 1600 ₴
+
+                .order-item.order-details__order-item
+                    .order-item__col
+                        picture.order-item__picture
+                            img.order-item__picture-img(src="img/gallery-img-thumb.webp" srcset="img/gallery-img-thumb@2x.webp 2x" loading="lazy" width="64" height="64" alt="alt")
+
+                    .order-item__col
+                        h4.order-item__title
+                            a.order-item__link(href="#") Стартовий набір для манікюру Saga
+                        
+                        .order-item__code Код товару 
+                            strong 4352635
+                            
+                    .order-item__col
+                        .order-item__price 800 ₴
+
+                    .order-item__col
+                        .order-item__count 2 шт
+
+                    .order-item__col
+                        .order-item__total 1600 ₴
+                        
+                .order-details__inner.order-details__inner--right
+                    .order-details__item
+                        h3.order-details__title Загальна вартість
+
+                        .order-details__row
+                            .order-details__col Використані кошти NewNails:
+                            .order-details__col 100 ₴
+                        
+                        .order-details__row
+                            .order-details__col Використані кошти Промокода:
+                            .order-details__col 120 ₴
+                        
+                        .order-details__row
+                            .order-details__col Вартість доставки:
+                            .order-details__col за тарифами перевізника
+                        
+                        .order-details__row
+                            .order-details__col.order-details__col--heavy Всього:
+                            .order-details__col.order-details__col--heavy 2920 ₴
+
+            ul.cabinet-section__data
+                li.cabinet-section__data-item.cabinet-section__data-item--lg
+                    h3.cabinet-section__data-title Дані про клієнта
+
+                    h4.cabinet-section__data-subtitle Володимир Гришко
+
+                    p.cabinet-section__data-text example@gmail.com
+                    p.cabinet-section__data-text +38 (099) 999 99 99
+
+                li.cabinet-section__data-item
+                    h3.cabinet-section__data-title Дані про доставку
+
+                    p.cabinet-section__data-text
+                        img(src="img/payment/np.svg" loading="lazy" width="25" height="24" alt="alt")
+                        | Нова Пошта, відділення № 15 м. Дніпро
+                
+                li.cabinet-section__data-item
+                    h3.cabinet-section__data-title Дані про оплату
+                    
+                    p.cabinet-section__data-text
+                        img(src="img/payment/visa.svg" loading="lazy" width="48" height="15" alt="alt")
+                        img(src="img/payment/mastercard.svg" loading="lazy" width="36" height="23" alt="alt")
+                        | Оплата на картку

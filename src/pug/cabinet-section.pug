@@ -1,0 +1,148 @@
+section.cabinet-section
+    .container.cabinet-section__container
+        aside.cabinet-section__sidebar
+            button.button.cabinet-menu-toggle(type="button" data-trigger="cabinet-menu" aria-expanded="false")
+                svg.cabinet-menu-toggle__icon(width="28" height="28")
+                    use(xlink:href="img/sprite.svg#account-user")
+                
+                | Мій аккаунт
+                
+                svg.cabinet-menu-toggle__arrow(width="12" height="7")
+                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+            nav#cabinet-menu.cabinet-menu(aria-hidden="true")
+                ul.cabinet-menu__list
+                    li.cabinet-menu__item
+                        a.cabinet-menu__link.is-active(href="#")
+                            svg.cabinet-menu__icon(width="28" height="28")
+                                use(xlink:href="img/sprite.svg#account-user")
+                            | Мій аккаунт
+
+                    li.cabinet-menu__item
+                        a.cabinet-menu__link(href="#")
+                            svg.cabinet-menu__icon(width="28" height="28")
+                                use(xlink:href="img/sprite.svg#account-heart")
+                            | Мій вибір
+                    
+                    li.cabinet-menu__item
+                        a.cabinet-menu__link(href="#")
+                            svg.cabinet-menu__icon(width="28" height="28")
+                                use(xlink:href="img/sprite.svg#account-nn")
+                            | NewNails бонуси
+                    
+                    li.cabinet-menu__item
+                        a.cabinet-menu__link(href="#")
+                            svg.cabinet-menu__icon(width="28" height="28")
+                                use(xlink:href="img/sprite.svg#account-cart")
+                            | Мої замовлення
+                    
+                    li.cabinet-menu__item
+                        a.cabinet-menu__link(href="#")
+                            svg.cabinet-menu__icon(width="28" height="28")
+                                use(xlink:href="img/sprite.svg#account-compare")
+                            | Порівняння
+
+                    li.cabinet-menu__item
+                        a.button.button--white.cabinet-menu__button(href="#") Вийти 
+
+        article.cabinet-section__article
+            header.cabinet-section__header
+                h1.cabinet-section__title Мій акаунт
+
+                form.form.cabinet-section__account-form(id="account-form" autocomplete="off" novalidate="novalidate")
+                    .form-block
+                        .form-block__grid
+                            .form-block__item.form-block__item--6
+                                input#accountInputName.input.form__input(type="text" name="accountInputName" placeholder="Ім'я *" autocomplete="off" required)
+                            
+                            .form-block__item.form-block__item--6
+                                input#accountInputLastName.input.form__input(type="text" name="accountInputLastName" placeholder="Прізвище *" autocomplete="off" required)
+
+                            .form-block__item.form-block__item--6
+                                input#accountInputPhone.input.form__input.tell-input(type="text" name="accountInputPhone" placeholder="" autocomplete="off" required)
+
+                            .form-block__item.form-block__item--6
+                                input#accountInputEmail.input.form__input(type="email" name="accountInputEmail" placeholder="Пошта *" autocomplete="off" required)
+
+                        .form__group
+                            .checkbox
+                                input.checkbox__input#accountAgree(type="checkbox" name="accountAgree" value="true" required)
+                                label.checkbox__label(for="accountAgree") Згоден(на) отримувати E-mail розсилку
+                        
+                        .form__buttons-group
+                            button.button.form__button.form__button--left Зберегти
+
+                form.form.cabinet-section__pass-form(id="pass-form" autocomplete="off" novalidate="novalidate")
+                    .form-block
+                        label.form-block__label Редагувати пароль
+
+                        .form-block__grid
+                            .form-block__item.form-block__item--6
+                                .form__input-group
+                                    input#passInputPassword.input.form__input(type="password" name="passInputPassword" placeholder="Пароль *" autocomplete="off" required)
+                                    
+                                    button.form__show-pass(type="button")
+                                        svg.form__show-pass-icon(width="26" height="18")
+                                            use(xlink:href="img/sprite.svg#eye")
+                                
+                                .form__input-info Використовуйте 8 або більше символів, що складаються з літер, цифр та символів. Для перевірки складності.
+                            
+                            .form-block__item.form-block__item--6
+                                .form__input-group
+                                    input#passInputConfirmPassword.input.form__input(type="password" name="passInputConfirmPassword" placeholder="Повторіть пароль *" autocomplete="off" required)
+                                    
+                                    button.form__show-pass(type="button")
+                                        svg.form__show-pass-icon(width="26" height="18")
+                                            use(xlink:href="img/sprite.svg#eye")
+                                        
+                        .form__buttons-group
+                            button.button.form__button.form__button--left Зберегти
+                
+                form.form.cabinet-section__delivery-form(id="delivery-form" autocomplete="off" novalidate="novalidate")
+                    .form-block
+                        label.form-block__label Додати дані по доставці
+
+                        .form-block__actions
+                            span № 1
+
+                            button.form-block__delete-button(type="button")
+                                svg(width="24" height="26")
+                                    use(xlink:href="img/sprite.svg#delete")
+
+                        .form-block__grid
+                            .form-block__item.form-block__item--6
+                                input#deliveryInputTitle.input.form__input(type="text" name="deliveryInputTitle" placeholder="Назва *" autocomplete="off" required)
+                            
+                            .form-block__item.form-block__item--6
+                                select#deliverySelectPostType.select.sort-form__select(name="deliverySelectPostType" aria-label="Select" required)
+                                    option(value="1") Нова пошта (відділення)
+                                    option(value="2") Нова пошта (поштомат)
+                                    option(value="3") Нова пошта (кур’єром)
+                                    option(value="4") Укрпошта (Експрес)
+                                    option(value="5") Міжнародна доставка
+                                    option(value="6") Самовивіз
+                            
+                            .form-block__item.form-block__item--6
+                                select#deliverySelectPostCity.select.sort-form__select(name="deliverySelectPostCity" aria-label="Select" required)
+                                    option(value="") Виберіть місто
+                                    option(value="1") Київ
+                                    option(value="2") Харків
+                                    option(value="3") Київ
+                                    option(value="4") Харків
+                                    option(value="5") Київ
+                                    option(value="6") Харків
+                            
+                            .form-block__item.form-block__item--6
+                                select#deliverySelectPostNumber.select.sort-form__select(name="deliverySelectPostNumber" aria-label="Select" required)
+                                    option(value="") Виберіть віділення
+                                    option(value="1") №1
+                                    option(value="2") №2
+                                    option(value="3") №3
+                                    option(value="4") №4
+                                        
+                        .form__buttons-group
+                            button.button.form__button.form__button--left Зберегти
+                            button.button.button--outline.form__button.form__button--left(type="button")
+                                svg.button__icon.ruby-color(width="15" height="20")
+                                    use(xlink:href="img/sprite.svg#location")
+                                | Додати адресу доставки

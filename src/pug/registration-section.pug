@@ -1,0 +1,43 @@
+section.login-section
+    picture.login-section__bg
+        source(srcset="img/login-bg-mobile@2x.webp 2x, img/login-bg-mobile.webb" width="320" height="644" media="(max-width: 767.98px)")
+        img.login-section__bg-img(src="img/login-bg.webp" srcset="img/login-bg@2x.webp 2x" width="1920" height="854" alt="alt")
+
+    .container.login-section__container
+        .login
+            h1.login__title Реєстрація
+
+            form.form.login__form(id="login-form" autocomplete="off" novalidate="novalidate")
+                .form__group
+                    input#loginInputEmail.input.form__input(type="email" name="loginInputEmail" placeholder="Пошта *" autocomplete="off" required)
+
+                .form__group
+                    .form__input-group
+                        input#loginInputPassword.input.form__input(type="password" name="loginInputPassword" placeholder="Пароль *" autocomplete="off" required)
+                        
+                        button.form__show-pass(type="button")
+                            svg.form__show-pass-icon(width="26" height="18")
+                                use(xlink:href="img/sprite.svg#eye")
+                    
+                    .form__input-info Використовуйте 8 або більше символів, що складаються з літер, цифр та символів. Для перевірки складності.
+                
+                .form__group
+                    .form__input-group
+                        input#loginInputConfirmPassword.input.form__input(type="password" name="loginInputConfirmPassword" placeholder="Повторіть пароль *" autocomplete="off" required)
+                        
+                        button.form__show-pass(type="button")
+                            svg.form__show-pass-icon(width="26" height="18")
+                                use(xlink:href="img/sprite.svg#eye")
+
+                .form__group
+                    .checkbox
+                        input.checkbox__input#loginAgree(type="checkbox" name="loginAgree" value="true" required)
+                        label.checkbox__label(for="loginAgree") Я прочитав(а) і згоден з 
+                            a.checkbox__link(href="#") Договором публічної оферти
+                            |  та 
+                            a.checkbox__link(href="#") Політикою конфіденційності
+
+                button.button.form__button.form__button--full Зареєструватися
+
+            .login__info Вже зареєстровані? 
+                a.login__info-link(href="#") Увійти

@@ -1,0 +1,142 @@
+.order
+    padding: 30px
+    background: var(--grey)
+
+    @media ($max-md)
+        padding: 15px
+
+    &__title
+        margin-bottom: 25px
+        font-size: 32px
+        font-weight: 700
+        text-align: center
+
+        @media ($max-md)
+            font-size: 24px
+            margin-bottom: 15px
+
+    &-item
+        display: grid
+        grid-template-columns: 1fr 2.5fr 1fr 1fr 1fr
+        align-items: center
+        gap: 10px
+        padding-bottom: 20px
+        margin-bottom: 20px
+        border-bottom: 1px solid #D9D9D9
+
+        @media ($max-md)
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 15px
+        
+        &__col
+            
+            @media ($max-md)
+                
+                &:nth-child(2)
+                    grid-column: 2 span
+                
+            &:nth-child(4)
+                text-align: center
+            
+            &:nth-child(5)
+                text-align: right
+
+        &__picture
+            display: flex
+    
+            &-img
+                width: 100%
+                height: auto
+                max-width: 100%
+        
+        &__title
+            margin-bottom: 6px
+            font-size: 14px
+            font-weight: 400
+            line-height: 1.25
+        
+        &__link
+            color: var(--black)
+            transition: color .5s ease
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--ruby)
+
+        &__code
+            font-size: 12px
+            font-weight: 300
+            line-height: 1
+            color: #393939
+        
+        &__price
+            font-size: 18px
+            font-weight: 400
+            line-height: 1
+        
+        &__count
+            font-size: 18px
+            font-weight: 300
+            line-height: 1
+        
+        &__total
+            font-size: 18px
+            font-weight: 700
+            line-height: 1
+    
+    &__sum
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 5px
+        font-size: 20px
+        font-weight: 700
+        margin-bottom: 20px
+
+        @media ($max-md)
+            font-size: 16px
+
+    &__row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 5px
+        font-size: 14px
+        margin-bottom: 15px
+
+        span
+
+            &:last-child
+                text-align: right
+    
+    &__info
+        padding: 15px 0
+        border-top: 1px solid #D9D9D9
+        border-bottom: 1px solid #D9D9D9
+        margin-bottom: 15px
+        font-size: 14px
+        text-align: center
+    
+    &__total
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 5px
+        font-size: 26px
+        font-weight: 900
+        margin-bottom: 20px
+
+        @media ($max-md)
+            font-size: 20px
+
+        &-value
+            color: var(--ruby)
+    
+    &__checkbox
+        margin-bottom: 30px
+    
+    &__button
+        width: 100%

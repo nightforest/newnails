@@ -1,0 +1,27 @@
+.circle-progressbar
+    position: relative
+    --size: 140px
+    --bar-width: 20px
+    --progress: 0%
+
+    font-family: var(--font-title)
+    font-size: 21px
+    font-weight: 400
+    width: var(--size)
+    aspect-ratio: 1 / 1
+    background: conic-gradient(var(--blue), var(--blue) var(--progress), #E0E9ED 0%)
+    border-radius: 50%
+    display: grid
+    place-items: center
+    z-index: 0
+
+    &:after
+        position: absolute
+        top: var(--bar-width)
+        left: var(--bar-width)
+        right: var(--bar-width)
+        bottom: var(--bar-width)
+        border-radius: 50%
+        background: var(--light-blue)
+        content: ""
+        z-index: -1

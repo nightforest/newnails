@@ -1,0 +1,119 @@
+.modal
+    position: absolute
+    top: 0
+    left: 0
+    z-index: $z-index-3
+    width: 100%
+    height: 100%
+    overflow-x: hidden
+    overflow-y: auto
+    outline: 0
+    opacity: 0
+    visibility: hidden
+    transition: all .5s ease
+
+    &.is-visible
+        opacity: 1
+        visibility: visible
+
+        .modal__window
+            transform: scale(1)
+
+    &--lg
+
+        .modal__window
+            max-width: 900px
+
+    &-wrap
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 1000
+        width: 100%
+        height: 100%
+        outline: 0
+        background: rgba(0, 0, 0, .5)
+        opacity: 0
+        visibility: hidden
+        transition: all .5s ease
+
+        &.is-visible
+            opacity: 1
+            visibility: visible
+
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: center
+        min-height: 100%
+        padding: 32px 16px
+
+    &__window
+        position: relative
+        width: 100%
+        max-width: 750px
+        background: #fff
+        border-radius: 0
+        overflow: hidden
+        transform: scale(.8)
+        transition: all .5s ease
+
+        &--video
+            max-width: 960px
+            overflow: visible
+            border-radius: 0
+
+    &__close
+        position: absolute
+        top: 10px
+        right: 10px
+        width: 32px
+        height: 32px
+        font-size: 0
+        color: var(--black)
+        transition: all .5s ease
+
+        &:hover,
+        &:focus-visible
+            color: var(--ruby)
+
+        &--outside
+            top: -32px
+            right: 0
+
+    &__content
+        padding: 50px
+
+        @media ($max-md)
+            padding: 40px 20px 30px
+
+        &--center
+            text-align: center
+
+    &__icon
+        display: flex
+        margin: 0 auto 35px
+
+    &__title
+        font-size: 30px
+        font-weight: 900
+        line-height: 1.25
+        margin: 0 0 15px
+        text-align: center
+
+        @media ($max-md)
+            font-size: 24px
+
+    &__text
+        font-size: 20px
+
+        @media ($max-md)
+            font-size: 16px
+
+        &:not(:last-child)
+            margin-bottom: 30px
+
+        p
+
+            &:not(:last-child)
+                margin-bottom: .75rem

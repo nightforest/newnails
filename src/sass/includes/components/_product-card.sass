@@ -1,0 +1,158 @@
+.product-card
+    position: relative
+    padding-bottom: 8px
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%
+
+    @media ($max-md)
+        padding-bottom: 0
+
+    &:hover,
+    &:active,
+    &:focus-visible
+        
+        .product-card__buttons
+            visibility: visible
+            opacity: 1
+
+    &__link
+        display: flex
+        flex-direction: column
+        width: 100%
+        height: 100%
+        color: var(--black)
+        transition: color .5s ease
+    
+    &__picture
+        display: flex
+        margin-bottom: 20px
+
+        @media ($max-sm)
+            margin-bottom: 15px
+    
+    &__img
+        width: 100%
+        height: auto
+        max-width: 100%
+    
+    &__group
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 8px
+        margin-bottom: 8px
+        min-height: 34px
+
+        @media ($max-sm)
+            min-height: 16px
+    
+    &__number
+        font-size: 14px
+        color: #393939
+
+        @media ($max-sm)
+            font-size: 10px
+    
+    &__status
+        display: flex
+        align-items: center
+        justify-content: center
+        min-width: 70px
+        height: 34px
+        padding: 4px 8px
+        background: var(--ruby)
+        color: var(--white)
+        font-size: 14px
+        text-transform: uppercase
+        text-align: center
+
+        @media ($max-sm)
+            min-width: 32px
+            height: 16px
+            font-size: 8px
+    
+    &__title
+        margin-bottom: 12px
+        font-size: 16px
+        font-weight: 300
+        line-height: 1.25
+
+        @media ($max-sm)
+            font-size: 12px
+            margin-bottom: 8px
+    
+    &__feedback
+        display: flex
+        align-items: center
+        gap: 5px
+        line-height: 1
+        margin-bottom: 5px
+        margin-top: auto
+
+        span
+            color: #393939
+
+            @media ($max-sm)
+                font-size: 12px
+    
+    &__price
+        display: flex
+        align-items: center
+        gap: 12px
+        font-size: 18px
+
+        @media ($max-sm)
+            font-size: 12px
+    
+    &__buttons
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        display: flex
+        gap: 10px
+        opacity: 0
+        visibility: hidden
+        transition: opacity .25s ease, visibility .25s ease
+        z-index: $z-index-1
+
+        @media ($max-md)
+            position: relative
+            top: auto
+            left: auto
+            margin-top: 5px
+            visibility: visible
+            opacity: 1
+        
+        @media ($max-sm)
+            gap: 5px
+    
+    &__buy-button
+        width: 100%
+        min-width: 0
+
+        @media ($max-sm)
+            height: 35px
+            font-size: 12px
+    
+    &__wish-button
+        width: 54px
+        min-width: 54px
+        padding: 4px
+        fill: none
+
+        @media ($max-sm)
+            width: 35px
+            min-width: 35px
+            height: 35px
+
+        &.is-active
+            fill: currentColor
+
+        .button__icon
+
+            @media ($max-sm)
+                width: 16px
+                height: 16px

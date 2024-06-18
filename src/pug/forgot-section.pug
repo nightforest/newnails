@@ -1,0 +1,15 @@
+section.login-section
+    picture.login-section__bg
+        source(srcset="img/login-bg-mobile@2x.webp 2x, img/login-bg-mobile.webb" width="320" height="644" media="(max-width: 767.98px)")
+        img.login-section__bg-img(src="img/login-bg.webp" srcset="img/login-bg@2x.webp 2x" width="1920" height="854" alt="alt")
+
+    .container.login-section__container
+        .login
+            h1.login__title Забули пароль?
+
+            form.form.login__form(id="login-form" autocomplete="off" novalidate="novalidate")
+                .form__group
+                    input#loginInputEmail.input.form__input(type="email" name="loginInputEmail" placeholder="Пошта *" autocomplete="off" required)
+
+                button.button.form__button.form__button--full Відправити
+                

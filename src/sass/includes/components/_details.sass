@@ -1,0 +1,169 @@
+.details
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    gap: 30px
+
+    @media ($max-lg)
+        display: flex
+        flex-direction: column
+        gap: 0
+
+    &__col
+        grid-column: 4 span
+
+        @media ($max-lg)
+            display: contents
+
+        &:last-child
+            padding-left: 100px
+
+            @media ($max-xxl)
+                padding-left: 30px
+            
+            @media ($max-lg)
+                padding-left: 0
+
+    &__status
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 30px
+        min-width: 70px
+        height: 34px
+        padding: 4px 8px
+        background: var(--ruby)
+        color: var(--white)
+        font-size: 14px
+        text-transform: uppercase
+        text-align: center
+
+        @media ($max-lg)
+            display: none
+    
+    &__title
+        margin-bottom: 45px
+        font-size: 32px
+        font-weight: 600
+        line-height: 1.25
+        text-transform: uppercase
+
+        @media ($max-lg)
+            order: 1
+            font-size: 24px
+            text-align: center
+            margin-bottom: 15px
+
+    &__brand
+        margin-bottom: 45px
+        font-size: 20px
+        font-weight: 300
+
+        @media ($max-lg)
+            order: 5
+            text-align: center
+            margin-bottom: 15px
+            font-size: 16px
+
+    &__feedback
+        display: flex
+        align-items: center
+        gap: 5px
+        line-height: 1
+        margin-bottom: 40px
+
+        @media ($max-lg)
+            order: 6
+            justify-content: center
+            margin-bottom: 15px
+
+        span
+            padding-top: 4px
+            color: #393939
+
+    &__discount
+        font-size: 20px
+        font-weight: 300
+
+        @media ($max-lg)
+            order: 7
+            font-size: 16px
+            text-align: center
+
+    &__gallery
+
+        @media ($max-lg)
+            order: 2
+            margin-bottom: 15px
+
+    &__group
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 8px
+        margin-bottom: 40px
+
+        @media ($max-lg)
+            order: 3
+            margin-bottom: 15px
+
+    &__buy-form
+
+        @media ($max-lg)
+            order: 4
+            margin-bottom: 30px
+
+    &__price
+        display: flex
+        align-items: center
+        gap: 16px
+        font-size: 32px
+
+        @media ($max-md)
+            font-size: 20px
+    
+    &__actions
+        display: flex
+        gap: 10px
+    
+        &-button
+            width: 54px
+            min-width: 54px
+            padding: 4px
+            fill: none
+
+            @media ($max-md)
+                width: 45px
+                min-width: 45px
+                height: 45px
+
+            &.is-active
+                fill: currentColor
+                background: var(--black)
+    
+    &__available
+        display: flex
+        align-items: center
+        text-align: left
+        gap: 10px
+        font-size: 20px
+        font-weight: 600
+        line-height: 1
+
+        @media ($max-md)
+            font-size: 16px
+            gap: 5px
+
+        &-icon
+            margin-top: -2px
+            
+            @media ($max-md)
+                width: 16px
+                height: 16px
+    
+    &__code
+        font-size: 20px
+        font-weight: 300
+
+        @media ($max-md)
+            font-size: 16px

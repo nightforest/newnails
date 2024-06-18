@@ -1,0 +1,75 @@
+.actions
+
+    &__list
+        display: flex
+        align-items: center
+        gap: 34px
+        margin: 0
+        padding: 0
+        list-style: none
+
+        @media ($max-xxl)
+            gap: 24px
+
+        @media ($max-md)
+            gap: 20px
+
+        @media ($max-xs)
+            gap: 14px
+
+    &__item
+
+        &--hidden-md
+
+            @media ($max-md)
+                display: none
+    
+    &__button
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 24px
+        min-width: 24px
+        height: 24px
+        color: var(--white)
+        transition: color .5s ease
+
+        @media ($max-md)
+            width: 18px
+            min-width: 18px
+            height: 18px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--ruby)
+    
+    &__icon
+        fill: none
+        
+        @media ($max-xs)
+            width: 18px
+            height: 18px
+
+    &__count
+        position: absolute
+        bottom: -7px
+        right: -9px
+        width: 18px
+        height: 18px
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        background: var(--ruby)
+        text-align: center
+        font-size: 13px
+        line-height: 1
+        font-weight: 600
+        color: var(--white)
+
+        @media ($max-md)
+            width: 15px
+            height: 15px
+            font-size: 11px

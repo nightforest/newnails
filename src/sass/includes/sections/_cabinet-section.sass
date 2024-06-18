@@ -1,0 +1,297 @@
+.cabinet-section
+    padding: 0 0 40px
+
+    @media ($max-md)
+        padding: 30px 0
+
+    &__container
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 30px
+
+        @media ($max-lg)
+            display: flex
+            flex-direction: column
+    
+    &__sidebar
+        grid-column: 3 span
+
+        @media ($max-xl)
+            grid-column: 4 span
+    
+    &__article
+        grid-column: 9 span
+
+        @media ($max-xl)
+            grid-column: 8 span
+
+    &__header
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        gap: 30px
+        margin-bottom: 20px
+
+        @media ($max-md)
+            flex-direction: column
+            gap: 10px
+
+    &__title
+        font-size: 36px
+        font-weight: 700
+
+        @media ($max-md)
+            font-size: 24px
+            text-align: center
+    
+    &__subtitle
+        font-size: 24px
+        font-weight: 900
+
+        @media ($max-md)
+            font-size: 20px
+            text-align: center
+
+    &__count
+        font-size: 18px
+    
+    &__actions
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 30px
+        margin-bottom: 25px
+
+        @media ($max-md)
+            flex-direction: column
+            align-items: stretch
+            gap: 20px
+    
+    &__control
+        display: flex
+        align-items: center
+        gap: 30px
+
+        &-button
+
+            @media ($max-md)
+                min-width: 0
+                width: 100%
+                padding: 4px 8px
+                font-size: 14px
+
+        &--hidden-md
+
+            @media ($max-md)
+                display: none
+
+        &--visible-md
+            margin-bottom: 25px
+            gap: 8px
+
+            @media ($min-md)
+                display: none
+
+    &__sort
+        
+        &-group
+            display: flex
+            align-items: center
+            gap: 20px
+
+            @media ($max-md)
+                flex-direction: column
+                align-items: stretch
+                gap: 10px
+        
+        &-label
+            display: block
+            margin: 0
+            font-size: 16px
+            font-weight: 600
+
+            @media ($max-md)
+                text-align: center
+
+    &__filter
+        display: flex
+        align-items: center
+        gap: 30px
+
+        @media ($max-md)
+            justify-content: space-between
+            gap: 10px
+
+        &-button
+            display: flex
+            align-items: center
+            gap: 8px
+            font-size: 18px
+            color: var(--black)
+            transition: color .5s ease
+
+            @media ($max-md)
+                font-size: 12px
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--ruby)
+
+            svg
+
+                @media ($max-md)
+                    width: 16px
+                    height: 16px
+            
+            &--ruby
+                color: var(--ruby)
+
+                &:hover,
+                &:active,
+                &:focus-visible
+                    color: var(--black)
+
+    &__account-form
+        margin-bottom: 30px
+
+    &__pass-form
+        margin-bottom: 30px
+
+    &__products
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 30px
+        margin: 0 0 80px
+        padding: 0
+        list-style: none
+
+        @media ($max-md)
+            gap: 20px
+            margin-bottom: 30px
+
+        &-item
+            grid-column: 3 span
+            display: flex
+            flex-direction: column
+
+            @media ($max-xl)
+                grid-column: 6 span
+
+    &__total
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        padding: 15px
+        gap: 45px
+        background: var(--grey)
+
+        @media ($max-md)
+            flex-direction: column
+            align-items: stretch
+            text-align: center
+            gap: 10px
+
+        &-title
+            font-size: 18px
+        
+        &-value
+            font-size: 24px
+            font-weight: 900
+            color: var(--ruby)
+
+    &__bonuses
+        margin-bottom: 20px
+
+    &__info
+        padding: 25px 30px
+        background: var(--grey)
+
+        @media ($max-md)
+            padding: 20px 15px
+
+        h3
+            margin-bottom: 1rem
+            font-size: 20px
+
+            @media ($max-md)
+                font-size: 16px
+        
+        p
+
+            @media ($max-md)
+                font-size: 14px
+
+            &:not(:last-child)
+                margin-bottom: 1rem
+
+    &__order-details
+        margin-bottom: 20px
+    
+    &__data
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 15px 30px
+        margin: 0
+        padding: 0
+        list-style: none
+
+        @media ($max-md)
+            display: flex
+            flex-direction: column
+
+        &-item
+            grid-column: 6 span
+            padding: 30px
+            background: var(--grey)
+
+            @media ($max-md)
+                padding: 20px 15px
+                text-align: center
+
+            &--lg
+                grid-row: 2 span
+
+        &-title
+            margin-bottom: 15px
+            font-size: 20px
+            
+            @media ($max-md)
+                font-size: 18px
+
+        &-subtitle
+            margin-bottom: 5px
+            font-size: 18px
+            font-weight: 900
+        
+        &-text
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            gap: 10px
+
+            @media ($max-md)
+                justify-content: center
+
+            &:not(:last-child)
+                margin-bottom: 5px
+
+    &__categories-slider
+        margin-bottom: 110px
+
+        @media ($max-md)
+            margin-bottom: 30px
+
+        .category-card__title
+            font-size: 14px
+        
+        .categories-slider__slide
+
+            @media ($min-md)
+                width: 95px
+        
+        .categories-slider__wrapper
+
+            @media ($min-md)
+                gap: 20px

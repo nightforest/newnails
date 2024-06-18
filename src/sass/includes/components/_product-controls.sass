@@ -1,0 +1,22 @@
+.product-controls
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 12px
+
+    &__checkbox
+        width: 25px
+    
+    &__delete-button
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 25px
+        height: 25px
+        color: var(--ruby)
+        transition: color .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--black)

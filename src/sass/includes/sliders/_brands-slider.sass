@@ -1,0 +1,29 @@
+.brands-slider
+    position: relative
+
+    @media ($max-md)
+        padding: 0 30px
+
+    &__slide
+        display: flex
+        align-items: center
+        justify-content: center
+
+    &__picture
+        display: flex
+    
+    &__img
+        max-width: 100%
+        height: auto
+    
+    &__prev
+        left: -65px
+
+        @media ($max-md)
+            left: -15px
+    
+    &__next
+        right: -65px
+
+        @media ($max-md)
+            right: -15px

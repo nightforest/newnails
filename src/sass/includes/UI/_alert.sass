@@ -1,0 +1,28 @@
+.alert
+    position: fixed
+    top: var(--header-h)
+    right: 0
+    display: inline-flex
+    align-items: center
+    gap: 10px
+    padding: 5px 10px
+    height: 40px
+    border-radius: 0
+    background: #6B9B35
+    color: var(--white)
+    font-size: 13px
+    line-height: 1
+    transform: translateX(100%)
+    opacity: 0
+    visibility: hidden
+    transition: all .5s ease
+    z-index: 2000
+    cursor: pointer
+
+    &.is-visible
+        transform: translateX(0)
+        opacity: 1
+        visibility: visible
+
+    &--red
+        background: #C10808

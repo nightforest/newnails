@@ -1,0 +1,171 @@
+.filter
+    .filter__sidebar
+        .filter__header
+            h2.filter__title Фільтр
+
+            svg.filter__icon(width="22" height="20")
+                use(xlink:href="img/sprite.svg#filter")
+
+            button.filter__close(type="button" aria-label="Close filter" data-filter-close)
+                svg.filter__close-icon(width="19" height="19")
+                    use(xlink:href="img/sprite.svg#close")
+
+        .filter__inner
+            .filter-block
+                button.filter-block__toggle(type="button" data-trigger="filter-block-1" aria-expanded="false") Бренд
+                    .filter-block__toggle-icon
+                
+                #filter-block-1.filter-block__body(aria-hidden="true")
+                    .filter-block__inner
+                        ul.filter-block__list
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-1(type="checkbox" name="filterCheckbox-1" value="true" checked)
+                                    label.checkbox__label(for="filterCheckbox-1") Brand 1
+                            
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-2(type="checkbox" name="filterCheckbox-2" value="true")
+                                    label.checkbox__label(for="filterCheckbox-2") Brand 2
+
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-3(type="checkbox" name="filterCheckbox-3" value="true")
+                                    label.checkbox__label(for="filterCheckbox-3") Brand 3
+
+            .filter-block
+                button.filter-block__toggle(type="button" data-trigger="filter-block-2" aria-expanded="true") Колір
+                    .filter-block__toggle-icon
+                
+                #filter-block-2.filter-block__body(aria-hidden="false")
+                    .filter-block__inner
+                        ul.filter-block__list
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-21(type="checkbox" name="filterCheckbox-21" value="true" checked)
+                                    label.checkbox__label(for="filterCheckbox-21") Бежевий(55)
+                            
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-22(type="checkbox" name="filterCheckbox-22" value="true")
+                                    label.checkbox__label(for="filterCheckbox-22") Білий(55)
+
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-23(type="checkbox" name="filterCheckbox-23" value="true")
+                                    label.checkbox__label(for="filterCheckbox-23") Блакитний(55)
+                            
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-24(type="checkbox" name="filterCheckbox-24" value="true" checked)
+                                    label.checkbox__label(for="filterCheckbox-24") Блискучий(55)
+                            
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-25(type="checkbox" name="filterCheckbox-25" value="true")
+                                    label.checkbox__label(for="filterCheckbox-25") Бордовий(55)
+
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-26(type="checkbox" name="filterCheckbox-26" value="true")
+                                    label.checkbox__label(for="filterCheckbox-26") Бузковий(55)
+                            
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-27(type="checkbox" name="filterCheckbox-27" value="true" checked)
+                                    label.checkbox__label(for="filterCheckbox-27") Глітер(55)
+                            
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-28(type="checkbox" name="filterCheckbox-28" value="true")
+                                    label.checkbox__label(for="filterCheckbox-28") Білий(55)
+
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-29(type="checkbox" name="filterCheckbox-29" value="true")
+                                    label.checkbox__label(for="filterCheckbox-29") Блакитний(55)
+
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-210(type="checkbox" name="filterCheckbox-210" value="true" checked)
+                                    label.checkbox__label(for="filterCheckbox-210") Бежевий(55)
+                            
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-211(type="checkbox" name="filterCheckbox-211" value="true")
+                                    label.checkbox__label(for="filterCheckbox-211") Білий(55)
+
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-212(type="checkbox" name="filterCheckbox-212" value="true")
+                                    label.checkbox__label(for="filterCheckbox-212") Блакитний(55)
+
+            .filter-block
+                button.filter-block__toggle(type="button" data-trigger="filter-block-3" aria-expanded="false") Призначення
+                    .filter-block__toggle-icon
+                
+                #filter-block-3.filter-block__body(aria-hidden="true")
+                    .filter-block__inner
+                        ul.filter-block__list
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-31(type="checkbox" name="filterCheckbox-31" value="true" checked)
+                                    label.checkbox__label(for="filterCheckbox-31") Brand 1
+                            
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-32(type="checkbox" name="filterCheckbox-32" value="true")
+                                    label.checkbox__label(for="filterCheckbox-32") Brand 2
+
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-33(type="checkbox" name="filterCheckbox-33" value="true")
+                                    label.checkbox__label(for="filterCheckbox-33") Brand 3
+
+            .filter-block
+                button.filter-block__toggle(type="button" data-trigger="filter-block-4" aria-expanded="false") Класифікація
+                    .filter-block__toggle-icon
+                
+                #filter-block-4.filter-block__body(aria-hidden="true")
+                    .filter-block__inner
+                        ul.filter-block__list
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-41(type="checkbox" name="filterCheckbox-41" value="true" checked)
+                                    label.checkbox__label(for="filterCheckbox-41") Brand 1
+                            
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-42(type="checkbox" name="filterCheckbox-42" value="true")
+                                    label.checkbox__label(for="filterCheckbox-42") Brand 2
+
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-43(type="checkbox" name="filterCheckbox-43" value="true")
+                                    label.checkbox__label(for="filterCheckbox-43") Brand 3
+
+            .filter-block
+                button.filter-block__toggle(type="button" data-trigger="filter-block-5" aria-expanded="false") Стать
+                    .filter-block__toggle-icon
+                
+                #filter-block-5.filter-block__body(aria-hidden="true")
+                    .filter-block__inner
+                        ul.filter-block__list
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-51(type="checkbox" name="filterCheckbox-51" value="true" checked)
+                                    label.checkbox__label(for="filterCheckbox-51") Brand 1
+                            
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-52(type="checkbox" name="filterCheckbox-52" value="true")
+                                    label.checkbox__label(for="filterCheckbox-52") Brand 2
+
+                            li.filter-block__item
+                                .checkbox.filter-block__checkbox
+                                    input.checkbox__input#filterCheckbox-53(type="checkbox" name="filterCheckbox-53" value="true")
+                                    label.checkbox__label(for="filterCheckbox-53") Brand 3
+
+            .filter__buttons-group
+                button.button.filter__button(type="button") Показати
+                button.button.button--outline.filter__button(type="button") Скинути

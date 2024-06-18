@@ -1,0 +1,53 @@
+.stars-rating
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row-reverse
+    gap: 5px
+    border: none
+    padding: 0
+    margin: 0
+
+    &:not(:checked) > input
+        position: absolute
+        top: -9999px
+        clip: rect(0, 0, 0, 0)
+
+    &:not(:checked) > label
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 36px
+        height: 36px
+        padding: 0
+        overflow: hidden
+        white-space: nowrap
+        cursor: pointer
+        font-size: 0
+        line-height: 1
+        color: #aaa
+
+    &__icon
+        color: #aaa
+        transition: all .5s ease
+
+    & > input:checked ~ label
+
+        .stars-rating__icon
+            color: var(--black)
+
+    &:not(:checked) > label:hover, 
+    &:not(:checked) > label:hover ~ label
+
+        .stars-rating__icon
+            color: var(--ruby)
+
+    & > input:checked + label:hover, 
+    & > input:checked + label:hover ~ label, 
+    & > input:checked ~ label:hover, 
+    & > input:checked ~ label:hover ~ label, 
+    & > label:hover ~ input:checked ~ label
+        color: var(--ruby)
+
+    & > label:active
+        position: relative

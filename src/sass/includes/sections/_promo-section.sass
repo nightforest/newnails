@@ -1,0 +1,44 @@
+.promo-section
+    padding: 40px 0
+
+    @media ($max-md)
+        padding: 20px 0
+
+    &__container
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 30px
+
+        @media ($max-xl)
+            display: flex
+            flex-direction: column
+        
+        @media ($max-md)
+            padding: 0
+    
+    &__col
+        grid-column: 6 span
+
+    &__info
+        margin-top: 15px
+
+        @media ($max-md)
+            margin-top: 10px
+            font-size: 14px
+            text-align: center
+            padding: 0 15px
+
+        &-time
+            color: var(--ruby)
+            font-weight: 600
+
+    &--grey
+        background: var(--grey)
+
+        @media ($max-md)
+            padding: 40px 0
+
+        .promo-section__container
+
+            @media ($max-md)
+                padding: 0 15px

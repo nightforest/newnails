@@ -1,0 +1,42 @@
+.breadcrumbs
+
+    &__list
+        padding-left: 0
+        list-style: none
+        margin: 0
+        font-size: 0
+        text-align: center
+
+    &__item
+        position: relative
+        color: var(--black)
+        display: inline
+        font-size: 18px
+        font-weight: 500
+
+        @media ($max-md)
+            font-size: 14px
+
+        &:after
+            margin: 0 6px
+            font-weight: 300
+            content: '/'
+
+        &:last-child
+            margin-right: 0
+
+            &:after
+                display: none
+
+    &__link
+        position: relative
+        color: var(--black)
+        font-weight: 300
+        text-decoration: none
+        display: inline
+        transition: all .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--ruby)

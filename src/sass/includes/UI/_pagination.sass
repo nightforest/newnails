@@ -1,0 +1,64 @@
+.pagination
+
+    &__list
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 12px
+        padding-left: 0
+        list-style: none
+        margin: 0
+
+        @media ($max-md)
+            gap: 10px
+
+    &__item
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 54px
+        height: 54px
+        line-height: 1
+        color: var(--black)
+        font-size: 16px
+        font-weight: 600
+        text-align: center
+
+        @media ($max-md)
+            width: 40px
+            height: 40px
+
+        &.is-active
+
+            .pagination__button
+                background: var(--black)
+                color: var(--white)
+
+    &__button
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 54px
+        height: 54px
+        border-radius: 0
+        border: 1px solid var(--black)
+        text-decoration: none
+        font-size: 16px
+        background: var(--white)
+        color: var(--black)
+        line-height: 1
+        transition: background .5s ease, color .5s ease, border-color .5s ease
+        outline: none
+
+        @media ($max-md)
+            width: 40px
+            height: 40px
+            font-size: 14px
+        
+        &:hover,
+        &:active,
+        &:focus-visible
+            outline: none
+            background: var(--ruby)
+            color: var(--white)
+            border-color: var(--ruby)

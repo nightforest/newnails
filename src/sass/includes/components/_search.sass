@@ -1,0 +1,47 @@
+.search
+
+    &-toggle
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 18px
+        height: 18px
+        color: var(--white)
+    
+    &-form
+        position: relative
+
+        &:hover
+
+            .search-form__input
+                border-color: var(--ruby)
+        
+        &__input
+            height: 34px
+            padding: 4px 30px 4px 0
+            border: none
+            border-bottom: 1px solid var(--white)
+            background: none
+            font-size: 16px
+            color: var(--white)
+
+            &::placeholder
+                color: var(--white)
+
+        &__button
+            position: absolute
+            right: 0
+            top: 50%
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 24px
+            height: 24px
+            translate: 0 -50% 0
+            color: var(--white)
+            transition: color .5s ease
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--ruby)

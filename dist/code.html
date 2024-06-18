@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <!--base(href="/")-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+        <!-- Title -->
+        <title>Login Page</title>
+        <!-- SEO Meta -->
+        <meta name="description" content="Description">
+        <meta name="keywords" content="keyword">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+      <script type="module" crossorigin src="/assets/main-6bb560e3.js"></script>
+      <link rel="stylesheet" href="/assets/main-effe7aae.css">
+    </head>
+    <body>
+        <!-- Header -->
+        
+<header class="header">
+  <div class="header__top" id="header-top" aria-hidden="false">
+    <div class="container header__top-container">
+      <p class="header__slogan">Безкоштовна доставка від 1500 грн</p>
+      <button class="header__top-close" type="button" data-trigger="header-top" aria-expanded="true" aria-label="Close panel">
+        <svg class="header__top-close-icon" width="12" height="12">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="dropdown header__currency">
+        <button class="dropdown__toggle" type="button" data-toggle="currency-dropdown" aria-expanded="false">Гривня
+          <svg class="dropdown__toggle-arrow" width="9" height="6">
+            <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+          </svg>
+        </button>
+        <ul class="dropdown__list" id="currency-dropdown" aria-hidden="true">
+          <li class="dropdown__item"><a class="dropdown__link" href="#">Доллар</a></li>
+          <li class="dropdown__item"><a class="dropdown__link" href="#">Євро</a></li>
+        </ul>
+      </div>
+      <div class="dropdown header__lang">
+        <button class="dropdown__toggle" type="button" data-toggle="lang-dropdown" aria-expanded="false">UA
+          <svg class="dropdown__toggle-arrow" width="9" height="6">
+            <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+          </svg>
+        </button>
+        <ul class="dropdown__list" id="lang-dropdown" aria-hidden="true">
+          <li class="dropdown__item"><a class="dropdown__link" href="#">EN</a></li>
+          <li class="dropdown__item"><a class="dropdown__link" href="#">DE</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="header__middle">
+    <div class="container header__middle-container">
+      <button class="burger header__burger" type="button" aria-expanded="false" data-nav-toggle="data-nav-toggle" aria-label="Show menu">
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+      </button>
+      <div class="dropdown dropdown--clean header__mobile-lang">
+        <button class="dropdown__toggle" type="button" data-toggle="lang-dropdown-mobile" aria-expanded="false">UA
+          <svg class="dropdown__toggle-arrow" width="9" height="6">
+            <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+          </svg>
+        </button>
+        <ul class="dropdown__list" id="lang-dropdown-mobile" aria-hidden="true">
+          <li class="dropdown__item"><a class="dropdown__link" href="#">EN</a></li>
+          <li class="dropdown__item"><a class="dropdown__link" href="#">DE</a></li>
+        </ul>
+      </div>
+      <button class="search-toggle header__search-toggle" type="button" data-toggle="search" aria-expanded="false" aria-label="Show search">
+        <svg class="search-toggle__icon" width="18" height="18">
+          <use xlink:href="img/sprite.svg#search"></use>
+        </svg>
+      </button>
+      <button class="button header__catalog-button" type="button" data-catalog-toggle="data-catalog-toggle">
+        <svg width="22" height="22">
+          <use xlink:href="img/sprite.svg#catalog"></use>
+        </svg><span>Каталог</span>
+      </button>
+      <div class="phones header__phones">
+        <button class="phones__toggle" type="button" data-toggle="phones-dropdown" aria-expanded="false">
+          <svg class="phones__toggle-icon" width="24" height="24">
+            <use xlink:href="img/sprite.svg#phone"></use>
+          </svg><span class="phones__toggle-text">+380 (98) 837-48-51</span>
+          <svg class="phones__toggle-arrow" width="15" height="9">
+            <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+          </svg>
+        </button>
+        <ul class="phones__list" id="phones-dropdown" aria-hidden="true">
+          <li class="phones__item"><a class="phones__link" href="tel:+380662188916">+380 (66) 218-89-16</a></li>
+          <li class="phones__item"><a class="phones__link" href="tel:+380988374851">+380 (98) 837-48-51</a></li>
+        </ul>
+      </div>
+      <div class="logo header__logo"><a class="logo__link" href="#" aria-label="logo">
+          <svg class="logo__img" width="132" height="73">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg></a></div>
+      <div class="search header__search" id="search" aria-hidden="true">
+        <form class="search-form">
+          <input class="input search-form__input" type="text" name="inputSearch" placeholder="Пошук" autocomplete="off" required="required"/>
+          <button class="search-form__button" type="button" aria-label="Search">
+            <svg class="search-form__button-icon" width="21" height="21">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+      </div><a class="header__bonus" href="#">
+        <svg class="header__bonus-icon" width="24" height="24">
+          <use xlink:href="img/sprite.svg#nn"></use>
+        </svg>
+        <div class="header__bonus-text">Бонусів <span>128₴</span></div></a>
+      <nav class="actions header__actions">
+        <ul class="actions__list">
+          <li class="actions__item actions__item--hidden-md"><a class="actions__button" href="#">
+              <svg class="actions__icon" width="24" height="22">
+                <use xlink:href="img/sprite.svg#heart"></use>
+              </svg><span class="actions__count">1</span></a></li>
+          <li class="actions__item"><a class="actions__button" href="#">
+              <svg class="actions__icon" width="21" height="24">
+                <use xlink:href="img/sprite.svg#user"></use>
+              </svg></a></li>
+          <li class="actions__item"><a class="actions__button" href="#" data-modal="modal-cart">
+              <svg class="actions__icon" width="18" height="24">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg><span class="actions__count">12</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container header__bottom-container">
+      <button class="button header__catalog-button-mobile" type="button" data-catalog-toggle="data-catalog-toggle">
+        <svg class="button__icon" width="22" height="22">
+          <use xlink:href="img/sprite.svg#catalog"></use>
+        </svg>
+        <svg class="button__icon" width="22" height="22">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg><span>Каталог</span>
+      </button>
+      <nav class="menu header__menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a class="menu__link is-active" href="#">Акції</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Бренди</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Про нас</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Доставка та оплата</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Оптові позиції</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Накопичувальна знижка</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Відгуки</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+        <!-- Main -->
+        <main id="main" class="main">
+            
+<section class="breadcrumbs-section">
+  <div class="container breadcrumbs-section__container">
+    <nav class="breadcrumbs breadcrumbs-section__breadcrumbs" aria-label="breadcrumb">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Головна</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Авторизація</li>
+      </ul>
+    </nav>
+  </div>
+</section>
+            
+<section class="login-section">
+  <picture class="login-section__bg">
+    <source srcset="img/login-bg-mobile@2x.webp 2x, img/login-bg-mobile.webb" width="320" height="644" media="(max-width: 767.98px)"/><img class="login-section__bg-img" src="img/login-bg.webp" srcset="img/login-bg@2x.webp 2x" width="1920" height="854" alt="alt"/>
+  </picture>
+  <div class="container login-section__container">
+    <div class="login">
+      <h1 class="login__title login__title--sm">Введіть верифікаційний код, який був надісланий вам на E-mail</h1>
+      <form class="form login__form" id="login-form" autocomplete="off" novalidate="novalidate">
+        <div class="form__code">
+          <div class="form__code-item">
+            <input class="input form__input input-numbers" id="LoginInputCode1" type="text" name="LoginInputCode1" placeholder="x" maxlength="1" autocomplete="off" required="required"/>
+          </div>
+          <div class="form__code-item">
+            <input class="input form__input input-numbers" id="LoginInputCode2" type="text" name="LoginInputCode2" placeholder="x" maxlength="1" autocomplete="off" required="required"/>
+          </div>
+          <div class="form__code-item">
+            <input class="input form__input input-numbers" id="LoginInputCode3" type="text" name="LoginInputCode3" placeholder="x" maxlength="1" autocomplete="off" required="required"/>
+          </div>
+          <div class="form__code-item">
+            <input class="input form__input input-numbers" id="LoginInputCode4" type="text" name="LoginInputCode4" placeholder="x" maxlength="1" autocomplete="off" required="required"/>
+          </div>
+        </div>
+      </form>
+      <div class="login__info">Запросити код повторно <strong class="ruby-color countdown-sec" data-duration="60">60</strong></div>
+    </div>
+  </div>
+</section>
+        </main>
+
+        <!-- Footer -->
+        
+<footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__col">
+      <div class="footer__logo-group">
+        <div class="logo footer__logo"><a class="logo__link" href="#" aria-label="logo">
+            <svg class="logo__img" width="130" height="72">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg></a></div>
+        <p class="footer__slogan">NewNails - це найкращий вибір українців 2024</p>
+        <div class="footer__map"><a class="footer__map-link" href="#">Карта сайту</a></div>
+      </div>
+      <div class="footer__payment-group">
+        <div class="payment footer__payment">
+          <h3 class="payment__title">Спосіб оплати</h3>
+          <ul class="payment__list">
+            <li class="payment__item"><img class="payment__logo" src="img/payment/liqpay.svg" loading="lazy" width="33" height="8" alt="alt"/></li>
+            <li class="payment__item"><img class="payment__logo" src="img/payment/visa.svg" loading="lazy" width="32" height="10" alt="alt"/></li>
+            <li class="payment__item"><img class="payment__logo" src="img/payment/mastercard.svg" loading="lazy" width="22" height="14" alt="alt"/></li>
+            <li class="payment__item"><img class="payment__logo" src="img/payment/apple-pay.svg" loading="lazy" width="29" height="13" alt="alt"/></li>
+            <li class="payment__item"><img class="payment__logo" src="img/payment/google-pay.svg" loading="lazy" width="30" height="12" alt="alt"/></li>
+          </ul>
+        </div>
+        <div class="payment footer__delivery">
+          <h3 class="payment__title">Доставка</h3>
+          <ul class="payment__list">
+            <li class="payment__item"><img class="payment__logo" src="img/payment/np.svg" loading="lazy" width="25" height="24" alt="alt"/></li>
+            <li class="payment__item"><img class="payment__logo" src="img/payment/ukr-post.svg" loading="lazy" width="17" height="24" alt="alt"/></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__col">
+      <nav class="footer-menu">
+        <button class="footer-menu__toggle" type="button" data-trigger="footer-menu-1" aria-expanded="true">Меню
+          <svg class="footer-menu__toggle-icon" width="8" height="17">
+            <use xlink:href="img/sprite.svg#arrow-down"></use>
+          </svg>
+        </button>
+        <div class="footer-menu__inner" id="footer-menu-1" aria-hidden="false">
+          <ul class="footer-menu__list">
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Акції</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Бренди</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Про нас</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Доставка та оплата</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Для нейл-блогерів</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Накопичувальна знижка</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Відгуки</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Контакти</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__col">
+      <nav class="footer-menu">
+        <button class="footer-menu__toggle" type="button" data-trigger="footer-menu-2" aria-expanded="true">Інформація
+          <svg class="footer-menu__toggle-icon" width="8" height="17">
+            <use xlink:href="img/sprite.svg#arrow-down"></use>
+          </svg>
+        </button>
+        <div class="footer-menu__inner" id="footer-menu-2" aria-hidden="false">
+          <ul class="footer-menu__list">
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Блог</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Повернення та обмін</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Політика конфіденціальності</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Публічна оферта</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__col">
+      <nav class="footer-menu">
+        <button class="footer-menu__toggle" type="button" data-trigger="footer-menu-3" aria-expanded="true">Категорії
+          <svg class="footer-menu__toggle-icon" width="8" height="17">
+            <use xlink:href="img/sprite.svg#arrow-down"></use>
+          </svg>
+        </button>
+        <div class="footer-menu__inner" id="footer-menu-3" aria-hidden="false">
+          <ul class="footer-menu__list footer-menu__list--cols">
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Техніка</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Стартові набори</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Таємні бокси</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Гель для наращування нігтів</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Полігель, акрілова пудра</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Гель-лаки, базові і топові покриття</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Інструменти для манікюру та педикюру</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Витратні матеріали</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Насадки для фрезерів</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Товари для стемпинга</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Слайдер-дизайн для манікюру</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Декор для нігтів</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Пензлі для нігтів</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Бафики і пилочки</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Рідини для манікюру</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Олія, ремувер, захист для кутикули</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">MircoSTOP</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Профейсійні креми для рук і ніг</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Свічкі масажні</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Розпродаж залишків</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__col footer__col--white">
+      <h3 class="footer__subtitle">Контакти</h3>
+      <address class="contacts footer__contacts">
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <svg class="contacts__icon" width="12" height="16">
+              <use xlink:href="img/sprite.svg#location"></use>
+            </svg>
+            <div class="contacts__content">
+              <p class="contacts__text">Проспект Володимира Івасюка 8 корпус 3, Київ, Україна</p>
+            </div>
+          </li>
+          <li class="contacts__item">
+            <svg class="contacts__icon" width="16" height="12">
+              <use xlink:href="img/sprite.svg#email"></use>
+            </svg>
+            <div class="contacts__content">
+              <div class="contacts__text"><a class="contacts__link" href="mailto:info@newnails.com.ua">info@newnails.com.ua</a></div>
+            </div>
+          </li>
+          <li class="contacts__item">
+            <svg class="contacts__icon" width="16" height="16">
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+            <div class="contacts__content">
+              <div class="contacts__text"><a class="contacts__link" href="tel:+380988374851">+380 (98) 837-48-51</a></div>
+              <div class="contacts__text contacts__text--flex"><a class="contacts__link" href="tel:+380662188916">+380 (66) 218-89-16</a>
+                <address class="social social--sm contacts__social">
+                  <ul class="social__list">
+                    <ul class="social__list">
+                      <li class="social__item"><a class="social__link" href="#" aria-label="Instagram">
+                          <svg class="social__icon" width="11" height="10">
+                            <use xlink:href="img/sprite.svg#telegram"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a class="social__link" href="#" aria-label="Facebook">
+                          <svg class="social__icon" width="12" height="13">
+                            <use xlink:href="img/sprite.svg#viber"></use>
+                          </svg></a></li>
+                    </ul>
+                  </ul>
+                </address>
+              </div>
+              <div class="contacts__text"><a class="contacts__link" href="tel:+380988374851">+380 (98) 837-48-51</a></div>
+            </div>
+          </li>
+          <li class="contacts__item">
+            <svg class="contacts__icon" width="16" height="16">
+              <use xlink:href="img/sprite.svg#clock"></use>
+            </svg>
+            <div class="contacts__content">
+              <p class="contacts__text">ПН, ВТ, СP, ЧТ, ПТ : 9.00 - 18.00, СБ, НД : 9.00 - 17.00</p>
+            </div>
+          </li>
+        </ul>
+      </address>
+      <h3 class="footer__subtitle">Соц мережі</h3>
+      <address class="social footer__social">
+        <ul class="social__list">
+          <ul class="social__list">
+            <li class="social__item"><a class="social__link" href="#" aria-label="Instagram">
+                <svg class="social__icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#instagram"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#" aria-label="Facebook">
+                <svg class="social__icon" width="12" height="23">
+                  <use xlink:href="img/sprite.svg#facebook"></use>
+                </svg></a></li>
+          </ul>
+        </ul>
+      </address>
+    </div>
+  </div>
+  <div class="container footer__bottom-container">
+    <div class="footer__copyright">&copy; Newnails 2018-2024 Всі права захищені.</div>
+    <div class="footer__dev">Розроблено<a class="footer__dev-link" href="https://shafem.com/" target="_blank"><img class="footer__dev-img" src="img/shafem.svg" width="103" height="22" loading="lazy" alt="shafem"/></a></div>
+  </div>
+</footer>
+
+        <!-- Alerts -->
+        
+<div class="alert alert--red" id="alert-field-error">
+  <svg class="alert__icon" width="14" height="14">
+    <use xlink:href="img/sprite.svg#close"></use>
+  </svg>Поля заповнено не корректно!
+</div>
+<div class="alert" id="alert-field-success">
+  <svg class="alert__icon" width="18" height="18">
+    <use xlink:href="img/sprite.svg#check-2"></use>
+  </svg>Дані успішно відправлені!
+</div>
+<div class="alert alert--red" id="alert-promo-error">
+  <svg class="alert__icon" width="14" height="14">
+    <use xlink:href="img/sprite.svg#close"></use>
+  </svg>Промокод не вірний!
+</div>
+<div class="alert" id="alert-promo-success">
+  <svg class="alert__icon" width="18" height="18">
+    <use xlink:href="img/sprite.svg#check-2"></use>
+  </svg>Промокод застосовано!
+</div>
+        
+        <!-- Mobile Nav -->
+        
+<div class="catalog">
+  <div class="container catalog__container">
+    <div class="catalog__sidebar">
+      <div class="catalog__inner">
+        <nav class="catalog-menu">
+          <ul class="catalog-menu__list">
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Техніка</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-2.webp" srcset="img/catalog/catalog-2@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Стартові набори</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-3.webp" srcset="img/catalog/catalog-3@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Таємні бокси</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-4.webp" srcset="img/catalog/catalog-4@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Гель для наращування нігтів</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-5.webp" srcset="img/catalog/catalog-5@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Полігель, акрілова пудра</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-6.webp" srcset="img/catalog/catalog-6@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Гель-лаки, базові і топові покриття</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-7.webp" srcset="img/catalog/catalog-7@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Інструменти для манікюру та педикюру</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-8.webp" srcset="img/catalog/catalog-8@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Витратні матеріали</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-9.webp" srcset="img/catalog/catalog-9@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Насадки для фрезерів</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-10.webp" srcset="img/catalog/catalog-10@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Товари для стемпинга</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-11.webp" srcset="img/catalog/catalog-11@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Слайдер-дизайн для манікюру</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-12.webp" srcset="img/catalog/catalog-12@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Декор для нігтів</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-13.webp" srcset="img/catalog/catalog-13@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Пензлі для нігтів</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-14.webp" srcset="img/catalog/catalog-14@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Бафики і пилочки</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-15.webp" srcset="img/catalog/catalog-15@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Рідини для манікюру</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-16.webp" srcset="img/catalog/catalog-16@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Олія, ремувер, захист для кутикули</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-17.webp" srcset="img/catalog/catalog-17@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>MircoSTOP</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-18.webp" srcset="img/catalog/catalog-18@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Профейсійні креми для рук і ніг</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-19.webp" srcset="img/catalog/catalog-19@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Свічкі масажні</a></li>
+            <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">
+                <picture class="catalog-menu__picture"><img class="catalog-menu__img" src="img/catalog/catalog-20.webp" srcset="img/catalog/catalog-20@2x.webp 2x" loading="lazy" width="24" height="24" alt="alt"/></picture>Розпродаж залишків</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- Mobile Nav -->
+        
+<div class="mobile-nav">
+  <div class="mobile-nav__sidebar">
+    <div class="mobile-nav__header">
+      <button class="mobile-nav__close" type="button" data-nav-toggle="data-nav-toggle" aria-label="Close mobile menu">
+        <svg class="mobile-nav__close-icon" width="19" height="19">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button><a class="mobile-nav__bonus" href="#">
+        <svg class="mobile-nav__bonus-icon" width="20" height="20">
+          <use xlink:href="img/sprite.svg#nn"></use>
+        </svg>
+        <div class="mobile-nav__bonus-text">Бонусів <span>128₴</span></div></a>
+      <nav class="actions mobile-nav__actions">
+        <ul class="actions__list">
+          <li class="actions__item"><a class="actions__button" href="#">
+              <svg class="actions__icon" width="24" height="22">
+                <use xlink:href="img/sprite.svg#heart"></use>
+              </svg><span class="actions__count">1</span></a></li>
+        </ul>
+      </nav>
+      <div class="dropdown mobile-nav__currency">
+        <button class="dropdown__toggle" type="button" data-toggle="currency-dropdown-mobile" aria-expanded="false">Гривня
+          <svg class="dropdown__toggle-arrow" width="9" height="6">
+            <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+          </svg>
+        </button>
+        <ul class="dropdown__list" id="currency-dropdown-mobile" aria-hidden="true">
+          <li class="dropdown__item"><a class="dropdown__link" href="#">Доллар</a></li>
+          <li class="dropdown__item"><a class="dropdown__link" href="#">Євро</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mobile-nav__inner">
+      <nav class="mobile-nav-menu">
+        <ul class="mobile-nav-menu__list">
+          <li class="mobile-nav-menu__item"><a class="mobile-nav-menu__link is-active" href="#">Акції</a></li>
+          <li class="mobile-nav-menu__item"><a class="mobile-nav-menu__link" href="#">Бренди</a></li>
+          <li class="mobile-nav-menu__item"><a class="mobile-nav-menu__link" href="#">Про нас</a></li>
+          <li class="mobile-nav-menu__item"><a class="mobile-nav-menu__link" href="#">Доставка та оплата</a></li>
+          <li class="mobile-nav-menu__item"><a class="mobile-nav-menu__link" href="#">Оптові позиції</a></li>
+          <li class="mobile-nav-menu__item"><a class="mobile-nav-menu__link" href="#">Накопичувальна знижка</a></li>
+          <li class="mobile-nav-menu__item"><a class="mobile-nav-menu__link" href="#">Відгуки</a></li>
+          <li class="mobile-nav-menu__item"><a class="mobile-nav-menu__link" href="#">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+        
+        <!-- Modals -->
+        
+<div class="modal-wrap">
+  <div class="modal" id="modal-feedback">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="20" height="20">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <h3 class="modal__title">Залишити відгук</h3>
+          <form class="form" id="feedback-form" autocomplete="off" novalidate="novalidate">
+            <div class="form__group">
+              <fieldset class="stars-rating">
+                <input class="stars-rating__input" type="radio" id="star5" name="stars-rating" value="5"/>
+                <label class="stars-rating__label" for="star5" aria-label="5 star">
+                  <svg class="stars-rating__icon" width="36" height="34">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </label>
+                <input class="stars-rating__input" type="radio" id="star4" name="stars-rating" value="4"/>
+                <label class="stars-rating__label" for="star4" aria-label="4 star">
+                  <svg class="stars-rating__icon" width="36" height="34">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </label>
+                <input class="stars-rating__input" type="radio" id="star3" name="stars-rating" value="3"/>
+                <label class="stars-rating__label" for="star3" aria-label="3 star">
+                  <svg class="stars-rating__icon" width="36" height="34">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </label>
+                <input class="stars-rating__input" type="radio" id="star2" name="stars-rating" value="2"/>
+                <label class="stars-rating__label" for="star2" aria-label="2 star">
+                  <svg class="stars-rating__icon" width="36" height="34">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </label>
+                <input class="stars-rating__input" type="radio" id="star1" name="stars-rating" value="1"/>
+                <label class="stars-rating__label" for="star1" aria-label="1 star">
+                  <svg class="stars-rating__icon" width="36" height="34">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </label>
+              </fieldset>
+            </div>
+            <div class="form__group">
+              <input class="input form__input" id="feedbackInputName" type="text" name="feedbackInputName" placeholder="ПІБ *" autocomplete="off" required="required"/>
+            </div>
+            <div class="form__group">
+              <textarea class="textarea form__input" id="feedbackTextarea" name="feedbackTextarea" rows="4" placeholder="Ваш відгук *" autocomplete="off" required="required"></textarea>
+              <div class="form__input-info">Мінімальна кільність 30 символів</div>
+            </div>
+            <button class="button form__button">Відправити</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal-success">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="20" height="20">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal__content modal__content--center">
+          <svg class="modal__icon" width="144" height="132">
+            <use xlink:href="img/sprite.svg#success"></use>
+          </svg>
+          <h3 class="modal__title">Ваша заявка успішно відправлена</h3>
+          <div class="modal__text">
+            <p>Найближчим часом Ми з Вами зв'яжемось.</p>
+            <p><strong>Дякуємо, ви зробили правильний вибір!</strong></p>
+          </div>
+          <button class="button modal__button" type="button" data-modal-close="data-modal-close">Закрити</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-cart" id="modal-cart">
+    <div class="modal__inner">
+      <div class="modal__window modal-cart__window">
+        <div class="modal-cart__header">
+          <h3 class="modal-cart__title">Кошик</h3>
+          <button class="modal__close modal-cart__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+            <svg class="modal__close-icon" width="20" height="20">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-cart__body">
+          <div class="modal-cart-item">
+            <div class="modal-cart-item__col">
+              <picture class="modal-cart-item__picture"><img class="modal-cart-item__picture-img" src="img/gallery-img-thumb.webp" srcset="img/gallery-img-thumb@2x.webp 2x" loading="lazy" width="100" height="100" alt="alt"/></picture>
+            </div>
+            <div class="modal-cart-item__col">
+              <h4 class="modal-cart-item__title"><a class="modal-cart-item__link" href="#">Стартовий набір для манікюру Saga</a></h4>
+              <div class="modal-cart-item__code">Код товару <strong>4352635</strong></div>
+            </div>
+            <div class="modal-cart-item__col">
+              <div class="quantity modal-cart-item__quantity">
+                <button class="quantity__button quantity__minus" type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">−</button>
+                <input class="quantity__input input-numbers" type="number" name="inputQuantity" min="1" max="99" step="1" value="1"/>
+                <button class="quantity__button quantity__plus" type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">+</button>
+              </div>
+            </div>
+            <div class="modal-cart-item__col">
+              <div class="modal-cart-item__total">1600 ₴</div>
+            </div>
+            <div class="modal-cart-item__col">
+              <button class="modal-cart-item__delete" type="button" aria-label="Delete">
+                <svg class="modal-cart-item__delete-icon" width="24" height="26">
+                  <use xlink:href="img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="modal-cart-item">
+            <div class="modal-cart-item__col">
+              <picture class="modal-cart-item__picture"><img class="modal-cart-item__picture-img" src="img/gallery-img-thumb.webp" srcset="img/gallery-img-thumb@2x.webp 2x" loading="lazy" width="100" height="100" alt="alt"/></picture>
+            </div>
+            <div class="modal-cart-item__col">
+              <h4 class="modal-cart-item__title"><a class="modal-cart-item__link" href="#">Стартовий набір для манікюру Saga</a></h4>
+              <div class="modal-cart-item__code">Код товару <strong>4352635</strong></div>
+            </div>
+            <div class="modal-cart-item__col">
+              <div class="quantity modal-cart-item__quantity">
+                <button class="quantity__button quantity__minus" type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">−</button>
+                <input class="quantity__input input-numbers" type="number" name="inputQuantity" min="1" max="99" step="1" value="1"/>
+                <button class="quantity__button quantity__plus" type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">+</button>
+              </div>
+            </div>
+            <div class="modal-cart-item__col">
+              <div class="modal-cart-item__total">1600 ₴</div>
+            </div>
+            <div class="modal-cart-item__col">
+              <button class="modal-cart-item__delete" type="button" aria-label="Delete">
+                <svg class="modal-cart-item__delete-icon" width="24" height="26">
+                  <use xlink:href="img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="modal-cart__row">
+            <div class="modal-cart__col">
+              <div class="modal-cart__info">Щоб отримати 105 бонусів <a class="modal-cart__link" href="#">Зареєструйтеся</a></div><a class="button button--outline modal-cart__button" href="#">Продовжити покупки</a>
+            </div>
+            <div class="modal-cart__col">
+              <div class="modal-cart__total">
+                <div class="modal-cart__total-title">Загальна вартість</div>
+                <div class="modal-cart__total-value">1600 ₴</div>
+              </div>
+              <button class="button modal-cart__button" type="button">Оформити замовлення</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-cart__footer">
+          <h4>Безкоштовна доставка при вартості замовлення від 1500 ₴.</h4>
+          <p>Безкоштовна доставка замовлень на суму від 1000 грн. Здійснюємо відправку післяплатою. Зверніть увагу, що при надсиланні грошей Ви оплачуєте 20 грн + 2% комісія від суми замовлення.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+    </body>
+</html>

@@ -1,0 +1,29 @@
+.characteristics-table
+    max-width: 50%
+
+    @media ($max-xl)
+        max-width: 100%
+
+    &__row
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 8px
+
+        &:not(:last-child)
+            margin-bottom: 30px
+
+            @media ($max-md)
+                margin-bottom: 15px
+    
+    &__col
+        grid-column: 6 span
+        font-size: 20px
+
+        @media ($max-md)
+            font-size: 14px
+
+        &:first-child
+            font-weight: 700
+
+        &:last-child
+            text-align: right

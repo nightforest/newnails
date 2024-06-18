@@ -1,0 +1,68 @@
+.button
+    position: relative
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    gap: 8px
+    text-align: center
+    width: auto
+    min-width: 200px
+    height: 54px
+    margin: 0
+    border: none
+    padding: 4px 20px
+    box-sizing: border-box
+    -webkit-tap-highlight-color: transparent
+    outline: none
+    cursor: pointer
+    user-select: none
+    vertical-align: middle
+    appearance: none
+    text-decoration: none
+    text-transform: uppercase
+    font-family: var(--font-title)
+    font-weight: 600
+    font-size: 16px
+    line-height: 1.2
+    letter-spacing: 0
+    border-radius: 0
+    background: var(--black)
+    color: var(--white)
+    box-shadow: none
+    transition: color .5s ease, background .5s ease
+
+    &:hover,
+    &:active,
+    &:focus-visible
+        outline: none
+        background: var(--ruby)
+        color: var(--white)
+
+    &:disabled
+        background: var(--grey-light) !important
+        border-color: var(--grey-light) !important
+        color: var(--grey) !important
+        cursor: not-allowed
+
+    &--outline
+        border: 1px solid var(--black)
+        background: none
+        color: var(--black)
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            background: var(--black)
+            color: var(--white)
+    
+    &--ruby
+        background: var(--ruby)
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            background: var(--black)
+
+    &--white
+        background: var(--white)
+        color: var(--black)

@@ -1,0 +1,73 @@
+section.about-section
+    .container.about-section__container
+        .about-section__row
+            .about-section__left
+                picture.about-section__picture
+                    img.about-section__img(src="img/about-img.webp" srcset="img/about-img@2x.webp 2x" width="750" height="465" alt="alt")
+
+            .about-section__right
+                .about-section__text
+                    p Наш інтернет-магазин займається продажем манікюрної продукції вже шість років. За цей час нашими клієнтами стали більше 70 000 клієнтів, досвідчених майстрів та початківців. 99% позитивних відгуків говорять, що наш головний пріоритет - задоволений клієнт.
+                    p У нас великий асортимент обладнання: лампи, фрезера, витяжки, сухожари; гель-лаки, гелі для нарощення, товари для стемпінга, витратні матеріали, пилки і бафи, інструменти, рідини. Все це ви можете купити з безкоштовною доставкою по Україні (при замовленні від 1000грн). Весь товар знаходиться на власному складі, що дозволяє відправляти замовлення кожен день (при оформленні до 15:00). Також є доставка за кордон: Польща, Німеччина, Чехія, Литва, Румунія, Молдова.
+                    p Якщо у Вас залишилися сумніви, звертайтеся до наших професійних менеджерів, які дадуть відповідь на будь-які питання.
+    
+    .about-slider
+        .swiper.about-slider__swiper
+            .swiper-wrapper.about-slider__wrapper
+                .swiper-slide.about-slider__slide
+                    article.about-card
+                        .about-card__header
+                            picture.about-card__picture
+                                img.about-card__img(src="img/about-1.svg" loading="lazy" width="70" height="70" alt="alt")
+                            
+                            h3.about-card__title Швидка Доставка
+
+                        p.about-card__text Ми забезпечуємо швидку і надійну доставку, щоб ваші замовлення доходили до вас максимально швидко і в найкращому стані.
+
+                .swiper-slide.about-slider__slide
+                    article.about-card
+                        .about-card__header
+                            picture.about-card__picture
+                                img.about-card__img(src="img/about-2.svg" loading="lazy" width="70" height="70" alt="alt")
+                            
+                            h3.about-card__title Професійна Підтримка Клієнтів
+
+                        p.about-card__text Наша команда підтримки завжди готова допомогти з будь-якими запитаннями або проблемами, забезпечуючи відмінний рівень сервісу.
+                
+                .swiper-slide.about-slider__slide
+                    article.about-card
+                        .about-card__header
+                            picture.about-card__picture
+                                img.about-card__img(src="img/about-3.svg" loading="lazy" width="70" height="70" alt="alt")
+                            
+                            h3.about-card__title Регулярні Акції та Знижки
+
+                        p.about-card__text Ми пропонуємо постійні акції, знижки та спеціальні пропозиції, щоб допомогти вам заощадити ще більше.
+                
+                .swiper-slide.about-slider__slide
+                    article.about-card
+                        .about-card__header
+                            picture.about-card__picture
+                                img.about-card__img(src="img/about-4.svg" loading="lazy" width="70" height="70" alt="alt")
+                            
+                            h3.about-card__title Зручний Інтерфейс Магазину
+
+                        p.about-card__text Наш сайт розроблений з урахуванням потреб клієнтів, що забезпечує зручний пошук та замовлення продукції.
+                
+                .swiper-slide.about-slider__slide
+                    article.about-card
+                        .about-card__header
+                            picture.about-card__picture
+                                img.about-card__img(src="img/about-5.svg" loading="lazy" width="70" height="70" alt="alt")
+                            
+                            h3.about-card__title 100% Гарантія Задоволення
+
+                        p.about-card__text Ми впевнені у якості наших продуктів, тому пропонуємо гарантію на повернення або обмін у разі, якщо ви не задоволені своїм замовленням.
+
+        button.swiper-nav-prev.about-slider__prev(type="button" aria-label="Previous slide")
+            svg.swiper-nav-prev__icon(width="11" height="17")
+                use(xlink:href="img/sprite.svg#arrow-left")
+
+        button.swiper-nav-next.about-slider__next(type="button" aria-label="Next slide")
+            svg.swiper-nav-next__icon(width="11" height="17")
+                use(xlink:href="img/sprite.svg#arrow-right")

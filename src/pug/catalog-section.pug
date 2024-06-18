@@ -1,0 +1,304 @@
+section.catalog-section
+    .container.catalog-section__container
+        aside.catalog-section__sidebar
+            include ./includes/_filter.pug
+
+        article.catalog-section__article
+            header.catalog-section__header
+                h1.catalog-section__title Стартові набори
+
+                .catalog-section__controls
+                    button.button.catalog-section__filter-button(type="button" data-filter-toggle) Фільтр
+                        svg.button__icon(width="22" height="20")
+                            use(xlink:href="img/sprite.svg#filter")
+                    
+                    button.button.catalog-section__sort-button(type="button" data-trigger="sort-form" aria-expanded="false")
+                        svg.button__icon(width="22" height="20")
+                            use(xlink:href="img/sprite.svg#sort")
+
+                form#sort-form.sort-form(aria-hidden="true")
+                    .sort-form__group
+                        label.sort-form__label(for="viewSelect") Показувати
+                        
+                        select#viewSelect.select.sort-form__select(name="viewSelect" aria-label="Select" required)
+                            option(value="25") 25
+                            option(value="50") 50
+                            option(value="100") 100
+                            
+                    .sort-form__group
+                        label.sort-form__label(for="sortSelect") Сортування
+
+                        select#sortSelect.select.sort-form__select(name="sortSelect" aria-label="Select" required)
+                            option(value="1") За замовчуванням
+                            option(value="2") По зростанню ціни
+                            option(value="3") По спаданню ціни
+
+            ul.catalog-section__list
+                li.catalog-section__item
+                    article.product-card
+                        a.product-card__link(href="#") 
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="286" height="286" alt="alt")
+                            
+                            .product-card__group
+                                .product-card__number N16001600
+                                .product-card__status HIT
+
+                            h3.product-card__title Стартовий набір для манікюру №1
+
+                            .product-card__feedback
+                                .rating(data-rating="4")
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                span 12
+
+                            .product-card__price
+                                span.new-price 1600 ₴
+                                span.old-price 1890 ₴
+
+                        .product-card__buttons
+                            button.button.product-card__buy-button(type="button") Купити
+                            button.button.product-card__wish-button.is-active(type="button" aria-label="Add to wishlist")
+                                svg.button__icon(width="26" height="23")
+                                    use(xlink:href="img/sprite.svg#heart")
+
+                li.catalog-section__item
+                    article.product-card
+                        a.product-card__link(href="#") 
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="286" height="286" alt="alt")
+                            
+                            .product-card__group
+                                .product-card__number N16001600
+
+                            h3.product-card__title Стартовий набір для манікюру №1
+
+                            .product-card__feedback
+                                .rating(data-rating="4")
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                span 12
+
+                            .product-card__price
+                                span.new-price 1600 ₴
+                                span.old-price 1890 ₴
+
+                        .product-card__buttons
+                            button.button.product-card__buy-button(type="button") Купити
+                            button.button.product-card__wish-button(type="button" aria-label="Add to wishlist")
+                                svg.button__icon(width="26" height="23")
+                                    use(xlink:href="img/sprite.svg#heart")
+                
+                li.catalog-section__item
+                    article.product-card
+                        a.product-card__link(href="#") 
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="286" height="286" alt="alt")
+                            
+                            .product-card__group
+                                .product-card__number N16001600
+                                .product-card__status HIT
+
+                            h3.product-card__title Стартовий набір для манікюру №1
+
+                            .product-card__feedback
+                                .rating(data-rating="4")
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                span 12
+
+                            .product-card__price
+                                span.new-price 1600 ₴
+                                span.old-price 1890 ₴
+
+                        .product-card__buttons
+                            button.button.product-card__buy-button(type="button") Купити
+                            button.button.product-card__wish-button.is-active(type="button" aria-label="Add to wishlist")
+                                svg.button__icon(width="26" height="23")
+                                    use(xlink:href="img/sprite.svg#heart")
+
+                li.catalog-section__item
+                    article.product-card
+                        a.product-card__link(href="#") 
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="286" height="286" alt="alt")
+                            
+                            .product-card__group
+                                .product-card__number N16001600
+
+                            h3.product-card__title Стартовий набір для манікюру №1
+
+                            .product-card__feedback
+                                .rating(data-rating="4")
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                span 12
+
+                            .product-card__price
+                                span.new-price 1600 ₴
+                                span.old-price 1890 ₴
+
+                        .product-card__buttons
+                            button.button.product-card__buy-button(type="button") Купити
+                            button.button.product-card__wish-button(type="button" aria-label="Add to wishlist")
+                                svg.button__icon(width="26" height="23")
+                                    use(xlink:href="img/sprite.svg#heart")
+                
+                li.catalog-section__item
+                    article.product-card
+                        a.product-card__link(href="#") 
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="286" height="286" alt="alt")
+                            
+                            .product-card__group
+                                .product-card__number N16001600
+
+                            h3.product-card__title Стартовий набір для манікюру №1
+
+                            .product-card__feedback
+                                .rating(data-rating="4")
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                span 12
+
+                            .product-card__price
+                                span.new-price 1600 ₴
+                                span.old-price 1890 ₴
+
+                        .product-card__buttons
+                            button.button.product-card__buy-button(type="button") Купити
+                            button.button.product-card__wish-button.is-active(type="button" aria-label="Add to wishlist")
+                                svg.button__icon(width="26" height="23")
+                                    use(xlink:href="img/sprite.svg#heart")
+
+                li.catalog-section__item
+                    article.product-card
+                        a.product-card__link(href="#") 
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="286" height="286" alt="alt")
+                            
+                            .product-card__group
+                                .product-card__number N16001600
+                                .product-card__status HIT
+
+                            h3.product-card__title Стартовий набір для манікюру №1
+
+                            .product-card__feedback
+                                .rating(data-rating="4")
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                span 12
+
+                            .product-card__price
+                                span.new-price 1600 ₴
+                                span.old-price 1890 ₴
+
+                        .product-card__buttons
+                            button.button.product-card__buy-button(type="button") Купити
+                            button.button.product-card__wish-button(type="button" aria-label="Add to wishlist")
+                                svg.button__icon(width="26" height="23")
+                                    use(xlink:href="img/sprite.svg#heart")
+
+                li.catalog-section__item
+                    article.product-card
+                        a.product-card__link(href="#") 
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="286" height="286" alt="alt")
+                            
+                            .product-card__group
+                                .product-card__number N16001600
+
+                            h3.product-card__title Стартовий набір для манікюру №1
+
+                            .product-card__feedback
+                                .rating(data-rating="4")
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                span 12
+
+                            .product-card__price
+                                span.new-price 1600 ₴
+                                span.old-price 1890 ₴
+
+                        .product-card__buttons
+                            button.button.product-card__buy-button(type="button") Купити
+                            button.button.product-card__wish-button.is-active(type="button" aria-label="Add to wishlist")
+                                svg.button__icon(width="26" height="23")
+                                    use(xlink:href="img/sprite.svg#heart")
+
+                li.catalog-section__item
+                    article.product-card
+                        a.product-card__link(href="#") 
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="286" height="286" alt="alt")
+                            
+                            .product-card__group
+                                .product-card__number N16001600
+
+                            h3.product-card__title Стартовий набір для манікюру №1
+
+                            .product-card__feedback
+                                .rating(data-rating="4")
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                    .rating__item
+                                span 12
+
+                            .product-card__price
+                                span.new-price 1600 ₴
+                                span.old-price 1890 ₴
+
+                        .product-card__buttons
+                            button.button.product-card__buy-button(type="button") Купити
+                            button.button.product-card__wish-button(type="button" aria-label="Add to wishlist")
+                                svg.button__icon(width="26" height="23")
+                                    use(xlink:href="img/sprite.svg#heart")
+            
+            button.button.catalog-section__more-button(type="button") Показати більше
+
+            nav.pagination.catalog-section__pagination(aria-label="Page navigation")
+                ul.pagination__list
+                    li.pagination__item
+                        button.pagination__button(type="button" aria-label="Previous page")
+                            svg.pagination__icon(width="7" height="12")
+                                use(xlink:href="img/sprite.svg#arrow-left")
+
+                    li.pagination__item.is-active(aria-current="page")
+                        button.pagination__button(type="button") 1
+                    
+                    li.pagination__item
+                        button.pagination__button(type="button") 2
+                    
+                    li.pagination__item
+                        span ...
+                    
+                    li.pagination__item
+                        button.pagination__button(type="button") 10
+
+                    li.pagination__item
+                        button.pagination__button(type="button" aria-label="Next page")
+                            svg.pagination__icon(width="7" height="12")
+                                use(xlink:href="img/sprite.svg#arrow-right")

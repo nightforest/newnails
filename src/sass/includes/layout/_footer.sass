@@ -1,0 +1,268 @@
+.footer
+    background: var(--black)
+
+    @media ($max-lg)
+        padding-top: 50px
+    
+    @media ($max-md)
+        padding-top: 30px
+
+    &__container
+        display: grid
+        grid-template-columns: 1.2fr 1fr 1fr 2fr 280px
+        gap: 40px
+
+        @media ($max-xxl)
+            gap: 30px
+
+        @media ($max-xl)
+            grid-template-columns: 1fr 1fr 1fr 2.5fr
+        
+        @media ($max-lg)
+            grid-template-columns: 1fr 1fr
+            gap: 50px
+        
+        @media ($max-md)
+            display: flex
+            flex-direction: column
+            gap: 0
+
+    &__col
+        position: relative
+        padding: 48px 0
+
+        @media ($max-lg)
+            padding: 0
+
+        &:not(:first-child):not(:last-child)
+
+            &:before
+                position: absolute
+                top: 0
+                left: -20px
+                width: 1px
+                height: 100%
+                background: rgba(255, 255, 255, .2)
+                content: ""
+
+                @media ($max-xxl)
+                    left: -15px
+                
+                @media ($max-lg)
+                    display: none
+
+        &:nth-child(1),
+        &:nth-child(4)
+            
+            @media ($max-lg)
+                grid-column: 2 span
+            
+            @media ($max-md)
+                margin-bottom: 30px
+
+        &--white
+            background: var(--white)
+            padding: 48px 30px
+
+            @media ($max-xl)
+                grid-column: 4 span
+
+            @media ($max-lg)
+                grid-column: 2 span
+            
+            @media ($max-md)
+                padding: 20px 15px 25px
+
+    &__logo-group
+        margin-bottom: 30px
+
+        @media ($max-lg)
+            text-align: center
+
+        @media ($max-md)
+            margin-bottom: 15px
+
+    &__logo
+        margin-bottom: 30px
+
+        @media ($max-md)
+            margin-bottom: 15px
+
+        .logo__link
+            color: var(--white)
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--ruby)
+    
+    &__slogan
+        margin-bottom: 20px
+        font-size: 14px
+        font-weight: 600
+        color: var(--ruby)
+
+        @media ($max-md)
+            max-width: 210px
+            margin: 0 auto 15px
+    
+    &__map
+
+        &-link
+            font-size: 14px
+            color: var(--white)
+            text-decoration: underline
+            transition: color .5s ease
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--ruby)
+                text-decoration: none
+
+    &__payment-group
+        display: flex
+        flex-direction: column
+        gap: 35px
+
+        @media ($max-lg)
+            flex-direction: row
+            justify-content: space-between
+            gap: 15px
+
+    &-menu
+
+        @media ($max-md)
+            border-bottom: 1px solid rgba(255, 255, 255, .2)
+
+        &:not(:last-child)
+            margin-bottom: 12px
+
+        &__toggle
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 100%
+            margin-bottom: 18px
+            color: var(--white)
+            font-size: 18px
+            font-weight: 700
+            cursor: default
+
+            @media ($max-md)
+                padding: 12px 0
+                margin: 0
+                font-size: 14px
+
+                &[aria-expanded="true"]
+
+                    .footer-menu__toggle-icon
+                        color: var(--white)
+                        transform: rotateX(180deg)
+
+            &-icon
+                transition: color .5s ease, transform .5s ease
+
+                @media ($min-md)
+                    display: none
+
+        &__inner
+            
+            @media ($max-md)
+                display: grid
+                grid-template-rows: 0fr
+                transition: grid-template-rows .5s, background-color .5s ease
+
+                &[aria-hidden="false"]
+                    grid-template-rows: 1fr
+
+        &__list
+            padding: 0
+            margin: 0
+            list-style: none
+            line-height: 1.28
+
+            @media ($max-md)
+                overflow: hidden
+            
+            &--cols
+
+                @media ($min-md)
+                    column-width: 100px
+                    column-count: 2
+                    column-gap: 15px
+
+        &__item
+
+            &:not(:last-child)
+                margin-bottom: 20px
+
+                @media ($max-md)
+                    margin-bottom: 15px
+            
+            &:last-child
+                
+                @media ($max-md)
+                    margin-bottom: 15px
+
+        &__link
+            color: var(--white)
+            font-size: 14px
+            transition: color .5s ease
+
+            @media ($max-xxl)
+                font-size: 12px
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--ruby)
+
+            &.is-active
+                color: var(--ruby)
+
+    &__subtitle
+        margin-bottom: 18px
+        font-size: 18px
+        font-weight: 700
+
+    &__contacts
+        margin-bottom: 18px
+
+    &__bottom
+
+        &-container
+            position: relative
+            display: flex
+            align-items: center
+            gap: 10px
+            justify-content: space-between
+            padding: 15px
+
+            @media ($max-md)
+                flex-direction: column-reverse
+                text-align: center
+                margin-top: 25px
+
+            &:before
+                position: absolute
+                top: 0
+                left: 15px
+                right: 15px
+                height: 1px
+                background: rgba(255, 255, 255, .2)
+                content: ""
+    
+    &__copyright
+        font-size: 14px
+        color: rgba(255, 255, 255, .5)
+    
+    &__dev
+        display: inline-flex
+        align-items: center
+        gap: 12px
+        font-size: 14px
+        color: rgba(255, 255, 255, .5)
+
+        &-link
+            display: flex

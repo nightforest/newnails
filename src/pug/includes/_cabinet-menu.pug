@@ -1,0 +1,43 @@
+button.button.cabinet-menu-toggle(type="button" data-trigger="cabinet-menu" aria-expanded="false")
+    svg.cabinet-menu-toggle__icon(width="28" height="28")
+        use(xlink:href="img/sprite.svg#account-user")
+    
+    | Мій аккаунт
+    
+    svg.cabinet-menu-toggle__arrow(width="12" height="7")
+        use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+nav#cabinet-menu.cabinet-menu(aria-hidden="true")
+    ul.cabinet-menu__list
+        li.cabinet-menu__item
+            a.cabinet-menu__link.is-active(href="#")
+                svg.cabinet-menu__icon(width="28" height="28")
+                    use(xlink:href="img/sprite.svg#account-user")
+                | Мій аккаунт
+
+        li.cabinet-menu__item
+            a.cabinet-menu__link(href="#")
+                svg.cabinet-menu__icon(width="28" height="28")
+                    use(xlink:href="img/sprite.svg#account-heart")
+                | Мій вибір
+        
+        li.cabinet-menu__item
+            a.cabinet-menu__link(href="#")
+                svg.cabinet-menu__icon(width="28" height="28")
+                    use(xlink:href="img/sprite.svg#account-nn")
+                | NewNails бонуси
+        
+        li.cabinet-menu__item
+            a.cabinet-menu__link(href="#")
+                svg.cabinet-menu__icon(width="28" height="28")
+                    use(xlink:href="img/sprite.svg#account-cart")
+                | Мої замовлення
+        
+        li.cabinet-menu__item
+            a.cabinet-menu__link(href="#")
+                svg.cabinet-menu__icon(width="28" height="28")
+                    use(xlink:href="img/sprite.svg#account-compare")
+                | Порівняння
+
+        li.cabinet-menu__item
+            a.button.button--white.cabinet-menu__button(href="#") Вийти

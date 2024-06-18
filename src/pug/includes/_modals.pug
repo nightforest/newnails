@@ -1,0 +1,145 @@
+.modal-wrap
+    #modal-feedback.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="20" height="20")
+                        use(xlink:href="img/sprite.svg#close")
+
+                .modal__content
+                    h3.modal__title Залишити відгук
+
+                    form.form(id="feedback-form" autocomplete="off" novalidate="novalidate")
+                        .form__group
+                            fieldset.stars-rating
+                                input.stars-rating__input(type="radio" id="star5" name="stars-rating" value="5")
+                                label.stars-rating__label(for="star5" aria-label="5 star")
+                                    svg.stars-rating__icon(width="36" height="34")
+                                        use(xlink:href="img/sprite.svg#star")
+                                input.stars-rating__input(type="radio" id="star4" name="stars-rating" value="4")
+                                label.stars-rating__label(for="star4" aria-label="4 star")
+                                    svg.stars-rating__icon(width="36" height="34")
+                                        use(xlink:href="img/sprite.svg#star")
+                                input.stars-rating__input(type="radio" id="star3" name="stars-rating" value="3")
+                                label.stars-rating__label(for="star3" aria-label="3 star")
+                                    svg.stars-rating__icon(width="36" height="34")
+                                        use(xlink:href="img/sprite.svg#star")
+                                input.stars-rating__input(type="radio" id="star2" name="stars-rating" value="2")
+                                label.stars-rating__label(for="star2" aria-label="2 star")
+                                    svg.stars-rating__icon(width="36" height="34")
+                                        use(xlink:href="img/sprite.svg#star")
+                                input.stars-rating__input(type="radio" id="star1" name="stars-rating" value="1")
+                                label.stars-rating__label(for="star1" aria-label="1 star")
+                                    svg.stars-rating__icon(width="36" height="34")
+                                        use(xlink:href="img/sprite.svg#star")
+
+                        .form__group
+                            input#feedbackInputName.input.form__input(type="text" name="feedbackInputName" placeholder="ПІБ *" autocomplete="off" required)
+
+                        .form__group
+                            textarea#feedbackTextarea.textarea.form__input(name="feedbackTextarea" rows="4" placeholder="Ваш відгук *" autocomplete="off" required)
+
+                            .form__input-info Мінімальна кільність 30 символів
+
+                        button.button.form__button Відправити
+
+    #modal-success.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="20" height="20")
+                        use(xlink:href="img/sprite.svg#close")
+
+                .modal__content.modal__content--center
+                    svg.modal__icon(width="144" height="132")
+                        use(xlink:href="img/sprite.svg#success")
+
+                    h3.modal__title Ваша заявка успішно відправлена
+
+                    .modal__text
+                        p Найближчим часом Ми з Вами зв'яжемось.
+                        p
+                            strong Дякуємо, ви зробили правильний вибір!
+
+                    button.button.modal__button(type="button" data-modal-close) Закрити
+
+    #modal-cart.modal.modal-cart
+        .modal__inner
+            .modal__window.modal-cart__window
+                .modal-cart__header
+                    h3.modal-cart__title Кошик
+
+                    button.modal__close.modal-cart__close(aria-label="Close modal" data-modal-close type="button")
+                        svg.modal__close-icon(width="20" height="20")
+                            use(xlink:href="img/sprite.svg#close")
+
+                .modal-cart__body
+                    .modal-cart-item
+                        .modal-cart-item__col
+                            picture.modal-cart-item__picture
+                                img.modal-cart-item__picture-img(src="img/gallery-img-thumb.webp" srcset="img/gallery-img-thumb@2x.webp 2x" loading="lazy" width="100" height="100" alt="alt")
+
+                        .modal-cart-item__col
+                            h4.modal-cart-item__title
+                                a.modal-cart-item__link(href="#") Стартовий набір для манікюру Saga
+                            
+                            .modal-cart-item__code Код товару 
+                                strong 4352635
+                                
+                        .modal-cart-item__col
+                            .quantity.modal-cart-item__quantity
+                                button.quantity__button.quantity__minus(type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();") −
+                                input.quantity__input.input-numbers(type="number" name="inputQuantity" min="1" max="99" step="1" value='1')
+                                button.quantity__button.quantity__plus(type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();") +
+
+                        .modal-cart-item__col
+                            .modal-cart-item__total 1600 ₴
+
+                        .modal-cart-item__col
+                            button.modal-cart-item__delete(type="button" aria-label="Delete")
+                                svg.modal-cart-item__delete-icon(width="24" height="26")
+                                    use(xlink:href="img/sprite.svg#delete")
+
+                    .modal-cart-item
+                        .modal-cart-item__col
+                            picture.modal-cart-item__picture
+                                img.modal-cart-item__picture-img(src="img/gallery-img-thumb.webp" srcset="img/gallery-img-thumb@2x.webp 2x" loading="lazy" width="100" height="100" alt="alt")
+
+                        .modal-cart-item__col
+                            h4.modal-cart-item__title
+                                a.modal-cart-item__link(href="#") Стартовий набір для манікюру Saga
+                            
+                            .modal-cart-item__code Код товару 
+                                strong 4352635
+                                
+                        .modal-cart-item__col
+                            .quantity.modal-cart-item__quantity
+                                button.quantity__button.quantity__minus(type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();") −
+                                input.quantity__input.input-numbers(type="number" name="inputQuantity" min="1" max="99" step="1" value='1')
+                                button.quantity__button.quantity__plus(type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();") +
+
+                        .modal-cart-item__col
+                            .modal-cart-item__total 1600 ₴
+
+                        .modal-cart-item__col
+                            button.modal-cart-item__delete(type="button" aria-label="Delete")
+                                svg.modal-cart-item__delete-icon(width="24" height="26")
+                                    use(xlink:href="img/sprite.svg#delete")
+
+                    .modal-cart__row
+                        .modal-cart__col
+                            .modal-cart__info Щоб отримати 105 бонусів 
+                                a.modal-cart__link(href="#") Зареєструйтеся
+                            
+                            a.button.button--outline.modal-cart__button(href="#") Продовжити покупки
+
+                        .modal-cart__col
+                            .modal-cart__total
+                                .modal-cart__total-title Загальна вартість
+                                .modal-cart__total-value 1600 ₴
+                            
+                            button.button.modal-cart__button(type="button") Оформити замовлення
+
+                .modal-cart__footer
+                    h4 Безкоштовна доставка при вартості замовлення від 1500 ₴.
+                    p Безкоштовна доставка замовлень на суму від 1000 грн. Здійснюємо відправку післяплатою. Зверніть увагу, що при надсиланні грошей Ви оплачуєте 20 грн + 2% комісія від суми замовлення.

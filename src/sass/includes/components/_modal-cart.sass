@@ -1,0 +1,186 @@
+.modal-cart
+    
+    &__window
+        max-width: 1010px
+    
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 12px
+        border-bottom: 1px solid #D9D9D9
+        padding: 20px 30px
+
+        @media ($max-md)
+            padding: 15px 20px
+    
+    &__title
+        font-size: 32px
+        font-weight: 600
+        text-transform: uppercase
+
+        @media ($max-md)
+            font-size: 20px
+    
+    &__close
+        position: relative
+        top: auto
+        right: auto
+    
+    &-item
+        display: grid
+        grid-template-columns: .7fr 2.5fr 1fr 1.5fr .5fr
+        align-items: center
+        gap: 20px
+        padding: 15px 30px
+        border-bottom: 1px solid #D9D9D9
+
+        @media ($max-md)
+            grid-template-columns: 1fr 1.5fr .5fr
+            gap: 15px
+            padding: 15px 20px
+        
+        &__col
+            
+            @media ($max-md)
+                
+                &:nth-child(2)
+                    grid-column: 2 span
+
+        &__picture
+            display: flex
+    
+            &-img
+                width: 100%
+                height: auto
+                max-width: 100%
+        
+        &__title
+            margin-bottom: 10px
+            font-size: 18px
+            font-weight: 400
+            line-height: 1.25
+
+            @media ($max-md)
+                font-size: 14px
+        
+        &__link
+            color: var(--black)
+            transition: color .5s ease
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--ruby)
+
+        &__code
+            font-size: 14px
+            font-weight: 300
+            line-height: 1
+            color: #393939
+        
+        &__total
+            font-size: 24px
+            font-weight: 700
+            color: var(--ruby)
+            line-height: 1
+            text-align: center
+        
+        &__delete
+            display: flex
+            margin-left: auto
+            color: var(--ruby)
+            transition: color .5s ease
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--black)
+    
+    &__row
+        display: flex
+        justify-content: space-between
+        gap: 30px
+        padding: 70px 30px 40px
+
+        @media ($max-md)
+            padding: 20px
+            flex-direction: column-reverse
+            gap: 15px
+
+    &__col
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        width: 100%
+        max-width: 360px
+
+        @media ($max-md)
+            max-width: 100%
+
+        &:first-child
+
+            @media ($max-md)
+                flex-direction: column-reverse
+                gap: 15px
+
+    &__button
+        width: 100%
+
+    &__footer
+        padding: 25px 30px
+        background: var(--grey)
+        text-align: center
+        font-size: 14px
+        line-height: 1.5
+
+        @media ($max-md)
+            padding: 20px
+
+        h4
+            font-size: 16px
+            color: var(--ruby)
+
+    &__info
+        font-size: 16px
+        margin-bottom: 20px
+
+        @media ($max-md)
+            font-size: 14px
+            margin-bottom: 0
+            text-align: center
+
+    &__link
+        font-weight: 700
+        text-decoration-line: underline
+        text-decoration-thickness: 1px
+        text-underline-offset: 3px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            text-decoration: none
+    
+    &__total
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 10px
+        margin-bottom: 20px
+        line-height: 1
+
+        &-title
+            font-size: 24px
+            font-weight: 700
+
+            @media ($max-md)
+                font-size: 18px
+        
+        &-value
+            font-size: 32px
+            font-weight: 700
+            color: var(--ruby)
+
+            @media ($max-md)
+                font-size: 24px

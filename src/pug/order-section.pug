@@ -1,0 +1,310 @@
+section.order-section
+    .container.order-section__container
+        form.form.order-form(id="order-form" autocomplete="off" novalidate="novalidate")
+            .order-form__left
+                h3.form__subtitle Дані кліента
+
+                .form__radio-group
+                    .radio
+                        input.radio__input#customer-radio-1(type="radio" name="customer-radio" value="new" checked)
+                        label.radio__label(for="customer-radio-1") Я Новий покупець
+                    
+                    .radio
+                        input.radio__input#customer-radio-2(type="radio" name="customer-radio" value="old")
+                        label.radio__label(for="customer-radio-2") Я Постійний покупець
+                
+                .form-block.is-visible(data-customer="new")
+                    .form-block__grid
+                        .form-block__item.form-block__item--6
+                            input.input.form__input(type="text" name="loginInputName" placeholder="Ім'я *" autocomplete="off" required)
+                        
+                        .form-block__item.form-block__item--6
+                            input.input.form__input(type="text" name="loginInputLastName" placeholder="Прізвище *" autocomplete="off" required)
+
+                        .form-block__item.form-block__item--6
+                            input.input.form__input.tell-input(type="text" name="loginInputPhone" placeholder="" autocomplete="off" required)
+
+                        .form-block__item.form-block__item--6
+                            input.input.form__input(type="email" name="loginInputEmail" placeholder="Пошта *" autocomplete="off" required)
+
+                        .form-block__item.form-block__item--6
+                            .form__input-group
+                                input.input.form__input(type="password" name="loginInputPassword" placeholder="Придумайте пароль *" autocomplete="off" required)
+                                
+                                button.form__show-pass(type="button")
+                                    svg.form__show-pass-icon(width="26" height="18")
+                                        use(xlink:href="img/sprite.svg#eye")
+
+                        .form-block__item.form-block__item--6
+                            .form__input-group
+                                input.input.form__input(type="password" name="loginInputConfirmPassword" placeholder="Підтвердження паролю *" autocomplete="off" required)
+                                
+                                button.form__show-pass(type="button")
+                                    svg.form__show-pass-icon(width="26" height="18")
+                                        use(xlink:href="img/sprite.svg#eye")
+            
+                .form-block(data-customer="old")
+                    .form-block__grid
+                        .form-block__item.form-block__item--6
+                            input.input.form__input(type="email" name="loginInputEmail2" placeholder="Пошта *" autocomplete="off")
+
+                        .form-block__item.form-block__item--6
+                            .form__input-group
+                                input.input.form__input(type="password" name="loginInputPassword2" placeholder="Пароль *" autocomplete="off" required)
+                                
+                                button.form__show-pass(type="button")
+                                    svg.form__show-pass-icon(width="26" height="18")
+                                        use(xlink:href="img/sprite.svg#eye")
+                
+                    .form__group
+                        button.button.form__button(type="button") Увійти
+
+                    .form__or
+                        span Або увійдіть за допомогою
+
+                    .form__social
+                        button.button.button--outline.form__social-button(type="button")
+                            svg.button__icon(width="24" height="24")
+                                use(xlink:href="img/sprite.svg#google")
+                            | Google
+
+                h3.form__subtitle Доставка
+
+                .form-block.form-block--black
+                    label.form-block__label.form-block__label--ruby Оберіть варіант доставки із готових шаблонів
+                    select#orderSelectDelivery.select.sort-form__select(name="orderSelectDelivery" aria-label="Select" required)
+                        option(value="1") Доставка №1
+                        option(value="2") Доставка №2
+                        option(value="3") Доставка №3
+                
+                .form-block
+                    .form-block__grid
+                        .form-block__item
+                            select#orderSelectPostType.select.sort-form__select(name="orderSelectPostType" aria-label="Select" required)
+                                option(value="department") Нова пошта (відділення)
+                                option(value="post-machine") Нова пошта (поштомат)
+                                option(value="courier") Нова пошта (кур’єром)
+                                option(value="express") Укрпошта (Експрес)
+                                option(value="international") Міжнародна доставка
+                                option(value="pickup") Самовивіз
+                    
+                    .form-block__grid.is-visible(data-delivery="department")
+                        .form-block__item.form-block__item--6
+                            select#orderSelectCity.select.sort-form__select(name="orderSelectCity" aria-label="Select" required)
+                                option(value="") Виберіть місто
+                                option(value="1") Київ
+                                option(value="2") Харків
+                                option(value="3") Київ
+                                option(value="4") Харків
+                                option(value="5") Київ
+                                option(value="6") Харків
+                        
+                        .form-block__item.form-block__item--6
+                            select#orderSelectPostNumber.select.sort-form__select(name="orderSelectPostNumber" aria-label="Select" required)
+                                option(value="") Виберіть віділення
+                                option(value="1") №1
+                                option(value="2") №2
+                                option(value="3") №3
+                                option(value="4") №4
+                    
+                    .form-block__grid(data-delivery="post-machine")
+                        .form-block__item.form-block__item--6
+                            select#orderSelectCity2.select.sort-form__select(name="orderSelectCity2" aria-label="Select" required)
+                                option(value="") Виберіть місто
+                                option(value="1") Київ
+                                option(value="2") Харків
+                                option(value="3") Київ
+                                option(value="4") Харків
+                                option(value="5") Київ
+                                option(value="6") Харків
+                        
+                        .form-block__item.form-block__item--6
+                            select#orderSelectPostNumber2.select.sort-form__select(name="orderSelectPostNumber2" aria-label="Select" required)
+                                option(value="") Виберіть поштомат
+                                option(value="1") №1
+                                option(value="2") №2
+                                option(value="3") №3
+                                option(value="4") №4
+
+                    .form-block__grid(data-delivery="courier")
+                        .form-block__item.form-block__item--6
+                            select#orderSelectCity3.select.sort-form__select(name="orderSelectCity3" aria-label="Select" required)
+                                option(value="") Виберіть місто
+                                option(value="1") Київ
+                                option(value="2") Харків
+                                option(value="3") Київ
+                                option(value="4") Харків
+                                option(value="5") Київ
+                                option(value="6") Харків
+                        
+                        .form-block__item.form-block__item--6
+                            input#orderInputStreet.input.form__input(type="text" name="orderInputStreet" placeholder="Вулиця *" autocomplete="off" required)
+                        
+                        .form-block__item.form-block__item--6
+                            input#orderInputBuilding.input.form__input(type="text" name="orderInputBuilding" placeholder="Будинок *" autocomplete="off" required)
+                        
+                        .form-block__item.form-block__item--6
+                            input#orderInputApartment.input.form__input(type="text" name="orderInputApartment" placeholder="Квартира *" autocomplete="off" required)
+                    
+                    .form-block__grid(data-delivery="express")
+                        .form-block__item.form-block__item--6
+                            select#orderSelectRegion.select.sort-form__select(name="orderSelectRegion" aria-label="Select" required)
+                                option(value="") Виберіть область
+                                option(value="1") Київ
+                                option(value="2") Харків
+                                option(value="3") Київ
+                                option(value="4") Харків
+                                option(value="5") Київ
+                                option(value="6") Харків
+                        
+                        .form-block__item.form-block__item--6
+                            select#orderSelectCity4.select.sort-form__select(name="orderSelectCity4" aria-label="Select" required)
+                                option(value="") Виберіть місто
+                                option(value="1") Київ
+                                option(value="2") Харків
+                                option(value="3") Київ
+                                option(value="4") Харків
+                                option(value="5") Київ
+                                option(value="6") Харків
+
+                        .form-block__item.form-block__item--6
+                            input#orderInputPostNumber2.input.form__input(type="text" name="orderInputPostNumber2" placeholder="Віділення *" autocomplete="off" required)
+                    
+                    .form-block__grid(data-delivery="international")
+                        .form-block__item.form-block__item--6
+                            select#orderSelectCountry.select.sort-form__select(name="orderSelectCountry" aria-label="Select" required)
+                                option(value="") Виберіть країну
+                                option(value="1") Київ
+                                option(value="2") Харків
+                                option(value="3") Київ
+                                option(value="4") Харків
+                                option(value="5") Київ
+                                option(value="6") Харків
+                        
+                        .form-block__item.form-block__item--6
+                            select#orderSelectCity5.select.sort-form__select(name="orderSelectCity5" aria-label="Select" required)
+                                option(value="") Виберіть місто
+                                option(value="1") Київ
+                                option(value="2") Харків
+                                option(value="3") Київ
+                                option(value="4") Харків
+                                option(value="5") Київ
+                                option(value="6") Харків
+
+                        .form-block__item.form-block__item--6
+                            input#orderInputPostNumber3.input.form__input(type="text" name="orderInputPostNumber3" placeholder="Віділення *" autocomplete="off" required)
+
+                    .form-block__grid(data-delivery="pickup")
+                        .form-block__item
+                            select#orderSelectPlace.select.sort-form__select(name="orderSelectPlace" aria-label="Select" required)
+                                option(value="") Виберіть місце
+                                option(value="1") Магазин №1
+                                option(value="2") Магазин №2
+                                option(value="3") Магазин №3
+                                option(value="4") Магазин №4
+
+                h3.form__subtitle Оплата
+
+                .form-block
+                    .form-block__grid
+                        .form-block__item
+                            select#orderSelectPayment.select.sort-form__select(name="orderSelectPayment" aria-label="Select" required)
+                                option(value="1") Liqpay
+                                option(value="2") Оплата під час отримання товару
+                                option(value="3") Оплата по реквізитам
+                
+                .form__comment
+                    button.form__comment-button(type="button" aria-expanded="false" data-trigger="form-comment") Коментар до замовлення
+                        .form__comment-icon
+                    
+                    #form-comment.form__comment-dropdown(aria-hidden="true")
+                        .form__comment-inner
+                            textarea.textarea.form__input(name="orderTextarea" rows="4" placeholder="Коментар" autocomplete="off")
+
+            .order-form__right
+                .order
+                    h2.order__title Ваше замовлення
+
+                    .order-item
+                        .order-item__col
+                            picture.order-item__picture
+                                img.order-item__picture-img(src="img/gallery-img-thumb.webp" srcset="img/gallery-img-thumb@2x.webp 2x" loading="lazy" width="64" height="64" alt="alt")
+
+                        .order-item__col
+                            h4.order-item__title
+                                a.order-item__link(href="#") Стартовий набір для манікюру Saga
+                            
+                            .order-item__code Код товару 
+                                strong 4352635
+                                
+                        .order-item__col
+                            .order-item__price 800 ₴
+
+                        .order-item__col
+                            .order-item__count 2 шт
+
+                        .order-item__col
+                            .order-item__total 1600 ₴
+
+                    .order-item
+                        .order-item__col
+                            picture.order-item__picture
+                                img.order-item__picture-img(src="img/gallery-img-thumb.webp" srcset="img/gallery-img-thumb@2x.webp 2x" loading="lazy" width="64" height="64" alt="alt")
+
+                        .order-item__col
+                            h4.order-item__title
+                                a.order-item__link(href="#") Стартовий набір для манікюру Saga
+                            
+                            .order-item__code Код товару 
+                                strong 4352635
+
+                        .order-item__col
+                            .order-item__price 800 ₴
+
+                        .order-item__col
+                            .order-item__count 2 шт
+
+                        .order-item__col
+                            .order-item__total 1600 ₴
+
+                    .order__sum
+                        .order__sum-title Разом
+                        .order__sum-value 3 200 ₴
+
+                    .form__group.order__group
+                        .form__input-group
+                            input#orderInputBonuses.input.form__input(type="text" name="orderInputBonuses" placeholder="Списання бонусів" autocomplete="off")
+                            
+                            button.button.form__sub-button(type="button") ОК
+
+                    .form__group.order__group
+                        .form__input-group
+                            input#orderInputPromo.input.form__input(type="text" name="orderInputPromo" placeholder="Промокод" autocomplete="off")
+                            
+                            button.button.form__sub-button(type="button") ОК
+
+                    .order__row
+                        span Нова пошта (відділення)
+                        span За тарифами перевізника
+                    
+                    .order__row
+                        span Промокод
+                        span -200 ₴
+
+                    .order__info
+                        p Якщо ви зареєструєтеся - при оформленні цього замовлення 
+                            strong.ruby-color ви отримаєте 3% від покупки
+                            |  (умови у розділі накопичувальна знижка)
+
+                    .order__total
+                        .order__total-title Вартість
+                        .order__total-value 3 099 ₴
+
+                    .checkbox.order__checkbox
+                        input.checkbox__input#orderAgree(type="checkbox" name="orderAgree" value="true" required)
+                        label.checkbox__label(for="orderAgree") Підтверджуючи замовлення, я приймаю умови 
+                            a.checkbox__link(href="#") Політки конфіденційності
+                            |  та 
+                            a.checkbox__link(href="#") Договіру оферти
+
+                    button.button.order__button Оформити замовлення

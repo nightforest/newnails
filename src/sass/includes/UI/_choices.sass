@@ -1,0 +1,159 @@
+.choices
+    margin-bottom: 0
+    
+    &[data-type*=select-one]::after
+        border: none
+        width: 20px
+        height: 20px
+        margin-top: -10px
+        right: 15px
+        background: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.40594 6.74815L0.24629 1.46799C-0.0820964 1.1321 -0.0820964 0.587528 0.24629 0.251809C0.574383 -0.0839371 1.10652 -0.083937 1.43459 0.251809L6.00009 4.92394L10.5654 0.251945C10.8937 -0.0838008 11.4257 -0.0838008 11.7538 0.251946C12.0821 0.587692 12.0821 1.13224 11.7538 1.46812L6.5941 6.74829C6.42998 6.91616 6.2151 7 6.00011 7C5.78502 7 5.56998 6.916 5.40594 6.74815Z' fill='black' style='fill:black;fill-opacity:1;'/%3E%3C/svg%3E%0A") no-repeat center center
+        transition: all .5s ease
+        
+    &[data-type*=select-one].is-open::after
+        margin-top: -10px
+        transform: rotateX(180deg)
+
+    &__placeholder
+        display: none
+        color: #8A8A8A
+        font-weight: 300
+        opacity: 1
+
+    &__inner
+        display: flex
+        align-items: center
+        width: 100%
+        height: 54px
+        border-radius: 0
+        background: var(--white)
+        border: 1px solid var(--black)
+        box-shadow: none
+        font-size: 16px
+        line-height: 1.2
+        color: var(--black)
+        padding: 5px 45px 5px 20px !important
+        font-weight: 300
+        outline: none
+        appearance: none
+        transition: all .5s ease
+
+        &:hover
+            border-color: var(--ruby)
+
+        &:focus-visible
+            border-color: var(--ruby)
+
+        &:has(> select.just-validate-error-field)
+            border-color: var(--red)
+
+    &.is-open
+        // z-index: $z-index-1
+
+        .choices__inner
+            border-radius: 0
+            border-color: var(--ruby)
+
+        .choices__list--dropdown, 
+        .choices__list[aria-expanded]
+            border-color: #e2e2e2
+
+    &.is-focused
+
+        .choices__inner
+            border-color: var(--ruby)
+
+    &__list
+
+        &--dropdown,
+        &[aria-expanded]
+            box-shadow: 0 10px 15px 0 rgba(255, 255, 255, .05)
+            border-radius: 0
+            margin-top: 0
+            background: var(--white)
+            border: 1px solid #e2e2e2
+            color: var(--black)
+            word-break: break-word
+
+            &.is-active
+                z-index: 100
+        
+        &--single
+            padding: 0
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+
+            .choices__item
+                display: inline
+
+        &--multiple
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            gap: 3px
+
+            .choices__item
+                margin: 0
+                border-color: var(--green)
+                background: var(--green)
+                font-size: 10px
+                font-weight: 400
+                line-height: 1
+    
+    &[data-type*=select-multiple]
+
+        .choices__button
+            background-repeat: no-repeat
+            background-position: center center
+            border-left-color: var(--light-green)
+
+    &__item
+        
+        &--disabled
+            text-indent: -9999px
+            height: 0
+            width: 0
+            padding: 0 !important
+
+    &__input
+        background: var(--white)
+        margin: 0
+        
+        &::placeholder
+            color: var(--grey)
+            font-weight: 400
+        
+.is-flipped
+
+    .choices__list
+
+        &--dropdown,
+        &[aria-expanded]
+            border-radius: 10px
+            margin-bottom: 0
+
+.choices__list--dropdown .choices__item--selectable::after, 
+.choices__list[aria-expanded] .choices__item--selectable::after
+    display: none
+
+.choices__list--dropdown .choices__list, 
+.choices__list[aria-expanded] .choices__list
+    max-height: 170px
+
+.choices__list--dropdown .choices__item, 
+.choices__list[aria-expanded] .choices__item
+    padding: 10px 40px 10px 20px
+    font-size: 16px
+    font-weight: 300
+    line-height: 1.2
+    transition: all .5s ease
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted, 
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted
+    background-color: var(--grey)
+    color: var(--black)
+
+.choices__list--dropdown .choices__item--choice.is-selected, 
+.choices__list[aria-expanded] .choices__item--choice.is-selected
+    background: url("data:image/svg+xml,%3Csvg width='23' height='20' viewBox='0 0 23 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.3205 20L7.19437 19.7945C5.26126 16.644 0.125515 9.95856 0.0738885 9.89138L0 9.7954L1.74932 8.14178L7.28809 11.8419C10.7757 7.5121 14.0292 4.53862 16.1514 2.80191C18.4727 0.902353 19.9839 0.0280925 19.9991 0.019627L20.0334 0H23L22.7175 0.240753C15.4264 6.45375 7.52267 19.6603 7.44376 19.793L7.3205 20Z' fill='%23C14073' style='fill:%23C14073;fill:color(display-p3 0.7569 0.2510 0.4510);fill-opacity:1;'/%3E%3C/svg%3E%0A") no-repeat right 10px center

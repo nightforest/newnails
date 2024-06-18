@@ -1,0 +1,71 @@
+.mother-section
+    position: relative
+    padding: 40px 0
+    background: #B5D3E4
+    overflow: hidden
+    min-height: 644px
+    display: flex
+    align-items: center
+    z-index: $z-index-0
+
+    @media ($max-lg)
+        min-height: 510px
+
+    @media ($max-md)
+        align-items: stretch
+        padding: 30px 0
+
+    &__bg
+        position: absolute
+        right: 10%
+        top: 0
+        bottom: 0
+        display: inline-flex
+        z-index: $z-index-minus
+
+        @media ($max-xxl)
+            right: 0
+
+        @media ($max-xl)
+            right: -150px
+
+        @media ($max-md)
+            top: auto
+            right: 0
+
+        &-img
+            height: 100%
+            width: auto
+
+            @media ($max-md)
+                max-width: 100%
+                height: auto
+
+    &__content
+        max-width: 50%
+
+        @media ($max-md)
+            max-width: 90%
+
+    &__title
+        margin-bottom: 10px
+        font-size: 40px
+        font-weight: 900
+
+        @media ($max-xl)
+            font-size: 36px
+
+        @media ($max-md)
+            font-size: 24px
+            line-height: 1.25
+
+    &__text
+        margin-bottom: 35px
+        font-size: 24px
+
+        @media ($max-xl)
+            font-size: 20px
+
+        @media ($max-md)
+            margin-bottom: 10px
+            font-size: 16px

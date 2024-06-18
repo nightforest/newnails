@@ -1,0 +1,100 @@
+section.contacts-section
+    picture.contacts-section__bg
+        img.contacts-section__bg-img(src="img/new-nails.webp" srcset="img/new-nails@2x.webp 2x" width="426" height="245" alt="alt")
+
+    .container.contacts-section__container
+        p.contacts-section__info З кожної покупки 
+            strong.ruby-color Ви отримаєте кешбек 5%
+            | , який зможете використовувати при наступному замовлення.
+
+        .contacts-section__row
+            .contacts-section__col
+                address.contacts.contacts-section__contacts
+                    ul.contacts__list
+                        li.contacts__item
+                            svg.contacts__icon(width="12" height="16")
+                                use(xlink:href="img/sprite.svg#location")
+
+                            .contacts__content
+                                p.contacts__text Проспект Володимира Івасюка 8 корпус 3, Київ, Україна
+                        
+                        li.contacts__item
+                            svg.contacts__icon(width="16" height="12")
+                                use(xlink:href="img/sprite.svg#email")
+                            
+                            .contacts__content
+                                .contacts__text
+                                    a.contacts__link(href="mailto:info@newnails.com.ua") info@newnails.com.ua
+                        
+                        li.contacts__item
+                            svg.contacts__icon(width="16" height="16")
+                                use(xlink:href="img/sprite.svg#phone")
+                            
+                            .contacts__content
+                                .contacts__text
+                                    a.contacts__link(href="tel:+380988374851") +380 (98) 837-48-51
+                                
+                                .contacts__text.contacts__text--flex
+                                    a.contacts__link(href="tel:+380662188916") +380 (66) 218-89-16
+
+                                    address.social.social--sm.contacts__social
+                                        ul.social__list
+                                            ul.social__list
+                                                li.social__item
+                                                    a.social__link(href="#" aria-label="Instagram")
+                                                        svg.social__icon(width="11" height="10")
+                                                            use(xlink:href="img/sprite.svg#telegram")
+
+                                                li.social__item
+                                                    a.social__link(href="#" aria-label="Facebook")
+                                                        svg.social__icon(width="12" height="13")
+                                                            use(xlink:href="img/sprite.svg#viber")
+
+                                .contacts__text
+                                    a.contacts__link(href="tel:+380988374851") +380 (98) 837-48-51
+
+                        li.contacts__item
+                            svg.contacts__icon(width="16" height="16")
+                                use(xlink:href="img/sprite.svg#clock")
+
+                            .contacts__content
+                                p.contacts__text ПН, ВТ, СP, ЧТ, ПТ : 9.00 - 18.00, 
+                                    br
+                                    | СБ, НД : 9.00 - 17.00
+
+                h3.contacts-section__subtitle Соц мережі
+
+                address.social.contacts-section__social
+                    ul.social__list
+                        ul.social__list
+                            li.social__item
+                                a.social__link(href="#" aria-label="Instagram")
+                                    svg.social__icon(width="20" height="20")
+                                        use(xlink:href="img/sprite.svg#instagram")
+
+                            li.social__item
+                                a.social__link(href="#" aria-label="Facebook")
+                                    svg.social__icon(width="12" height="23")
+                                        use(xlink:href="img/sprite.svg#facebook")
+
+            .contacts-section__col
+                form.form.contacts-section__form(id="contacts-form" autocomplete="off" novalidate="novalidate")
+                    .form__group
+                        input#contactsInputName.input.form__input(type="text" name="contactsInputName" placeholder="Ім'я *" autocomplete="off" required)
+
+                    .form__group
+                        input#contactsInputPhone.input.form__input.tell-input(type="text" name="contactsInputPhone" placeholder="" autocomplete="off" required)
+
+                    .form__group
+                        input#contactsInputEmail.input.form__input(type="email" name="contactsInputEmail" placeholder="Пошта *" autocomplete="off" required)
+
+                    .form__group
+                        textarea#contactsTextarea.textarea.form__input(name="contactsTextarea" rows="4" placeholder="Коментар" autocomplete="off" required)
+                    
+                    .form__group
+                        .checkbox
+                            input.checkbox__input#contactsAgree(type="checkbox" name="contactsAgree" value="true" required)
+                            label.checkbox__label(for="contactsAgree") Угода з 
+                                a.checkbox__link(href="#") політикою конфіденційності
+
+                    button.button.form__button відправити

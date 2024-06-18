@@ -1,0 +1,41 @@
+.social
+    font-style: normal
+
+    &__title
+        font-size: 18px
+
+    &__list
+        display: flex
+        align-items: center
+        gap: 15px
+        margin: 0
+        padding: 0
+        list-style: none
+
+    &__link
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 40px
+        height: 40px
+        line-height: 1
+        color: var(--white)
+        background: var(--black)
+        transition: color .5s ease, background .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            outline: none
+            color: var(--white)
+            background: var(--ruby)
+
+    &--sm
+
+        .social__list
+            gap: 8px
+        
+        .social__link
+            width: 20px
+            height: 20px

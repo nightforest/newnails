@@ -1,0 +1,25 @@
+section.login-section
+    picture.login-section__bg
+        source(srcset="img/login-bg-mobile@2x.webp 2x, img/login-bg-mobile.webb" width="320" height="644" media="(max-width: 767.98px)")
+        img.login-section__bg-img(src="img/login-bg.webp" srcset="img/login-bg@2x.webp 2x" width="1920" height="854" alt="alt")
+
+    .container.login-section__container
+        .login
+            h1.login__title.login__title--sm Введіть верифікаційний код, який був надісланий вам на E-mail
+
+            form.form.login__form(id="login-form" autocomplete="off" novalidate="novalidate")
+                .form__code
+                    .form__code-item
+                        input#LoginInputCode1.input.form__input.input-numbers(type="text" name="LoginInputCode1" placeholder="x" maxlength="1" autocomplete="off" required)
+
+                    .form__code-item
+                        input#LoginInputCode2.input.form__input.input-numbers(type="text" name="LoginInputCode2" placeholder="x" maxlength="1" autocomplete="off" required)
+
+                    .form__code-item
+                        input#LoginInputCode3.input.form__input.input-numbers(type="text" name="LoginInputCode3" placeholder="x" maxlength="1" autocomplete="off" required)
+
+                    .form__code-item
+                        input#LoginInputCode4.input.form__input.input-numbers(type="text" name="LoginInputCode4" placeholder="x" maxlength="1" autocomplete="off" required)
+
+            .login__info Запросити код повторно 
+                strong.ruby-color.countdown-sec(data-duration="60") 60

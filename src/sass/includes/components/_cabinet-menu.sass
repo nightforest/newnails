@@ -1,0 +1,83 @@
+.cabinet-menu
+    background: var(--black)
+    padding: 45px
+
+    @media ($max-lg)
+        padding: 0 20px
+        display: grid
+        grid-template-rows: 0fr
+        transition: grid-template-rows .5s, background-color .5s ease
+
+        &[aria-hidden="false"]
+            grid-template-rows: 1fr
+
+    &-toggle
+        width: 100%
+        text-transform: none
+
+        @media ($min-lg)
+            display: none
+
+        &[aria-expanded="true"]
+
+            .cabinet-menu-toggle__arrow
+                transform: rotateX(180deg)
+
+        &__arrow
+            margin-left: auto
+            transition: transform .5s ease
+
+    &__list
+        margin: 0
+        padding: 0
+        list-style: none
+
+        @media ($max-lg)
+            overflow: hidden
+    
+    &__item
+
+        @media ($max-lg)
+            margin-bottom: 20px
+
+            &:has(> .is-active)
+                display: none
+
+        &:not(:last-child)
+            margin-bottom: 60px
+
+            @media ($max-lg)
+                margin-bottom: 0
+    
+    &__icon
+        margin-top: -2px
+    
+    &__link
+        display: inline-flex
+        align-items: center
+        gap: 20px
+        color: var(--white)
+        font-size: 20px
+        font-weight: 400
+        transition: color .5s ease
+
+        @media ($max-xxl)
+            font-size: 16px
+
+        @media ($max-lg)
+            display: flex
+            font-size: 16px
+            gap: 8px
+            padding: 20px 0
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--ruby)
+
+        &.is-active
+            font-weight: 600
+            color: var(--ruby)
+    
+    &__button
+        width: 100%

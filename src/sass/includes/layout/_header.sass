@@ -1,0 +1,243 @@
+.header
+    position: relative
+
+    @media ($max-md)
+        z-index: $z-index-2
+
+    &__top
+        background: var(--white)
+
+        @media ($max-md)
+            padding: 10px 0
+
+            &[aria-hidden="true"]
+                display: none
+
+        &-container
+            display: flex
+            align-items: center
+
+            @media ($max-md)
+                justify-content: space-between
+                gap: 8px
+        
+        &-close
+            display: flex
+
+            @media ($min-md)
+                display: none
+    
+    &__middle
+        position: relative
+        background: var(--black)
+
+        &-container
+            display: flex
+            align-items: center
+            gap: 24px
+
+            @media ($max-md)
+                gap: 20px
+
+            @media ($max-xs)
+                gap: 14px
+
+    &__bottom
+        background: var(--white)
+        padding: 38px 0
+
+        @media ($max-md)
+            padding: 0
+            border-bottom: 1px solid var(--black)
+        
+        &-container
+
+            @media ($max-md)
+                padding: 0
+
+    &__slogan
+        font-size: 14px
+        font-weight: 600
+
+        @media ($max-md)
+            font-size: 12px
+
+    &__currency
+        margin-left: auto
+        margin-right: 10px
+
+        @media ($max-md)
+            display: none
+    
+    &__lang
+
+        @media ($max-md)
+            display: none
+
+    &__mobile-lang
+        order: 2
+
+        @media ($min-md)
+            display: none
+
+        .dropdown__list
+            top: calc(100% + 18px)
+
+    &__search-toggle
+        order: 3
+
+        @media ($min-md)
+            display: none
+
+    &__logo
+        position: absolute
+        top: -18px
+        left: 50%
+        translate: -50% 0 0
+
+        @media ($max-lg)
+            position: relative
+            top: auto
+            left: auto
+            display: flex
+            align-items: center
+            justify-content: center
+            translate: none
+            background: var(--white)
+            padding: 8px
+            height: 70px
+        
+        @media ($max-md)
+            margin: 0 auto
+            order: 4
+            height: 60px
+
+        &:before
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 207px
+            height: 207px
+            rotate: 45deg
+            translate: -50% -125px 0
+            background: var(--white)
+            content: ""
+
+            @media ($max-lg)
+                display: none
+
+        .logo__img
+
+            @media ($max-md)
+                max-width: 55px
+
+    &__catalog-button
+        min-width: 230px
+        height: 70px
+        font-size: 20px
+        background: #272727
+
+        @media ($max-xl)
+            font-size: 18px
+            min-width: 200px
+        
+        @media ($max-md)
+            display: none
+
+        span
+            padding-top: 4px
+    
+    &__catalog-button-mobile
+        height: 56px
+        width: 100%
+        background: none
+        font-size: 20px
+        color: var(--black)
+
+        @media ($min-md)
+            display: none
+
+        span
+            padding-top: 4px
+        
+        .button__icon
+            
+            &:nth-child(2)
+                display: none
+
+        &.is-active
+
+            .button__icon
+
+                &:nth-child(1)
+                    display: none
+            
+                &:nth-child(2)
+                    display: flex
+
+    &__bonus
+        display: flex
+        align-items: center
+        gap: 6px
+        color: var(--white)
+        font-weight: 300
+        transition: color .5s ease
+
+        @media ($max-xl)
+            display: none
+
+        span
+            font-weight: 400
+
+    &__search
+        margin-left: auto
+        max-width: 220px
+        width: 100%
+
+        @media ($max-xxl)
+            max-width: 170px
+        
+        @media ($max-lg)
+            max-width: 160px
+        
+        @media ($max-md)
+            position: absolute
+            top: 100%
+            left: 0
+            width: 100%
+            max-width: 100%
+            padding: 12px 15px
+            z-index: $z-index-1
+            background: var(--black)
+            opacity: 0
+            visibility: hidden
+            transform: translateY(20px)
+            transition: opacity .25s ease, transform .25s ease, visibility .25s ease
+            z-index: $z-index-2
+
+            &[aria-hidden="false"]
+                opacity: 1
+                visibility: visible
+                transform: translateY(0)
+                transition: opacity .5s ease, transform .5s ease, visibility .5s ease
+
+    &__menu
+
+        @media ($max-md)
+            display: none
+    
+    &__burger
+        order: 1
+
+        @media ($min-md)
+            display: none
+
+    &__actions
+
+        @media ($max-md)
+            order: 6
+
+    &__phones
+
+        @media ($max-md)
+            order: 5

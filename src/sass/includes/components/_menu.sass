@@ -1,0 +1,47 @@
+.menu
+
+    &__list
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 16px
+        padding: 0
+        margin: 0
+        list-style: none
+        line-height: 1
+
+    &__link
+        position: relative
+        display: flex
+        align-items: center
+        gap: 8px
+        text-align: left
+        font-size: 18px
+        color: var(--black)
+        transition: color .5s ease
+
+        @media ($max-xxl)
+            font-size: 16px
+
+        @media ($max-lg)
+            font-size: 12px
+
+        &:before
+            position: absolute
+            bottom: -17px
+            left: 0
+            width: 100%
+            height: 4px
+            background: var(--ruby)
+            display: none
+            content: ""
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--ruby)
+
+        &.is-active
+            
+            &:before
+                display: block
