@@ -60,7 +60,7 @@ header.header
                 span Каталог
 
             .phones.header__phones
-                button.phones__toggle(type="button" data-toggle="phones-dropdown" aria-expanded="false")
+                button.phones__toggle(type="button" data-toggle="phones-dropdown" aria-label="Show phones" aria-expanded="false")
                     svg.phones__toggle-icon(width="24" height="24")
                         use(xlink:href="img/sprite.svg#phone")
                     
@@ -81,7 +81,7 @@ header.header
                     svg.logo__img(width="132" height="73")
                         use(xlink:href="img/sprite.svg#logo")
             
-            .search#search.header__search(aria-hidden="true")
+            .search#search.header__search
                 form.search-form
                     input.input.search-form__input(type="text" name="inputSearch" placeholder="Пошук" autocomplete="off" required)
 
@@ -99,19 +99,19 @@ header.header
             nav.actions.header__actions
                 ul.actions__list
                     li.actions__item.actions__item--hidden-md
-                        a.actions__button(href="#")
+                        a.actions__button(href="#" aria-label="Wishlist")
                             svg.actions__icon(width="24" height="22")
                                 use(xlink:href="img/sprite.svg#heart")
                             
                             span.actions__count 1
                     
                     li.actions__item
-                        a.actions__button(href="#")
+                        a.actions__button(href="#" aria-label="Profile")
                             svg.actions__icon(width="21" height="24")
                                 use(xlink:href="img/sprite.svg#user")
                     
                     li.actions__item
-                        a.actions__button(href="#" data-modal="modal-cart")
+                        a.actions__button(href="#" aria-label="Cart" data-modal="modal-cart")
                             svg.actions__icon(width="18" height="24")
                                 use(xlink:href="img/sprite.svg#cart")
                             
