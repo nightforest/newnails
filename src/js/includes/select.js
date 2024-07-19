@@ -5,7 +5,7 @@ const select = () => {
     const selectAll = document.querySelectorAll('.select');
 
     selectAll?.forEach(item => {
-        const select = new Choices(item, {
+        new Choices(item, {
             allowHTML: true,
             placeholder: true,
             searchEnabled: false,

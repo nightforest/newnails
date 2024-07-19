@@ -29,8 +29,8 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-6add6cb9.js"></script>
-      <link rel="stylesheet" href="/assets/main-af44e76f.css">
+      <script type="module" crossorigin src="/assets/main-2cad07d0.js"></script>
+      <link rel="stylesheet" href="/assets/main-6e64b023.css">
     </head>
     <body>
         <!-- Header -->
@@ -439,9 +439,11 @@
           <div class="sort-form__group">
             <label class="sort-form__label" for="sortSelect">Сортування</label>
             <select class="select sort-form__select" id="sortSelect" name="sortSelect" aria-label="Select" required="required">
-              <option value="1">За замовчуванням</option>
-              <option value="2">По зростанню ціни</option>
-              <option value="3">По спаданню ціни</option>
+              <option value="1 true red" data-custom-properties="This option is fantastic">За замовчуванням</option>
+              <option value="2" data-custom-properties="[{link: 'https'}, {checked: true}, {points: 'str'}]">По зростанню ціни</option>
+              <option value="3" data-custom-properties="This option is fantastic">По спаданню ціни</option>
+              <option value="4" data-custom-properties="This option is fantastic">Від дорогих до дешевих</option>
+              <option value="5" data-custom-properties="This option is fantastic">Від дешевих до дорогих</option>
             </select>
           </div>
         </form>

@@ -29,9 +29,11 @@ section.catalog-section
                         label.sort-form__label(for="sortSelect") Сортування
 
                         select#sortSelect.select.sort-form__select(name="sortSelect" aria-label="Select" required)
-                            option(value="1") За замовчуванням
-                            option(value="2") По зростанню ціни
-                            option(value="3") По спаданню ціни
+                            option(value="1 true red" data-custom-properties="This option is fantastic") За замовчуванням
+                            option(value="2" data-custom-properties="[{link: 'https'}, {checked: true}, {points: 'str'}]") По зростанню ціни
+                            option(value="3" data-custom-properties="This option is fantastic") По спаданню ціни
+                            option(value="4" data-custom-properties="This option is fantastic") Від дорогих до дешевих
+                            option(value="5" data-custom-properties="This option is fantastic") Від дешевих до дорогих
 
             ul.catalog-section__list
                 li.catalog-section__item
