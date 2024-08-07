@@ -65,7 +65,18 @@
 
         @media ($min-md)
             display: none
-        
+    
+    &__categories-slider
+        margin-bottom: 50px
+
+        @media ($max-md)
+            margin-bottom: 30px
+
+        .categories-slider__wrapper
+
+            @media ($min-md)
+                justify-content: flex-start
+
     &__list
         display: grid
         grid-template-columns: repeat(12, 1fr)

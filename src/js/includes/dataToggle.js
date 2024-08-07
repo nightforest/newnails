@@ -4,7 +4,7 @@ const dataToggle = () => {
     
     toggleAll?.forEach(item => {
         item.addEventListener('click', function(e) {
-            const activeItem = document.querySelector('[data-toggle][aria-expanded="true"');
+            const activeItem = document.querySelector('[data-toggle][aria-expanded="true"]');
             const menuID = item.getAttribute('data-toggle');
             const menu = document.getElementById(menuID);
             const buttonsAll = document.querySelectorAll(`[data-toggle="${menuID}"]`);
@@ -31,9 +31,9 @@ const dataToggle = () => {
 
                 menu.setAttribute('aria-hidden', false);
 
-                if (window.innerWidth < 768) {
-                    body.style = 'overflow: hidden'
-                }
+                // if (window.innerWidth < 768) {
+                //     body.style = 'overflow: hidden'
+                // }
             } else {
                 buttonsAll.forEach(item => {
                     item.setAttribute('aria-expanded', false);
@@ -41,9 +41,9 @@ const dataToggle = () => {
 
                 menu.setAttribute('aria-hidden', true);
 
-                if (window.innerWidth < 768) {
-                    body.style = 'overflow: visible'
-                }
+                // if (window.innerWidth < 768) {
+                //     body.style = 'overflow: visible'
+                // }
             }
         });
     });
@@ -60,9 +60,9 @@ const dataToggle = () => {
             activeItem?.setAttribute('aria-expanded', false);
             activeMenu?.setAttribute('aria-hidden', true);
 
-            if (window.innerWidth < 768) {
-                body.style = 'overflow: visible'
-            }
+            // if (window.innerWidth < 768) {
+            //     body.style = 'overflow: visible'
+            // }
         }
     });
 }

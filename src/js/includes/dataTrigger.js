@@ -23,17 +23,17 @@ const dataTrigger = () => {
 
                 menu.setAttribute('aria-hidden', false);
 
-                if (window.innerWidth < 768) {
-                    body.style = 'overflow: hidden'
-                }
+                // if (window.innerWidth < 768) {
+                //     body.style = 'overflow: hidden'
+                // }
             } else {
                 item.setAttribute('aria-expanded', false);
 
                 menu.setAttribute('aria-hidden', true);
 
-                if (window.innerWidth < 768) {
-                    body.style = 'overflow: visible'
-                }
+                // if (window.innerWidth < 768) {
+                //     body.style = 'overflow: visible'
+                // }
             }
 
             changeHeight();

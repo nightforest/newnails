@@ -46,4 +46,14 @@
                 background: url("data:image/svg+xml,%3Csvg width='29' height='26' viewBox='0 0 29 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.2302 26L9.07116 25.7328C6.63376 21.6371 0.158258 12.9461 0.0931637 12.8588L0 12.734L2.20566 10.5843L9.18934 15.3944C13.5868 9.76573 17.6889 5.9002 20.3648 3.64248C23.2916 1.17306 25.1971 0.0365203 25.2163 0.0255152L25.2594 0H29L28.6438 0.312979C19.4507 8.38988 9.4851 25.5584 9.38561 25.7309L9.2302 26Z' fill='white' style='fill:white;fill-opacity:1;'/%3E%3C/svg%3E%0A") no-repeat center center
                 background-color: rgba(193, 64, 115, .4)
                 content: ""
-                
+    
+    &--sm
+        
+        .category-card__title
+            font-size: 14px
+
+            @media ($max-lg)
+                font-size: 12px
+
+        @media ($max-lg)
+            width: 80px

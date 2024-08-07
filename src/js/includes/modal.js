@@ -1,3 +1,5 @@
+import { disablePageScroll, enablePageScroll } from 'scroll-lock';
+
 const modal = () => {
     const body = document.querySelector("body");
     const header = document.querySelector(".header");
@@ -45,9 +47,7 @@ const modal = () => {
     });
 
     const openModal = (modal) => {
-        body.classList.add('scroll-disabled');
-        body.style.paddingRight = paddingRight + 'px';
-        header.style.paddingRight = paddingRight + 'px';
+        disablePageScroll(modal);
         modalWrap.classList.add('is-visible');
         modal.classList.add('is-visible');
 
@@ -62,9 +62,7 @@ const modal = () => {
 
         if (!header.classList.contains('is-active')) {
             setTimeout(() => {
-                body.classList.remove('scroll-disabled');
-                body.style.paddingRight = '0px';
-                header.style.paddingRight = '0px';
+                enablePageScroll(modal);
             }, 500);
         }
 
