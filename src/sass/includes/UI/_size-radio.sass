@@ -1,0 +1,64 @@
+.size-radio
+    padding: 0
+    margin: 0
+    line-height: 1
+    height: 100%
+
+    &__label
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 2px 8px
+        color: var(--black)
+        font-size: 14px
+        margin: 0
+        height: 30px
+        cursor: pointer
+        user-select: none
+        border: 2px solid #c6c6c6
+        white-space: nowrap
+        transition: border-color .5s ease
+
+        &:hover,
+        &:active
+            border-color: var(--ruby)
+
+    &__input
+        position: absolute
+        opacity: 0
+        z-index: -1
+
+        // Checked
+        &:checked + .size-radio__label
+            border-color: var(--ruby)
+
+        // Not Checked
+        // &:not(:checked) + .radio__label::after
+
+
+        // Hover
+        // &:not(:disabled):not(:checked) + .radio__label:hover::before
+
+
+        // Active 
+        &:not(:disabled):active + .size-radio__label
+            border-color: var(--ruby)
+
+        // Focus 
+        &:focus-visible + .size-radio__label
+            border-color: var(--ruby)
+
+        &:focus-visible:not(:checked) + .size-radio__label
+            border-color: var(--ruby)
+        
+        // Disabled
+        &:disabled
+            &:not(:checked) + .size-radio__label
+                border-color: var(--black)
+
+            &:checked + .size-radio__label
+                border-color: var(--black)
+
+            + .size-radio__label
+                color: var(--black)

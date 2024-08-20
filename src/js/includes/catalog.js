@@ -1,13 +1,10 @@
-import { disablePageScroll, enablePageScroll } from 'scroll-lock';
+import disableScroll from "./disableScroll";
+import enableScroll from "./enableScroll";
 
 const catalog = () => {
-    const body = document.querySelector('body');
     const header = document.querySelector('.header');
     const catalog = document.querySelector(".catalog");
-    const catalogSubWrap = catalog?.querySelector(".catalog__sub-wrap");
-    const catalogInner = catalog?.querySelector(".catalog__inner");
     const catalogToggleAll = document.querySelectorAll("[data-catalog-toggle]");
-    const paddingRight = window.innerWidth - document.documentElement.clientWidth;
     const subMenuToggleAll = document.querySelectorAll("[data-sub-menu]");
     
     catalogToggleAll?.forEach(item => {
@@ -18,7 +15,7 @@ const catalog = () => {
     });
 
     catalog?.addEventListener('click', e => {
-        if (!e.target.closest('.catalog__sidebar')) {
+        if (!e.target.closest('.catalog__sidebar') && !e.target.closest('.catalog__sub-wrap')) {
             catalogShowHide();
         }
     });
@@ -35,12 +32,10 @@ const catalog = () => {
         });
         
         if (catalog.classList.contains('is-visible')) {
-            disablePageScroll(catalogSubWrap);
-            disablePageScroll(catalogInner);
+            disableScroll();
         } else {
             setTimeout(() => {
-                enablePageScroll(catalogSubWrap);
-                enablePageScroll(catalogInner);
+                enableScroll();
             }, 500);
 
             activeToggle?.setAttribute('aria-expanded', false);
@@ -53,23 +48,28 @@ const catalog = () => {
             const menuID = item.getAttribute('data-sub-menu');
             const menu = document.getElementById(menuID);
             const isExpanded = item.getAttribute('aria-expanded');
-            const activeToggle = document.querySelector('.catalog-menu__link[aria-expanded="true"]');
+            const activeToggleAll = catalog?.querySelectorAll('[aria-expanded="true"]');
             const activeMenu = document.querySelector('.catalog-sub-menu[aria-hidden="false"]');
-            
+
             e.preventDefault();
             
             if (isExpanded === 'false') {
-                activeToggle?.setAttribute('aria-expanded', false);
+                activeToggleAll?.forEach(toggle => {
+                    toggle.setAttribute('aria-expanded', false);
+                });
                 activeMenu?.setAttribute('aria-hidden', true);
                 
                 item.setAttribute('aria-expanded', true);
                 menu.setAttribute('aria-hidden', false);
+
+                if (item.classList.contains('catalog-menu__link')) {
+                    catalog?.querySelector('.catalog-menu__link.is-active')?.classList.remove('is-active');
+                    item.classList.add('is-active');
+                }
             } else {
                 item.setAttribute('aria-expanded', false);
                 menu.setAttribute('aria-hidden', true);
             }
-
-            changeHeight();
         });
     });
 }

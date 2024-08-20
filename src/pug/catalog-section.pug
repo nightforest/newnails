@@ -28,7 +28,7 @@ section.catalog-section
                     .sort-form__group
                         label.sort-form__label(for="sortSelect") Сортування
 
-                        select#sortSelect.select.sort-form__select(name="sortSelect" aria-label="Select" required)
+                        select#sortSelect.select.sort-form__select.sort-form__select--fixed-width(name="sortSelect" aria-label="Select" required)
                             option(value="1 true red" data-custom-properties="This option is fantastic") За замовчуванням
                             option(value="2" data-custom-properties="[{link: 'https'}, {checked: true}, {points: 'str'}]") По зростанню ціни
                             option(value="3" data-custom-properties="This option is fantastic") По спаданню ціни
@@ -136,9 +136,83 @@ section.catalog-section
                                 span.new-price 1600 ₴
                                 span.old-price 1890 ₴
 
+                        .product-card__colors
+                            ul.product-card__colors-list
+                                li.product-card__colors-item
+                                    .color-radio
+                                        input.color-radio__input(type="radio" id="product-color-radio-1" name="product-color-radio" value="red" checked)
+                                        label.color-radio__label(for="product-color-radio-1")
+                                            picture.color-radio__picture
+                                                img.color-radio__picture-img(src="img/color-radio-img.webp" srcset="img/color-radio-img@2x.webp 2x" width="80" height="80" alt="alt")
+                                
+                                li.product-card__colors-item
+                                    .color-radio
+                                        input.color-radio__input(type="radio" id="product-color-radio-2" name="product-color-radio" value="black")
+                                        label.color-radio__label(for="product-color-radio-2")
+                                            picture.color-radio__picture
+                                                img.color-radio__picture-img(src="img/color-radio-img.webp" srcset="img/color-radio-img@2x.webp 2x" width="80" height="80" alt="alt")
+                                
+                                li.product-card__colors-item
+                                    .color-radio
+                                        input.color-radio__input(type="radio" id="product-color-radio-3" name="product-color-radio" value="yellow")
+                                        label.color-radio__label(for="product-color-radio-3")
+                                            picture.color-radio__picture
+                                                img.color-radio__picture-img(src="img/color-radio-img.webp" srcset="img/color-radio-img@2x.webp 2x" width="80" height="80" alt="alt")
+                                
+                                li.product-card__colors-item
+                                    .color-radio
+                                        input.color-radio__input(type="radio" id="product-color-radio-4" name="product-color-radio" value="white")
+                                        label.color-radio__label(for="product-color-radio-4")
+                                            picture.color-radio__picture
+                                                img.color-radio__picture-img(src="img/color-radio-img.webp" srcset="img/color-radio-img@2x.webp 2x" width="80" height="80" alt="alt")
+
+                                li.product-card__colors-item
+                                    .color-radio
+                                        input.color-radio__input(type="radio" id="product-color-radio-1" name="product-color-radio" value="red")
+                                        label.color-radio__label(for="product-color-radio-1")
+                                            picture.color-radio__picture
+                                                img.color-radio__picture-img(src="img/color-radio-img.webp" srcset="img/color-radio-img@2x.webp 2x" width="80" height="80" alt="alt")
+                                
+                                li.product-card__colors-item
+                                    .color-radio
+                                        input.color-radio__input(type="radio" id="product-color-radio-2" name="product-color-radio" value="black")
+                                        label.color-radio__label(for="product-color-radio-2")
+                                            picture.color-radio__picture
+                                                img.color-radio__picture-img(src="img/color-radio-img.webp" srcset="img/color-radio-img@2x.webp 2x" width="80" height="80" alt="alt")
+                                
+                                li.product-card__colors-item
+                                    .color-radio
+                                        input.color-radio__input(type="radio" id="product-color-radio-3" name="product-color-radio" value="yellow")
+                                        label.color-radio__label(for="product-color-radio-3")
+                                            picture.color-radio__picture
+                                                img.color-radio__picture-img(src="img/color-radio-img.webp" srcset="img/color-radio-img@2x.webp 2x" width="80" height="80" alt="alt")
+                                
+                                li.product-card__colors-item
+                                    .color-radio
+                                        input.color-radio__input(type="radio" id="product-color-radio-4" name="product-color-radio" value="white")
+                                        label.color-radio__label(for="product-color-radio-4")
+                                            picture.color-radio__picture
+                                                img.color-radio__picture-img(src="img/color-radio-img.webp" srcset="img/color-radio-img@2x.webp 2x" width="80" height="80" alt="alt")
+                        .product-card__sizes
+                            ul.product-card__sizes-list
+                                li.product-card__sizes-item
+                                    .size-radio
+                                        input.size-radio__input(type="radio" id="product-size-radio-1" name="product-size-radio" value="10" checked)
+                                        label.size-radio__label(for="product-size-radio-1") 10 мл
+                                
+                                li.product-card__sizes-item
+                                    .size-radio
+                                        input.size-radio__input(type="radio" id="product-size-radio-2" name="product-size-radio" value="15")
+                                        label.size-radio__label(for="product-size-radio-2") 15 мл
+                                
+                                li.product-card__sizes-item
+                                    .size-radio
+                                        input.size-radio__input(type="radio" id="product-size-radio-3" name="product-size-radio" value="20")
+                                        label.size-radio__label(for="product-size-radio-3") 20 мл
+                                        
                         .product-card__buttons
                             button.button.product-card__buy-button(type="button") Купити
-                            button.button.product-card__wish-button.is-active(type="button" aria-label="Add to wishlist")
+                            button.button.button--ruby.product-card__wish-button.is-active(type="button" aria-label="Add to wishlist")
                                 svg.button__icon(width="26" height="23")
                                     use(xlink:href="img/sprite.svg#heart")
 
@@ -168,7 +242,7 @@ section.catalog-section
 
                         .product-card__buttons
                             button.button.product-card__buy-button(type="button") Купити
-                            button.button.product-card__wish-button(type="button" aria-label="Add to wishlist")
+                            button.button.button--ruby.product-card__wish-button(type="button" aria-label="Add to wishlist")
                                 svg.button__icon(width="26" height="23")
                                     use(xlink:href="img/sprite.svg#heart")
                 
@@ -199,7 +273,7 @@ section.catalog-section
 
                         .product-card__buttons
                             button.button.product-card__buy-button(type="button") Купити
-                            button.button.product-card__wish-button.is-active(type="button" aria-label="Add to wishlist")
+                            button.button.button--ruby.product-card__wish-button.is-active(type="button" aria-label="Add to wishlist")
                                 svg.button__icon(width="26" height="23")
                                     use(xlink:href="img/sprite.svg#heart")
 
@@ -229,7 +303,7 @@ section.catalog-section
 
                         .product-card__buttons
                             button.button.product-card__buy-button(type="button") Купити
-                            button.button.product-card__wish-button(type="button" aria-label="Add to wishlist")
+                            button.button.button--ruby.product-card__wish-button(type="button" aria-label="Add to wishlist")
                                 svg.button__icon(width="26" height="23")
                                     use(xlink:href="img/sprite.svg#heart")
                 
@@ -259,7 +333,7 @@ section.catalog-section
 
                         .product-card__buttons
                             button.button.product-card__buy-button(type="button") Купити
-                            button.button.product-card__wish-button.is-active(type="button" aria-label="Add to wishlist")
+                            button.button.button--ruby.product-card__wish-button.is-active(type="button" aria-label="Add to wishlist")
                                 svg.button__icon(width="26" height="23")
                                     use(xlink:href="img/sprite.svg#heart")
 
@@ -290,7 +364,7 @@ section.catalog-section
 
                         .product-card__buttons
                             button.button.product-card__buy-button(type="button") Купити
-                            button.button.product-card__wish-button(type="button" aria-label="Add to wishlist")
+                            button.button.button--ruby.product-card__wish-button(type="button" aria-label="Add to wishlist")
                                 svg.button__icon(width="26" height="23")
                                     use(xlink:href="img/sprite.svg#heart")
 
@@ -320,7 +394,7 @@ section.catalog-section
 
                         .product-card__buttons
                             button.button.product-card__buy-button(type="button") Купити
-                            button.button.product-card__wish-button.is-active(type="button" aria-label="Add to wishlist")
+                            button.button.button--ruby.product-card__wish-button.is-active(type="button" aria-label="Add to wishlist")
                                 svg.button__icon(width="26" height="23")
                                     use(xlink:href="img/sprite.svg#heart")
 
@@ -350,7 +424,7 @@ section.catalog-section
 
                         .product-card__buttons
                             button.button.product-card__buy-button(type="button") Купити
-                            button.button.product-card__wish-button(type="button" aria-label="Add to wishlist")
+                            button.button.button--ruby.product-card__wish-button(type="button" aria-label="Add to wishlist")
                                 svg.button__icon(width="26" height="23")
                                     use(xlink:href="img/sprite.svg#heart")
             

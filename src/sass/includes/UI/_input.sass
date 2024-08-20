@@ -29,11 +29,19 @@
         font-weight: 300
 
     &:read-only
-        color: var(--grey)
+        color: var(--black)
 
         &:hover,
         &:focus
-            border-color: var(--grey)
+            border-color: var(--black)
+    
+    &:disabled
+        color: #8A8A8A
+        border-color: #c6c6c6
+
+        &:hover,
+        &:focus
+            border-color: #c6c6c6
 
     &::-webkit-contacts-auto-fill-button,
     &::-webkit-credentials-auto-fill-button

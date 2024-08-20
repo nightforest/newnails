@@ -29,8 +29,8 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-0e87e730.js"></script>
-      <link rel="stylesheet" href="/assets/main-834c898d.css">
+      <script type="module" crossorigin src="/assets/main-94d0222d.js"></script>
+      <link rel="stylesheet" href="/assets/main-437e948f.css">
     </head>
     <body>
         <!-- Header -->
@@ -478,12 +478,12 @@
       </div>
     </div>
     <div class="catalog__sub-wrap">
-      <div class="catalog-sub-menu" id="catalog-sub-menu-1" aria-hidden="true">
+      <nav class="catalog-sub-menu" id="catalog-sub-menu-1" aria-hidden="true">
         <div class="catalog-sub-menu__header"><a class="catalog-sub-menu__title" href="#">Техніка</a></div>
         <ul class="catalog-sub-menu__list">
-          <li class="catalog-sub-menu__item"><a class="category-card category-card--sm" href="#"> 
+          <li class="catalog-sub-menu__item"><a class="category-card category-card--sm" href="#" data-sub-menu="catalog-sub-menu-1-2" aria-expanded="false"> 
               <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
-              <h3 class="category-card__title">Підкатегорія</h3></a></li>
+              <h3 class="category-card__title">Підкатегорія 1</h3></a></li>
           <li class="catalog-sub-menu__item"><a class="category-card category-card--sm" href="#"> 
               <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
               <h3 class="category-card__title">Lorem, ipsum dolor fdsds</h3></a></li>
@@ -506,7 +506,49 @@
               <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
               <h3 class="category-card__title">Підкатегорія</h3></a></li>
         </ul>
-      </div>
+      </nav>
+      <nav class="catalog-sub-menu" id="catalog-sub-menu-1-2" aria-hidden="true">
+        <div class="catalog-sub-menu__header">
+          <button class="catalog-sub-menu__back" type="button" data-sub-menu="catalog-sub-menu-1" aria-expanded="false" aria-label="Back button">
+            <svg width="11" height="17">
+              <use xlink:href="img/sprite.svg#arrow-left"></use>
+            </svg>
+          </button><a class="catalog-sub-menu__title" href="#">Рівень 2</a>
+        </div>
+        <ul class="catalog-sub-menu__list">
+          <li class="catalog-sub-menu__item"><a class="category-card category-card--sm" href="#" data-sub-menu="catalog-sub-menu-1-3" aria-expanded="false"> 
+              <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
+              <h3 class="category-card__title">Підкатегорія 2</h3></a></li>
+        </ul>
+      </nav>
+      <nav class="catalog-sub-menu" id="catalog-sub-menu-1-3" aria-hidden="true">
+        <div class="catalog-sub-menu__header">
+          <button class="catalog-sub-menu__back" type="button" data-sub-menu="catalog-sub-menu-1-2" aria-expanded="false" aria-label="Back button">
+            <svg width="11" height="17">
+              <use xlink:href="img/sprite.svg#arrow-left"></use>
+            </svg>
+          </button><a class="catalog-sub-menu__title" href="#">Рівень 3</a>
+        </div>
+        <ul class="catalog-sub-menu__list">
+          <li class="catalog-sub-menu__item"><a class="category-card category-card--sm" href="#" data-sub-menu="catalog-sub-menu-1-4" aria-expanded="false"> 
+              <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
+              <h3 class="category-card__title">Підкатегорія 3</h3></a></li>
+        </ul>
+      </nav>
+      <nav class="catalog-sub-menu" id="catalog-sub-menu-1-4" aria-hidden="true">
+        <div class="catalog-sub-menu__header">
+          <button class="catalog-sub-menu__back" type="button" data-sub-menu="catalog-sub-menu-1-3" aria-expanded="false" aria-label="Back button">
+            <svg width="11" height="17">
+              <use xlink:href="img/sprite.svg#arrow-left"></use>
+            </svg>
+          </button><a class="catalog-sub-menu__title" href="#">Рівень 4</a>
+        </div>
+        <ul class="catalog-sub-menu__list">
+          <li class="catalog-sub-menu__item"><a class="category-card category-card--sm" href="#"> 
+              <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
+              <h3 class="category-card__title">Підкатегорія 4</h3></a></li>
+        </ul>
+      </nav>
       <nav class="catalog-sub-menu" id="catalog-sub-menu-2" aria-hidden="true">
         <div class="catalog-sub-menu__header"><a class="catalog-sub-menu__title" href="#">Назва категорії</a></div>
         <ul class="catalog-sub-menu__list">

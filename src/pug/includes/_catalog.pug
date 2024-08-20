@@ -125,17 +125,17 @@
                                 span Розпродаж залишків
 
         .catalog__sub-wrap
-            #catalog-sub-menu-1.catalog-sub-menu(aria-hidden="true")
+            nav#catalog-sub-menu-1.catalog-sub-menu(aria-hidden="true")
                 .catalog-sub-menu__header
                     a.catalog-sub-menu__title(href="#") Техніка
 
                 ul.catalog-sub-menu__list
                     li.catalog-sub-menu__item
-                        a.category-card.category-card--sm(href="#") 
+                        a.category-card.category-card--sm(href="#" data-sub-menu="catalog-sub-menu-1-2" aria-expanded="false") 
                             picture.category-card__picture
                                 img.category-card__img(src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
                             
-                            h3.category-card__title Підкатегорія
+                            h3.category-card__title Підкатегорія 1
                     
                     li.catalog-sub-menu__item
                         a.category-card.category-card--sm(href="#") 
@@ -185,6 +185,54 @@
                                 img.category-card__img(src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
                             
                             h3.category-card__title Підкатегорія
+
+            nav#catalog-sub-menu-1-2.catalog-sub-menu(aria-hidden="true")
+                .catalog-sub-menu__header
+                    button.catalog-sub-menu__back(type="button" data-sub-menu="catalog-sub-menu-1" aria-expanded="false" aria-label="Back button")
+                        svg(width="11" height="17")
+                            use(xlink:href="img/sprite.svg#arrow-left")
+
+                    a.catalog-sub-menu__title(href="#") Рівень 2
+
+                ul.catalog-sub-menu__list
+                    li.catalog-sub-menu__item
+                        a.category-card.category-card--sm(href="#" data-sub-menu="catalog-sub-menu-1-3" aria-expanded="false") 
+                            picture.category-card__picture
+                                img.category-card__img(src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
+                            
+                            h3.category-card__title Підкатегорія 2
+            
+            nav#catalog-sub-menu-1-3.catalog-sub-menu(aria-hidden="true")
+                .catalog-sub-menu__header
+                    button.catalog-sub-menu__back(type="button" data-sub-menu="catalog-sub-menu-1-2" aria-expanded="false" aria-label="Back button")
+                        svg(width="11" height="17")
+                            use(xlink:href="img/sprite.svg#arrow-left")
+
+                    a.catalog-sub-menu__title(href="#") Рівень 3
+
+                ul.catalog-sub-menu__list
+                    li.catalog-sub-menu__item
+                        a.category-card.category-card--sm(href="#" data-sub-menu="catalog-sub-menu-1-4" aria-expanded="false") 
+                            picture.category-card__picture
+                                img.category-card__img(src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
+                            
+                            h3.category-card__title Підкатегорія 3
+            
+            nav#catalog-sub-menu-1-4.catalog-sub-menu(aria-hidden="true")
+                .catalog-sub-menu__header
+                    button.catalog-sub-menu__back(type="button" data-sub-menu="catalog-sub-menu-1-3" aria-expanded="false" aria-label="Back button")
+                        svg(width="11" height="17")
+                            use(xlink:href="img/sprite.svg#arrow-left")
+
+                    a.catalog-sub-menu__title(href="#") Рівень 4
+
+                ul.catalog-sub-menu__list
+                    li.catalog-sub-menu__item
+                        a.category-card.category-card--sm(href="#") 
+                            picture.category-card__picture
+                                img.category-card__img(src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
+                            
+                            h3.category-card__title Підкатегорія 4
 
             nav#catalog-sub-menu-2.catalog-sub-menu(aria-hidden="true")
                 .catalog-sub-menu__header

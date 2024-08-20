@@ -18,7 +18,7 @@
         
         &__input
             height: 34px
-            padding: 4px 30px 4px 0
+            padding: 4px 30px
             border: none
             border-bottom: 1px solid var(--white)
             background: none
@@ -28,7 +28,8 @@
             &::placeholder
                 color: var(--white)
 
-        &__button
+        &__button,
+        #voice-button
             position: absolute
             right: 0
             top: 50%
@@ -45,3 +46,7 @@
             &:active,
             &:focus-visible
                 color: var(--ruby)
+
+        #voice-button
+            left: 0
+            right: auto

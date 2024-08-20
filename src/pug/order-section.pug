@@ -16,10 +16,10 @@ section.order-section
                 .form-block.is-visible(data-customer="new")
                     .form-block__grid
                         .form-block__item.form-block__item--6
-                            input.input.form__input(type="text" name="loginInputName" placeholder="Ім'я *" autocomplete="off" required)
+                            input.input.form__input(type="text" name="loginInputName" placeholder="Ім'я *" autocomplete="off" disabled  value="123" required)
                         
                         .form-block__item.form-block__item--6
-                            input.input.form__input(type="text" name="loginInputLastName" placeholder="Прізвище *" autocomplete="off" required)
+                            input.input.form__input(type="text" name="loginInputLastName" placeholder="Прізвище *" autocomplete="off" readonly value="123" required)
 
                         .form-block__item.form-block__item--6
                             input.input.form__input.tell-input(type="text" name="loginInputPhone" placeholder="" autocomplete="off" required)
@@ -213,13 +213,11 @@ section.order-section
                                 option(value="2") Оплата під час отримання товару
                                 option(value="3") Оплата по реквізитам
                 
-                .form__comment
-                    button.form__comment-button(type="button" aria-expanded="false" data-trigger="form-comment") Коментар до замовлення
-                        .form__comment-icon
-                    
-                    #form-comment.form__comment-dropdown(aria-hidden="true")
-                        .form__comment-inner
-                            textarea.textarea.form__input(name="orderTextarea" rows="4" placeholder="Коментар" autocomplete="off")
+                h3.form__subtitle Коментар до замовлення
+
+                .form-block
+                    .form-block__item
+                        textarea.textarea.form__input(name="orderTextarea" rows="4" placeholder="Коментар" autocomplete="off")
 
             .order-form__right
                 .order

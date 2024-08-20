@@ -59,9 +59,27 @@
             display: block
 
         &__header
+            display: flex
+            align-items: center
+            gap: 15px
             background: #f3f3f3
-            padding: 8px 15px
+            padding: 6px 15px
             margin-bottom: 20px
+        
+        &__back
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 24px
+            height: 24px
+            padding: 0
+            transition: color .5s ease
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--ruby)
+
         
         &__title
             font-size: 18px
@@ -180,11 +198,10 @@
 
             &:hover,
             &:active,
-            &:focus-visible,
-            &.is-active
+            &:focus-visible
                 color: var(--ruby)
             
-            &[aria-expanded="true"]
+            &.is-active
                 color: var(--ruby)
                 background: #F3F3F3
 

@@ -1,4 +1,5 @@
-import { disablePageScroll, enablePageScroll } from 'scroll-lock';
+import disableScroll from "./disableScroll";
+import enableScroll from "./enableScroll";
 
 const filter = () => {
     const body = document.querySelector('body');
@@ -10,19 +11,19 @@ const filter = () => {
     filterToggle?.addEventListener('click', e => {
         e.preventDefault();
 
-        disablePageScroll(filterInner);
+        disableScroll();
         filter?.classList.add('is-visible');
     });
 
     filter?.addEventListener('click', e => {
         if (!e.target.closest('.filter__sidebar')) {
-            enablePageScroll(filterInner);
+            enableScroll();
             filter?.classList.remove('is-visible');
         }
     });
 
     filterClose?.addEventListener('click', () => {
-        enablePageScroll(filterInner);
+        enableScroll();
         filter?.classList.remove('is-visible');
     });
 }

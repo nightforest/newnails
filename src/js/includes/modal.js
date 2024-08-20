@@ -1,4 +1,5 @@
-import { disablePageScroll, enablePageScroll } from 'scroll-lock';
+import disableScroll from "./disableScroll";
+import enableScroll from "./enableScroll";
 
 const modal = () => {
     const body = document.querySelector("body");
@@ -47,7 +48,7 @@ const modal = () => {
     });
 
     const openModal = (modal) => {
-        disablePageScroll(modal);
+        disableScroll();
         modalWrap.classList.add('is-visible');
         modal.classList.add('is-visible');
 
@@ -62,7 +63,7 @@ const modal = () => {
 
         if (!header.classList.contains('is-active')) {
             setTimeout(() => {
-                enablePageScroll(modal);
+                enableScroll();
             }, 500);
         }
 

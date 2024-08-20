@@ -72,6 +72,9 @@
             min-width: 32px
             height: 16px
             font-size: 8px
+        
+        &--grey
+            background: #c6c6c6
     
     &__title
         margin-bottom: 12px
@@ -106,6 +109,50 @@
         @media ($max-sm)
             font-size: 12px
     
+    &__colors
+        margin-top: 10px
+        width: 100%
+        min-height: 35px
+        overflow-x: auto
+        line-height: 1
+        -ms-overflow-style: none
+        scrollbar-width: none
+
+        &::-webkit-scrollbar
+            display: none
+
+        &-list
+            display: flex
+            gap: 10px
+            margin: 0
+            padding: 0
+            list-style: none
+
+        &-item
+            display: flex
+            width: 35px
+            min-width: 35px
+            height: 35px
+    
+    &__sizes
+        margin-top: 10px
+        width: 100%
+        min-height: 30px
+        overflow-x: auto
+        line-height: 1
+        -ms-overflow-style: none
+        scrollbar-width: none
+
+        &::-webkit-scrollbar
+            display: none
+
+        &-list
+            display: flex
+            gap: 10px
+            margin: 0
+            padding: 0
+            list-style: none
+
     &__buttons
         position: absolute
         top: 100%
