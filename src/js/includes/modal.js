@@ -2,13 +2,10 @@ import disableScroll from "./disableScroll";
 import enableScroll from "./enableScroll";
 
 const modal = () => {
-    const body = document.querySelector("body");
     const header = document.querySelector(".header");
-    const modalWrap = document.querySelector(".modal-wrap");
     const modalAll = document.querySelectorAll(".modal");
     const modalToggleAll = document.querySelectorAll("[data-modal]");
     const modalCloseAll = document.querySelectorAll("[data-modal-close]");
-    const paddingRight = window.innerWidth - document.documentElement.clientWidth;
 
     modalToggleAll.forEach(item => {
         const modalID = item.getAttribute("data-modal");
@@ -49,7 +46,8 @@ const modal = () => {
 
     const openModal = (modal) => {
         disableScroll();
-        modalWrap.classList.add('is-visible');
+        const modalWrap = modal.closest('.modal-wrap');
+        modalWrap?.classList.add('is-visible');
         modal.classList.add('is-visible');
 
         const video = modal.querySelector('#youtube-video');
@@ -58,7 +56,8 @@ const modal = () => {
         }
     }
     const closeModal = (modal) => {
-        modalWrap.classList.remove('is-visible');
+        const modalWrap = modal.closest('.modal-wrap');
+        modalWrap?.classList.remove('is-visible');
         modal.classList.remove('is-visible');
 
         if (!header.classList.contains('is-active')) {
