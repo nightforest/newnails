@@ -1,0 +1,111 @@
+section.catalog-section
+    .container.catalog-section__container
+        aside.catalog-section__sidebar
+            include ./includes/_filter.pug
+
+        article.catalog-section__article
+            header.catalog-section__header
+                h1.catalog-section__title Стартові набори
+
+                .catalog-section__controls
+                    button.button.catalog-section__filter-button(type="button" data-filter-toggle) Фільтр
+                        svg.button__icon(width="22" height="20")
+                            use(xlink:href="img/sprite.svg#filter")
+                    
+                    button.button.catalog-section__sort-button(type="button" data-trigger="sort-form" aria-expanded="false")
+                        svg.button__icon(width="22" height="20")
+                            use(xlink:href="img/sprite.svg#sort")
+
+                form#sort-form.sort-form(aria-hidden="true")
+                    .sort-form__group
+                        label.sort-form__label(for="viewSelect") Показувати
+                        
+                        select#viewSelect.select.sort-form__select(name="viewSelect" aria-label="Select" required)
+                            option(value="25") 25
+                            option(value="50") 50
+                            option(value="100") 100
+                            
+                    .sort-form__group
+                        label.sort-form__label(for="sortSelect") Сортування
+
+                        select#sortSelect.select.sort-form__select.sort-form__select--fixed-width(name="sortSelect" aria-label="Select" required)
+                            option(value="1 true red" data-custom-properties="This option is fantastic") За замовчуванням
+                            option(value="2" data-custom-properties="[{link: 'https'}, {checked: true}, {points: 'str'}]") По зростанню ціни
+                            option(value="3" data-custom-properties="This option is fantastic") По спаданню ціни
+                            option(value="4" data-custom-properties="This option is fantastic") Від дорогих до дешевих
+                            option(value="5" data-custom-properties="This option is fantastic") Від дешевих до дорогих
+
+            .categories-slider.catalog-section__categories-slider
+                .swiper.categories-slider__swiper
+                    .swiper-wrapper.categories-slider__wrapper
+                        .swiper-slide.categories-slider__slide
+                            a.category-card(href="#") 
+                                picture.category-card__picture
+                                    img.category-card__img(src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
+                                
+                                h3.category-card__title Техніка
+
+                        .swiper-slide.categories-slider__slide
+                            a.category-card(href="#") 
+                                picture.category-card__picture
+                                    img.category-card__img(src="img/catalog/catalog-2.webp" srcset="img/catalog/catalog-2@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
+                                
+                                h3.category-card__title Стартові набори
+                        
+                        .swiper-slide.categories-slider__slide
+                            a.category-card(href="#") 
+                                picture.category-card__picture
+                                    img.category-card__img(src="img/catalog/catalog-3.webp" srcset="img/catalog/catalog-3@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
+                                
+                                h3.category-card__title Таємні бокси
+                        
+                        .swiper-slide.categories-slider__slide
+                            a.category-card(href="#") 
+                                picture.category-card__picture
+                                    img.category-card__img(src="img/catalog/catalog-4.webp" srcset="img/catalog/catalog-4@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
+                                
+                                h3.category-card__title Гель для наращування нігтів
+                        
+                        .swiper-slide.categories-slider__slide
+                            a.category-card(href="#") 
+                                picture.category-card__picture
+                                    img.category-card__img(src="img/catalog/catalog-5.webp" srcset="img/catalog/catalog-5@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
+                                
+                                h3.category-card__title Полігель, акрілова пудра
+
+                        .swiper-slide.categories-slider__slide
+                            a.category-card(href="#") 
+                                picture.category-card__picture
+                                    img.category-card__img(src="img/catalog/catalog-6.webp" srcset="img/catalog/catalog-6@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
+                                
+                                h3.category-card__title Гель-лаки, базові і топові покриття
+
+                        .swiper-slide.categories-slider__slide
+                            a.category-card(href="#") 
+                                picture.category-card__picture
+                                    img.category-card__img(src="img/catalog/catalog-7.webp" srcset="img/catalog/catalog-7@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
+                                
+                                h3.category-card__title Інструменти для манікюру та педикюру
+                        
+                        .swiper-slide.categories-slider__slide
+                            a.category-card(href="#") 
+                                picture.category-card__picture
+                                    img.category-card__img(src="img/catalog/catalog-8.webp" srcset="img/catalog/catalog-8@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
+                                
+                                h3.category-card__title Витратні матеріали
+                        
+                        .swiper-slide.categories-slider__slide
+                            a.category-card(href="#") 
+                                picture.category-card__picture
+                                    img.category-card__img(src="img/catalog/catalog-9.webp" srcset="img/catalog/catalog-9@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
+                                
+                                h3.category-card__title Насадки для фрезерів
+                        
+                        .swiper-slide.categories-slider__slide
+                            a.category-card(href="#") 
+                                picture.category-card__picture
+                                    img.category-card__img(src="img/catalog/catalog-10.webp" srcset="img/catalog/catalog-10@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt")
+                                
+                                h3.category-card__title Товари для стемпинга
+
+                    .swiper-scrollbar.categories-slider__scrollbar

@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
         <!-- Title -->
-        <title>Feedback Page</title>
+        <title>Catalog Empty Page</title>
         <!-- SEO Meta -->
         <meta name="description" content="Description">
         <meta name="keywords" content="keyword">
@@ -175,240 +175,319 @@
         <!-- Main -->
         <main id="main" class="main">
             
-<section class="header-section">
-  <picture class="header-section__bg">
-    <source srcset="img/header-bg-mobile@2x.webp 2x, img/header-bg-mobile.webb" width="320" height="131" media="(max-width: 767.98px)"/><img class="header-section__bg-img" src="img/header-bg.webp" srcset="img/header-bg@2x.webp 2x" width="1920" height="120" alt="alt"/>
-  </picture>
-  <div class="container header-section__container">
-    <nav class="breadcrumbs header-section__breadcrumbs" aria-label="breadcrumb">
+<section class="breadcrumbs-section">
+  <div class="container breadcrumbs-section__container">
+    <nav class="breadcrumbs breadcrumbs-section__breadcrumbs" aria-label="breadcrumb">
       <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Головна</a></li>
-        <li class="breadcrumbs__item" aria-current="page">Відгуки</li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Категорія</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Підкатегорія</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Назва товару</li>
       </ul>
     </nav>
-    <h1 class="header-section__title">Відгуки</h1>
   </div>
 </section>
             
-<section class="feedback-section">
-  <div class="container feedback-section__container">
-    <button class="button feedback-section__add-button" type="button" data-modal="modal-feedback">Залишити відгук</button>
-    <ul class="feedback-section__list">
-      <li class="feedback-section__item">
-        <div class="feedback-card">
-          <picture class="feedback-card__avatar"><img class="feedback-card__avatar-img" src="img/avatar-img.webp" srcset="img/avatar-img@2x.webp 2x" loading="lazy" width="105" height="105" alt="alt"/></picture>
-          <div class="feedback-card__content">
-            <div class="feedback-card__header">
-              <h3 class="feedback-card__name">Покупець Покупець</h3>
-              <div class="rating rating--md feedback-card__rating" data-rating="5">
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
+<section class="catalog-section">
+  <div class="container catalog-section__container">
+    <aside class="catalog-section__sidebar">
+      <div class="filter">
+        <div class="filter__sidebar">
+          <div class="filter__header">
+            <h2 class="filter__title">Фільтр</h2>
+            <svg class="filter__icon" width="22" height="20">
+              <use xlink:href="img/sprite.svg#filter"></use>
+            </svg>
+            <button class="filter__close" type="button" aria-label="Close filter" data-filter-close="data-filter-close">
+              <svg class="filter__close-icon" width="19" height="19">
+                <use xlink:href="img/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="filter__inner">
+            <div class="filter-block">
+              <button class="filter-block__toggle" type="button" data-trigger="filter-block-1" aria-expanded="false">Lorem ipsum dolor sit amet consectetur
+                <div class="filter-block__toggle-icon"></div>
+              </button>
+              <div class="filter-block__body" id="filter-block-1" aria-hidden="true">
+                <div class="filter-block__inner">
+                  <ul class="filter-block__list">
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-1" type="checkbox" name="filterCheckbox-1" value="true" checked="checked"/>
+                        <label class="checkbox__label" for="filterCheckbox-1">Brand 1</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-2" type="checkbox" name="filterCheckbox-2" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-2">Brand 2</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-3" type="checkbox" name="filterCheckbox-3" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-3">Brand 3</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <time class="feedback-card__date">17.05.2024</time>
             </div>
-            <div class="feedback-card__text">
-              <p>Все отримала,що замовляла. гарна якість. буду тепер замовляти тільки у вас!! дякую. Все отримала,що замовляла. гарна якість. буду тепер замовляти тільки у вас!! дякую. Все отримала,що замовляла. гарна якість. буду тепер замовляти тільки у вас!! дякую.</p>
+            <div class="filter-block">
+              <button class="filter-block__toggle" type="button" data-trigger="filter-block-2" aria-expanded="true">Колір
+                <div class="filter-block__toggle-icon"></div>
+              </button>
+              <div class="filter-block__body" id="filter-block-2" aria-hidden="false">
+                <div class="filter-block__inner">
+                  <ul class="filter-block__list">
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-21" type="checkbox" name="filterCheckbox-21" value="true" checked="checked"/>
+                        <label class="checkbox__label" for="filterCheckbox-21">Бежевий(55)</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-22" type="checkbox" name="filterCheckbox-22" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-22">Білий(55)</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-23" type="checkbox" name="filterCheckbox-23" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-23">Блакитний(55)</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-24" type="checkbox" name="filterCheckbox-24" value="true" checked="checked"/>
+                        <label class="checkbox__label" for="filterCheckbox-24">Блискучий(55)</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-25" type="checkbox" name="filterCheckbox-25" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-25">Бордовий(55)</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-26" type="checkbox" name="filterCheckbox-26" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-26">Бузковий(55)</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-27" type="checkbox" name="filterCheckbox-27" value="true" checked="checked"/>
+                        <label class="checkbox__label" for="filterCheckbox-27">Глітер(55)</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-28" type="checkbox" name="filterCheckbox-28" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-28">Білий(55)</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-29" type="checkbox" name="filterCheckbox-29" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-29">Блакитний(55)</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-210" type="checkbox" name="filterCheckbox-210" value="true" checked="checked"/>
+                        <label class="checkbox__label" for="filterCheckbox-210">Бежевий(55)</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-211" type="checkbox" name="filterCheckbox-211" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-211">Білий(55)</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-212" type="checkbox" name="filterCheckbox-212" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-212">Блакитний(55)</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <h4 class="feedback-card__subtitle">Щітка для нігтів від пилу з довгою і зручною ручкою</h4>
-            <ul class="feedback-card__list">
-              <li class="feedback-card__list-item">
-                <picture class="feedback-card__picture"><img class="feedback-card__picture-img" src="img/gallery-img-thumb.webp" srcset="img/gallery-img-thumb@2x.webp 2x" loading="lazy" width="50" height="50" alt="alt"/></picture>
-              </li>
-            </ul>
+            <div class="filter-block">
+              <button class="filter-block__toggle" type="button" data-trigger="filter-block-3" aria-expanded="false">Призначення
+                <div class="filter-block__toggle-icon"></div>
+              </button>
+              <div class="filter-block__body" id="filter-block-3" aria-hidden="true">
+                <div class="filter-block__inner">
+                  <ul class="filter-block__list">
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-31" type="checkbox" name="filterCheckbox-31" value="true" checked="checked"/>
+                        <label class="checkbox__label" for="filterCheckbox-31">Brand 1</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-32" type="checkbox" name="filterCheckbox-32" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-32">Brand 2</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-33" type="checkbox" name="filterCheckbox-33" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-33">Brand 3</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="filter-block">
+              <button class="filter-block__toggle" type="button" data-trigger="filter-block-4" aria-expanded="false">Класифікація
+                <div class="filter-block__toggle-icon"></div>
+              </button>
+              <div class="filter-block__body" id="filter-block-4" aria-hidden="true">
+                <div class="filter-block__inner">
+                  <ul class="filter-block__list">
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-41" type="checkbox" name="filterCheckbox-41" value="true" checked="checked"/>
+                        <label class="checkbox__label" for="filterCheckbox-41">Brand 1</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-42" type="checkbox" name="filterCheckbox-42" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-42">Brand 2</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-43" type="checkbox" name="filterCheckbox-43" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-43">Brand 3</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="filter-block">
+              <button class="filter-block__toggle" type="button" data-trigger="filter-block-5" aria-expanded="false">Стать
+                <div class="filter-block__toggle-icon"></div>
+              </button>
+              <div class="filter-block__body" id="filter-block-5" aria-hidden="true">
+                <div class="filter-block__inner">
+                  <ul class="filter-block__list">
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-51" type="checkbox" name="filterCheckbox-51" value="true" checked="checked"/>
+                        <label class="checkbox__label" for="filterCheckbox-51">Brand 1</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-52" type="checkbox" name="filterCheckbox-52" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-52">Brand 2</label>
+                      </div>
+                    </li>
+                    <li class="filter-block__item">
+                      <div class="checkbox filter-block__checkbox">
+                        <input class="checkbox__input" id="filterCheckbox-53" type="checkbox" name="filterCheckbox-53" value="true"/>
+                        <label class="checkbox__label" for="filterCheckbox-53">Brand 3</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="filter__buttons-group">
+              <button class="button filter__button" type="button">Показати</button>
+              <button class="button button--outline filter__button" type="button">Скинути</button>
+            </div>
           </div>
         </div>
-      </li>
-      <li class="feedback-section__item">
-        <div class="feedback-card">
-          <picture class="feedback-card__avatar"><img class="feedback-card__avatar-img" src="img/avatar-img.webp" srcset="img/avatar-img@2x.webp 2x" loading="lazy" width="105" height="105" alt="alt"/></picture>
-          <div class="feedback-card__content">
-            <div class="feedback-card__header">
-              <h3 class="feedback-card__name">Покупець Покупець</h3>
-              <div class="rating rating--md feedback-card__rating" data-rating="4">
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-              </div>
-              <time class="feedback-card__date">17.05.2024</time>
-            </div>
-            <div class="feedback-card__text">
-              <p>Все отримала,що замовляла. гарна якість. буду тепер замовляти тільки у вас!! дякую. Все отримала,що замовляла. гарна якість. буду тепер замовляти тільки у вас!! дякую. Все отримала,що замовляла. гарна якість. буду тепер замовляти тільки у вас!! дякую.</p>
-              <p>Щітка для нігтів від пилу з довгою і зручною ручкою</p>
-              <p>Форми для нарощування нігтів, золота муха (100 штук)</p>
-              <p>Поталь для дизайну нігтів MART 02 рожеве золото</p>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="feedback-section__item">
-        <div class="feedback-card">
-          <picture class="feedback-card__avatar"><img class="feedback-card__avatar-img" src="img/avatar-img.webp" srcset="img/avatar-img@2x.webp 2x" loading="lazy" width="105" height="105" alt="alt"/></picture>
-          <div class="feedback-card__content">
-            <div class="feedback-card__header">
-              <h3 class="feedback-card__name">Покупець Покупець</h3>
-              <div class="rating rating--md feedback-card__rating" data-rating="4">
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-              </div>
-              <time class="feedback-card__date">17.05.2024</time>
-            </div>
-            <div class="feedback-card__text">
-              <p>Все отримала,що замовляла. гарна якість. буду тепер замовляти тільки у вас!! дякую. Все отримала,що замовляла. гарна якість. буду тепер замовляти тільки у вас!! дякую. Все отримала,що замовляла. гарна якість. буду тепер замовляти тільки у вас!! дякую.</p>
-            </div>
-            <h4 class="feedback-card__subtitle">Щітка для нігтів від пилу з довгою і зручною ручкою</h4>
-            <ul class="feedback-card__list">
-              <li class="feedback-card__list-item">
-                <picture class="feedback-card__picture"><img class="feedback-card__picture-img" src="img/gallery-img-thumb.webp" srcset="img/gallery-img-thumb@2x.webp 2x" loading="lazy" width="50" height="50" alt="alt"/></picture>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li class="feedback-section__item">
-        <div class="feedback-card">
-          <picture class="feedback-card__avatar"><img class="feedback-card__avatar-img" src="img/avatar-img.webp" srcset="img/avatar-img@2x.webp 2x" loading="lazy" width="105" height="105" alt="alt"/></picture>
-          <div class="feedback-card__content">
-            <div class="feedback-card__header">
-              <h3 class="feedback-card__name">Покупець Покупець</h3>
-              <div class="rating rating--md feedback-card__rating" data-rating="4">
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-                <div class="rating__item"></div>
-              </div>
-              <time class="feedback-card__date">17.05.2024</time>
-            </div>
-            <div class="feedback-card__text">
-              <p>Все отримала,що замовляла. гарна якість. буду тепер замовляти тільки у вас!! дякую. Все отримала,що замовляла. гарна якість. буду тепер замовляти тільки у вас!! дякую. Все отримала,що замовляла. гарна якість. буду тепер замовляти тільки у вас!! дякую.</p>
-              <p>Щітка для нігтів від пилу з довгою і зручною ручкою</p>
-              <p>Форми для нарощування нігтів, золота муха (100 штук)</p>
-              <p>Поталь для дизайну нігтів MART 02 рожеве золото</p>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
-    <nav class="pagination feedback-section__pagination" aria-label="Page navigation">
-      <ul class="pagination__list">
-        <li class="pagination__item">
-          <button class="pagination__button" type="button" aria-label="Previous page">
-            <svg class="pagination__icon" width="7" height="12">
-              <use xlink:href="img/sprite.svg#arrow-left"></use>
+      </div>
+    </aside>
+    <article class="catalog-section__article">
+      <header class="catalog-section__header">
+        <h1 class="catalog-section__title">Стартові набори</h1>
+        <div class="catalog-section__controls">
+          <button class="button catalog-section__filter-button" type="button" data-filter-toggle="data-filter-toggle">Фільтр
+            <svg class="button__icon" width="22" height="20">
+              <use xlink:href="img/sprite.svg#filter"></use>
             </svg>
           </button>
-        </li>
-        <li class="pagination__item is-active" aria-current="page">
-          <button class="pagination__button" type="button">1</button>
-        </li>
-        <li class="pagination__item">
-          <button class="pagination__button" type="button">2</button>
-        </li>
-        <li class="pagination__item"><span>...</span></li>
-        <li class="pagination__item">
-          <button class="pagination__button" type="button">10</button>
-        </li>
-        <li class="pagination__item">
-          <button class="pagination__button" type="button" aria-label="Next page">
-            <svg class="pagination__icon" width="7" height="12">
-              <use xlink:href="img/sprite.svg#arrow-right"></use>
+          <button class="button catalog-section__sort-button" type="button" data-trigger="sort-form" aria-expanded="false">
+            <svg class="button__icon" width="22" height="20">
+              <use xlink:href="img/sprite.svg#sort"></use>
             </svg>
           </button>
-        </li>
-      </ul>
-    </nav>
+        </div>
+        <form class="sort-form" id="sort-form" aria-hidden="true">
+          <div class="sort-form__group">
+            <label class="sort-form__label" for="viewSelect">Показувати</label>
+            <select class="select sort-form__select" id="viewSelect" name="viewSelect" aria-label="Select" required="required">
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+          </div>
+          <div class="sort-form__group">
+            <label class="sort-form__label" for="sortSelect">Сортування</label>
+            <select class="select sort-form__select sort-form__select--fixed-width" id="sortSelect" name="sortSelect" aria-label="Select" required="required">
+              <option value="1 true red" data-custom-properties="This option is fantastic">За замовчуванням</option>
+              <option value="2" data-custom-properties="[{link: 'https'}, {checked: true}, {points: 'str'}]">По зростанню ціни</option>
+              <option value="3" data-custom-properties="This option is fantastic">По спаданню ціни</option>
+              <option value="4" data-custom-properties="This option is fantastic">Від дорогих до дешевих</option>
+              <option value="5" data-custom-properties="This option is fantastic">Від дешевих до дорогих</option>
+            </select>
+          </div>
+        </form>
+      </header>
+      <div class="categories-slider catalog-section__categories-slider">
+        <div class="swiper categories-slider__swiper">
+          <div class="swiper-wrapper categories-slider__wrapper">
+            <div class="swiper-slide categories-slider__slide"><a class="category-card" href="#"> 
+                <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-1.webp" srcset="img/catalog/catalog-1@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
+                <h3 class="category-card__title">Техніка</h3></a></div>
+            <div class="swiper-slide categories-slider__slide"><a class="category-card" href="#"> 
+                <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-2.webp" srcset="img/catalog/catalog-2@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
+                <h3 class="category-card__title">Стартові набори</h3></a></div>
+            <div class="swiper-slide categories-slider__slide"><a class="category-card" href="#"> 
+                <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-3.webp" srcset="img/catalog/catalog-3@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
+                <h3 class="category-card__title">Таємні бокси</h3></a></div>
+            <div class="swiper-slide categories-slider__slide"><a class="category-card" href="#"> 
+                <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-4.webp" srcset="img/catalog/catalog-4@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
+                <h3 class="category-card__title">Гель для наращування нігтів</h3></a></div>
+            <div class="swiper-slide categories-slider__slide"><a class="category-card" href="#"> 
+                <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-5.webp" srcset="img/catalog/catalog-5@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
+                <h3 class="category-card__title">Полігель, акрілова пудра</h3></a></div>
+            <div class="swiper-slide categories-slider__slide"><a class="category-card" href="#"> 
+                <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-6.webp" srcset="img/catalog/catalog-6@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
+                <h3 class="category-card__title">Гель-лаки, базові і топові покриття</h3></a></div>
+            <div class="swiper-slide categories-slider__slide"><a class="category-card" href="#"> 
+                <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-7.webp" srcset="img/catalog/catalog-7@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
+                <h3 class="category-card__title">Інструменти для манікюру та педикюру</h3></a></div>
+            <div class="swiper-slide categories-slider__slide"><a class="category-card" href="#"> 
+                <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-8.webp" srcset="img/catalog/catalog-8@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
+                <h3 class="category-card__title">Витратні матеріали</h3></a></div>
+            <div class="swiper-slide categories-slider__slide"><a class="category-card" href="#"> 
+                <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-9.webp" srcset="img/catalog/catalog-9@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
+                <h3 class="category-card__title">Насадки для фрезерів</h3></a></div>
+            <div class="swiper-slide categories-slider__slide"><a class="category-card" href="#"> 
+                <picture class="category-card__picture"><img class="category-card__img" src="img/catalog/catalog-10.webp" srcset="img/catalog/catalog-10@2x.webp 2x" loading="lazy" width="150" height="150" alt="alt"/></picture>
+                <h3 class="category-card__title">Товари для стемпинга</h3></a></div>
+          </div>
+          <div class="swiper-scrollbar categories-slider__scrollbar"></div>
+        </div>
+      </div>
+    </article>
   </div>
 </section>
-<div class="modal-wrap">
-  <div class="modal" id="modal-feedback">
-    <div class="modal__inner">
-      <div class="modal__window">
-        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
-          <svg class="modal__close-icon" width="20" height="20">
-            <use xlink:href="img/sprite.svg#close"></use>
-          </svg>
-        </button>
-        <div class="modal__content">
-          <h3 class="modal__title">Залишити відгук</h3>
-          <form class="form" id="feedback-form" autocomplete="off" novalidate="novalidate">
-            <div class="form__group">
-              <fieldset class="stars-rating">
-                <input class="stars-rating__input" type="radio" id="star5" name="stars-rating" value="5"/>
-                <label class="stars-rating__label" for="star5" aria-label="5 star">
-                  <svg class="stars-rating__icon" width="36" height="34">
-                    <use xlink:href="img/sprite.svg#star"></use>
-                  </svg>
-                </label>
-                <input class="stars-rating__input" type="radio" id="star4" name="stars-rating" value="4"/>
-                <label class="stars-rating__label" for="star4" aria-label="4 star">
-                  <svg class="stars-rating__icon" width="36" height="34">
-                    <use xlink:href="img/sprite.svg#star"></use>
-                  </svg>
-                </label>
-                <input class="stars-rating__input" type="radio" id="star3" name="stars-rating" value="3"/>
-                <label class="stars-rating__label" for="star3" aria-label="3 star">
-                  <svg class="stars-rating__icon" width="36" height="34">
-                    <use xlink:href="img/sprite.svg#star"></use>
-                  </svg>
-                </label>
-                <input class="stars-rating__input" type="radio" id="star2" name="stars-rating" value="2"/>
-                <label class="stars-rating__label" for="star2" aria-label="2 star">
-                  <svg class="stars-rating__icon" width="36" height="34">
-                    <use xlink:href="img/sprite.svg#star"></use>
-                  </svg>
-                </label>
-                <input class="stars-rating__input" type="radio" id="star1" name="stars-rating" value="1"/>
-                <label class="stars-rating__label" for="star1" aria-label="1 star">
-                  <svg class="stars-rating__icon" width="36" height="34">
-                    <use xlink:href="img/sprite.svg#star"></use>
-                  </svg>
-                </label>
-              </fieldset>
-            </div>
-            <div class="form__group">
-              <input class="input form__input" id="feedbackInputName" type="text" name="feedbackInputName" placeholder="ПІБ *" autocomplete="off" required="required"/>
-            </div>
-            <div class="form__group">
-              <textarea class="textarea form__input" id="feedbackTextarea" name="feedbackTextarea" rows="4" placeholder="Ваш відгук *" autocomplete="off" required="required"></textarea>
-              <div class="form__input-info">Мінімальна кільність 30 символів</div>
-            </div>
-            <button class="button form__button">Відправити</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" id="modal-success">
-    <div class="modal__inner">
-      <div class="modal__window">
-        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
-          <svg class="modal__close-icon" width="20" height="20">
-            <use xlink:href="img/sprite.svg#close"></use>
-          </svg>
-        </button>
-        <div class="modal__content modal__content--center">
-          <svg class="modal__icon" width="144" height="132">
-            <use xlink:href="img/sprite.svg#success"></use>
-          </svg>
-          <h3 class="modal__title">Ваша заявка успішно відправлена</h3>
-          <div class="modal__text">
-            <p>Найближчим часом Ми з Вами зв'яжемось.</p>
-            <p><strong>Дякуємо, ви зробили правильний вибір!</strong></p>
-          </div>
-          <button class="button modal__button" type="button" data-modal-close="data-modal-close">Закрити</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
             
 <section class="subscribe-section">
   <div class="container subscribe-section__container">
@@ -443,6 +522,26 @@
           <use xlink:href="img/sprite.svg#long-arrow-right"></use>
         </svg>
       </div></a></div>
+</section>
+            
+<section class="seo-section">
+  <div class="container seo-section__container">
+    <h1 class="section-title seo-section__title">Інтернет-магазин манікюрної продукції NewNails</h1>
+    <div class="seo-section__inner">
+      <div class="seo-section__text">
+        <p>Наш інтернет-магазин займається продажем манікюрної продукції вже шість років. За цей час нашими клієнтами стали більше 70 000 клієнтів, досвідчених майстрів та початківців. 99% позитивних відгуків говорять, що наш головний пріоритет - задоволений клієнт.</p>
+        <p>У нас великий асортимент обладнання: лампи, фрезера, витяжки, сухожари; гель-лаки, гелі для нарощення, товари для стемпінга, витратні матеріали, пилки і бафи, інструменти, рідини. Все це ви можете купити з безкоштовною доставкою по Україні (при замовленні від 1000грн). Весь товар знаходиться на власному складі, що дозволяє відправляти замовлення кожен день (при оформленні до 15:00). Також є доставка за кордон: Польща, Німеччина, Чехія, Литва, Румунія, Молдова.</p>
+        <p>Якщо у Вас залишилися сумніви, звертайтеся до наших професійних менеджерів, які дадуть відповідь на будь-які питання.</p>
+        <p>Наш інтернет-магазин займається продажем манікюрної продукції вже шість років. За цей час нашими клієнтами стали більше 70 000 клієнтів, досвідчених майстрів та початківців. 99% позитивних відгуків говорять, що наш головний пріоритет - задоволений клієнт.</p>
+        <p>У нас великий асортимент обладнання: лампи, фрезера, витяжки, сухожари; гель-лаки, гелі для нарощення, товари для стемпінга, витратні матеріали, пилки і бафи, інструменти, рідини. Все це ви можете купити з безкоштовною доставкою по Україні (при замовленні від 1000грн). Весь товар знаходиться на власному складі, що дозволяє відправляти замовлення кожен день (при оформленні до 15:00). Також є доставка за кордон: Польща, Німеччина, Чехія, Литва, Румунія, Молдова.</p>
+        <p>Якщо у Вас залишилися сумніви, звертайтеся до наших професійних менеджерів, які дадуть відповідь на будь-які питання.</p>
+        <p>Наш інтернет-магазин займається продажем манікюрної продукції вже шість років. За цей час нашими клієнтами стали більше 70 000 клієнтів, досвідчених майстрів та початківців. 99% позитивних відгуків говорять, що наш головний пріоритет - задоволений клієнт.</p>
+        <p>У нас великий асортимент обладнання: лампи, фрезера, витяжки, сухожари; гель-лаки, гелі для нарощення, товари для стемпінга, витратні матеріали, пилки і бафи, інструменти, рідини. Все це ви можете купити з безкоштовною доставкою по Україні (при замовленні від 1000грн). Весь товар знаходиться на власному складі, що дозволяє відправляти замовлення кожен день (при оформленні до 15:00). Також є доставка за кордон: Польща, Німеччина, Чехія, Литва, Румунія, Молдова.</p>
+        <p>Якщо у Вас залишилися сумніви, звертайтеся до наших професійних менеджерів, які дадуть відповідь на будь-які питання.</p>
+      </div>
+      <button class="seo-section__more-button" type="button" data-trigger="seo-text">Читати детальніше</button>
+    </div>
+  </div>
 </section>
         </main>
 
