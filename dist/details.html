@@ -29,8 +29,8 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-967c0742.js"></script>
-      <link rel="stylesheet" href="/assets/main-259ede2e.css">
+      <script type="module" crossorigin src="/assets/main-e3d9f086.js"></script>
+      <link rel="stylesheet" href="/assets/main-2fb1b1b9.css">
     </head>
     <body>
         <!-- Header -->
@@ -45,14 +45,14 @@
         </svg>
       </button>
       <div class="dropdown header__currency">
-        <button class="dropdown__toggle" type="button" data-toggle="currency-dropdown" aria-expanded="false">Гривня
+        <button class="dropdown__toggle" type="button" data-toggle="currency-dropdown" aria-expanded="false">Гривня (грн)
           <svg class="dropdown__toggle-arrow" width="9" height="6">
             <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
           </svg>
         </button>
         <ul class="dropdown__list" id="currency-dropdown" aria-hidden="true">
-          <li class="dropdown__item"><a class="dropdown__link" href="#">Доллар</a></li>
-          <li class="dropdown__item"><a class="dropdown__link" href="#">Євро</a></li>
+          <li class="dropdown__item"><a class="dropdown__link" href="#">Доллар (usd)</a></li>
+          <li class="dropdown__item"><a class="dropdown__link" href="#">Євро (eur)</a></li>
         </ul>
       </div>
       <div class="dropdown header__lang">
@@ -1250,25 +1250,29 @@
 
         <!-- Alerts -->
         
-<div class="alert alert--red" id="alert-field-error">
+<div class="alert alert--red" id="alert-field-error" onclick="this.classList.remove('is-visible');">
   <svg class="alert__icon" width="14" height="14">
     <use xlink:href="img/sprite.svg#close"></use>
-  </svg>Поля заповнено не корректно!
+  </svg>
+  <p>Поля заповнено не корректно! Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, <a href="#">ducimus</a>. </p>
 </div>
-<div class="alert" id="alert-field-success">
+<div class="alert" id="alert-field-success" onclick="this.classList.remove('is-visible');">
   <svg class="alert__icon" width="18" height="18">
     <use xlink:href="img/sprite.svg#check-2"></use>
-  </svg>Дані успішно відправлені!
+  </svg>
+  <p>Дані успішно відправлені!</p>
 </div>
-<div class="alert alert--red" id="alert-promo-error">
+<div class="alert alert--red" id="alert-promo-error" onclick="this.classList.remove('is-visible');">
   <svg class="alert__icon" width="14" height="14">
     <use xlink:href="img/sprite.svg#close"></use>
-  </svg>Промокод не вірний!
+  </svg>
+  <p>Промокод не вірний!</p>
 </div>
-<div class="alert" id="alert-promo-success">
+<div class="alert" id="alert-promo-success" onclick="this.classList.remove('is-visible');">
   <svg class="alert__icon" width="18" height="18">
     <use xlink:href="img/sprite.svg#check-2"></use>
-  </svg>Промокод застосовано!
+  </svg>
+  <p>Промокод застосовано!</p>
 </div>
         
         <!-- Mobile Nav -->

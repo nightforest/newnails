@@ -111,15 +111,25 @@
     
     &__colors
         margin-top: 10px
+        flex: 0 0 auto
         width: 100%
-        min-height: 35px
+        overflow-y: hidden
         overflow-x: auto
         line-height: 1
-        -ms-overflow-style: none
-        scrollbar-width: none
+        padding-bottom: 10px
 
-        &::-webkit-scrollbar
-            display: none
+        &::-webkit-scrollbar 
+            -webkit-appearance: none
+            height: 3px
+            background-color: #e6e6e6
+            cursor: pointer
+
+        &::-webkit-scrollbar-thumb 
+            border-radius: 0
+            background-color: var(--ruby)
+            -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5)
+            cursor: grab
+            background-clip: padding-box
 
         &-list
             display: flex
@@ -136,15 +146,25 @@
     
     &__sizes
         margin-top: 10px
+        flex: 0 0 auto
         width: 100%
-        min-height: 30px
+        overflow-y: hidden
         overflow-x: auto
         line-height: 1
-        -ms-overflow-style: none
-        scrollbar-width: none
+        padding-bottom: 10px
 
-        &::-webkit-scrollbar
-            display: none
+        &::-webkit-scrollbar 
+            -webkit-appearance: none
+            height: 3px
+            background-color: #e6e6e6
+            cursor: pointer
+
+        &::-webkit-scrollbar-thumb 
+            border-radius: 0
+            background-color: var(--ruby)
+            -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5)
+            cursor: grab
+            background-clip: padding-box
 
         &-list
             display: flex

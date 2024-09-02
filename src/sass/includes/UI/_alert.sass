@@ -5,13 +5,13 @@
     display: inline-flex
     align-items: center
     gap: 10px
+    max-width: 400px
     padding: 5px 10px
-    height: 40px
     border-radius: 0
     background: #6B9B35
     color: var(--white)
     font-size: 13px
-    line-height: 1
+    line-height: 1.2
     transform: translateX(100%)
     opacity: 0
     visibility: hidden
@@ -24,5 +24,18 @@
         opacity: 1
         visibility: visible
 
+    &__icon
+        min-width: 14px
+
     &--red
         background: #C10808
+
+    a
+        color: var(--white)
+        text-decoration: underline
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--white)
+            text-decoration: none
