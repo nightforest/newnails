@@ -7,25 +7,10 @@
     &__top
         background: var(--white)
 
-        @media ($max-md)
-            padding: 10px 0
-
-            &[aria-hidden="true"]
-                display: none
-
         &-container
             display: flex
             align-items: center
-
-            @media ($max-md)
-                justify-content: space-between
-                gap: 8px
-        
-        &-close
-            display: flex
-
-            @media ($min-md)
-                display: none
+            gap: 5px
     
     &__middle
         position: relative
@@ -57,6 +42,7 @@
 
     &__slogan
         font-size: 14px
+        line-height: 1.25
         font-weight: 600
 
         @media ($max-md)
@@ -66,25 +52,8 @@
         margin-left: auto
         margin-right: 10px
 
-        @media ($max-md)
-            display: none
-    
-    &__lang
-
-        @media ($max-md)
-            display: none
-
-    &__mobile-lang
-        order: 2
-
-        @media ($min-md)
-            display: none
-
-        .dropdown__list
-            top: calc(100% + 18px)
-
     &__search-toggle
-        order: 4
+        order: 2
 
         @media ($min-md)
             display: none
@@ -240,4 +209,4 @@
     &__phones
 
         @media ($max-md)
-            order: 5
+            order: 3

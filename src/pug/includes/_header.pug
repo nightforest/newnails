@@ -2,22 +2,18 @@ header.header
     .header__top#header-top(aria-hidden="false")
         .container.header__top-container
             p.header__slogan Безкоштовна доставка від 1500 грн
-
-            button.header__top-close(type="button" data-trigger="header-top" aria-expanded="true" aria-label="Close panel")
-                svg.header__top-close-icon(width="12" height="12")
-                    use(xlink:href="img/sprite.svg#close")
         
             .dropdown.header__currency
-                button.dropdown__toggle(type="button" data-toggle="currency-dropdown" aria-expanded="false") Гривня (грн)
+                button.dropdown__toggle(type="button" data-toggle="currency-dropdown" aria-expanded="false") грн
                     svg.dropdown__toggle-arrow(width="9" height="6")
                         use(xlink:href="img/sprite.svg#dropdown-arrow")
                 
                 ul#currency-dropdown.dropdown__list(aria-hidden="true")
                     li.dropdown__item
-                        a.dropdown__link(href="#") Доллар (usd)
+                        a.dropdown__link(href="#") Доллар ($)
                     
                     li.dropdown__item
-                        a.dropdown__link(href="#") Євро (eur)
+                        a.dropdown__link(href="#") Євро (€)
 
             .dropdown.header__lang
                 button.dropdown__toggle(type="button" data-toggle="lang-dropdown" aria-expanded="false") UA
@@ -38,17 +34,17 @@ header.header
                 .burger__line
                 .burger__line
 
-            .dropdown.dropdown--clean.header__mobile-lang
-                button.dropdown__toggle(type="button" data-toggle="lang-dropdown-mobile" aria-expanded="false") UA
-                    svg.dropdown__toggle-arrow(width="9" height="6")
-                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+            //- .dropdown.dropdown--clean.header__mobile-lang
+            //-     button.dropdown__toggle(type="button" data-toggle="lang-dropdown-mobile" aria-expanded="false") UA
+            //-         svg.dropdown__toggle-arrow(width="9" height="6")
+            //-             use(xlink:href="img/sprite.svg#dropdown-arrow")
                 
-                ul#lang-dropdown-mobile.dropdown__list(aria-hidden="true")
-                    li.dropdown__item
-                        a.dropdown__link(href="#") EN
+            //-     ul#lang-dropdown-mobile.dropdown__list(aria-hidden="true")
+            //-         li.dropdown__item
+            //-             a.dropdown__link(href="#") EN
                     
-                    li.dropdown__item
-                        a.dropdown__link(href="#") DE
+            //-         li.dropdown__item
+            //-             a.dropdown__link(href="#") DE
 
             button.search-toggle.header__search-toggle(type="button" data-toggle="search" aria-expanded="false" aria-label="Show search")
                 svg.search-toggle__icon(width="18" height="18")
@@ -98,7 +94,7 @@ header.header
 
             nav.actions.header__actions
                 ul.actions__list
-                    li.actions__item.actions__item--hidden-md
+                    li.actions__item
                         a.actions__button(href="#" aria-label="Wishlist")
                             svg.actions__icon(width="24" height="22")
                                 use(xlink:href="img/sprite.svg#heart")
