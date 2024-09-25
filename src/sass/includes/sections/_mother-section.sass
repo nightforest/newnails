@@ -17,19 +17,14 @@
 
     &__bg
         position: absolute
-        right: 10%
+        right: 0
         top: 0
         bottom: 0
         display: inline-flex
         z-index: $z-index-minus
 
-        @media ($max-xxl)
-            right: 0
-
-        @media ($max-xl)
-            right: -150px
-
         @media ($max-md)
+            width: 100%
             top: auto
             right: 0
 
@@ -38,7 +33,7 @@
             width: auto
 
             @media ($max-md)
-                max-width: 100%
+                width: 100%
                 height: auto
 
     &__content
